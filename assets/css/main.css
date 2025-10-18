@@ -3037,6 +3037,7 @@ input, select, textarea {
 				margin-top: -1.75em;
 				position: relative;
 				width: calc(100% + 3.5em);
+				aspect-ratio: 4 / 6;
 			}
 
 				.features article .image img {
