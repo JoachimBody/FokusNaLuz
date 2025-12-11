@@ -172,7 +172,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+		/* border-bottom: dotted 1px rgba(255, 255, 255, 0.35); */
 		color: #ffffff;
 		text-decoration: none;
 	}
@@ -2406,44 +2406,30 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
-/* Image */
+		/* Image */
 
-	.image {
-		width: 100%;
-		max-width: 300px; /* ustal maksymalny rozmiar okręgu */
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		overflow: hidden;
-		display: block;
-		margin: 0 auto;
-	/* width: 200px; /* lub inna stała lub procentowa wartość */ */
-	/* aspect-ratio: 1 / 1; /* kluczowe: gwarantuje kwadrat */ */
-	/* border-radius: 50%; */
-	/* overflow: hidden; */
-	/* display: inline-block; */
-	/* position: relative; */
-		/* border-radius: 5px; */
-		/* border: 0; */
-		/* display: inline-block; */
-		/* position: relative; */
-	}
+		.image {
+			border-radius: 4px;
+			border: 0;
+			display: inline-block;
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+		}
 
 		.image img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover; /* wypełnia obszar bez zniekształceń */
 			display: block;
-			/* border-radius: 5px; */
-			/* display: block; */
+			width: 100%;
+			height: auto;
 		}
 
 		.image.left, .image.right {
 			max-width: 40%;
 		}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
+		.image.left img, .image.right img {
+			width: 100%;
+		}
 
 		.image.left {
 			float: left;
@@ -2463,9 +2449,9 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			.image.fit img {
-				width: 100%;
-			}
+		.image.fit img {
+			width: 100%;
+		}
 
 		.image.main {
 			display: block;
@@ -2473,9 +2459,9 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			.image.main img {
-				width: 100%;
-			}
+		.image.main img {
+			width: 100%;
+		}
 
 /* List */
 
@@ -3587,49 +3573,40 @@ input, select, textarea {
 		}
 
 	@media screen and (max-width: 1280px) {
-
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			background-size: auto, cover;
+			background-position: center, 0% 30%;
 			margin-bottom: -6.5em;
 		}
-
 	}
 
 	@media screen and (max-width: 980px) {
-
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
-			background-size: auto, cover;
-			background-position: center, 0% 0%;
+			background-size: auto, cover;
+			background-position: center, 0% 0%;
 			margin-bottom: -4.75em;
 		}
-
-			#wrapper > header .inner {
-				width: 100%;
-			}
-
+		#wrapper > header .inner {
+			width: 100%;
+		}
 	}
 
 	@media screen and (max-width: 736px) {
-
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
-			background-size: auto, 125%;
+			background-size: auto, 125%;
 			margin-bottom: -2.5em;
 		}
-
-			#wrapper > header h2 {
-				font-size: 1.25em;
-			}
-
-			#wrapper > header p {
-				font-size: 0.8em;
-			}
-
+		#wrapper > header h2 {
+			font-size: 1.25em;
+		}
+		#wrapper > header p {
+			font-size: 0.8em;
+		}
 	}
 
 	.wrapper {
@@ -3694,469 +3671,613 @@ input, select, textarea {
 			width: 55em;
 		}
 
-		.wrapper.style2 {
-			background-color: #353849;
-		}
+		.wrapper.style2 { background-color: #353849; }
+		.wrapper.style2:before, .wrapper.style2:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E"); }
+		.wrapper.style2:before { box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849; }
+		.wrapper.style2:after { box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849; }
 
-			.wrapper.style2:before, .wrapper.style2:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
-			}
-
-			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
-			}
-
-			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
-			}
-
-		.wrapper.style3 {
-			background-color: #3d4051;
-		}
-
-			.wrapper.style3:before, .wrapper.style3:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
-			}
-
-			.wrapper.style3:before {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
-			}
-
-			.wrapper.style3:after {
-				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
-			}
-
-		.wrapper.style4 {
-			background-color: #454858;
-		}
-
-			.wrapper.style4:before, .wrapper.style4:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23454858%3B' /%3E%3C/svg%3E");
-			}
-
-			.wrapper.style4:before {
-				box-shadow: inset 0 -1px 0 0 #454858, 0 1px 0 0 #454858;
-			}
-
-			.wrapper.style4:after {
-				box-shadow: inset 0 -1px 0 0 #454858, 0 1px 0 0 #454858;
-			}
-
-		.wrapper.style5 {
-			background-color: #4d5060;
-		}
-
-			.wrapper.style5:before, .wrapper.style5:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%234d5060%3B' /%3E%3C/svg%3E");
-			}
-
-			.wrapper.style5:before {
-				box-shadow: inset 0 -1px 0 0 #4d5060, 0 1px 0 0 #4d5060;
-			}
-
-			.wrapper.style5:after {
-				box-shadow: inset 0 -1px 0 0 #4d5060, 0 1px 0 0 #4d5060;
-			}
-
-		.wrapper.style6 {
-			background-color: #555867;
-		}
-
-			.wrapper.style6:before, .wrapper.style6:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23555867%3B' /%3E%3C/svg%3E");
-			}
-
-			.wrapper.style6:before {
-				box-shadow: inset 0 -1px 0 0 #555867, 0 1px 0 0 #555867;
-			}
-
-			.wrapper.style6:after {
-				box-shadow: inset 0 -1px 0 0 #555867, 0 1px 0 0 #555867;
-			}
+		.wrapper.style3 { background-color: #3d4051; }
+		.wrapper.style3:before, .wrapper.style3:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E"); }
+		.wrapper.style3:before { box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051; }
+		.wrapper.style3:after { box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051; }
 
 		.wrapper.spotlight {
 			background-color: #4c5c96;
 		}
 
-			.wrapper.spotlight:before, .wrapper.spotlight:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%234c5c96%3B' /%3E%3C/svg%3E");
-			}
+		.wrapper.spotlight:before, .wrapper.spotlight:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%234c5c96%3B' /%3E%3C/svg%3E");
+		}
+		.wrapper.spotlight:before { box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96; }
+		.wrapper.spotlight:after { box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96; }
 
-			.wrapper.spotlight:before {
-				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
-			}
+		.wrapper.spotlight .inner {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+		}
 
-			.wrapper.spotlight:after {
-				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
-			}
+		/* --- FIX ZDJĘCIA PROFILOWEGO (KOŁO) --- */
+		.wrapper.spotlight .image {
+			width: 350px !important;
+			height: 350px !important;
+			min-width: 350px !important;
+			min-height: 350px !important;
+			border-radius: 50% !important;
+			overflow: hidden !important;
+			margin: 0 3em 2em 0;
+			flex-shrink: 0;
+			padding: 0;
+			border: 0;
+		}
 
-			.wrapper.spotlight .inner {
-				display: -moz-flex;
-				display: -webkit-flex;
-				display: -ms-flex;
-				display: flex;
-				-moz-align-items: center;
-				-webkit-align-items: center;
-				-ms-align-items: center;
-				align-items: center;
-				-moz-flex-direction: row;
-				-webkit-flex-direction: row;
-				-ms-flex-direction: row;
-				flex-direction: row;
-			}
+		.wrapper.spotlight .image img {
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: cover !important;
+			object-position: center 20%; /* Tutaj ustawiasz kadrowanie twarzy */
+			border-radius: 0;
+			object-position: center center !important; 
+		}
 
-			.wrapper.spotlight .image {
-				border-radius: 100%;
-				margin: 0 3em 2em 0;
-				width: 22em;
-				overflow: hidden;
-				-ms-flex: 1;
-			}
+		.wrapper.spotlight .content {
+			width: 100%;
+		}
 
-				.wrapper.spotlight .image img {
-					border-radius: 100%;
-					width: 100%;
-				}
+		/* Zygzak: Co druga sekcja odwrócona */
+		.wrapper.spotlight:nth-child(2n - 1) .inner {
+			flex-direction: row-reverse;
+			text-align: left;
+		}
 
-			.wrapper.spotlight .content {
-				width: 100%;
-				-ms-flex: 2;
-			}
+		.wrapper.spotlight:nth-child(2n - 1) .image {
+			margin: 0 0 2em 3em;
+		}
 
-			.wrapper.spotlight:nth-child(2n - 1) .inner {
-				-moz-flex-direction: row-reverse;
-				-webkit-flex-direction: row-reverse;
-				-ms-flex-direction: row-reverse;
-				flex-direction: row-reverse;
-				text-align: right;
-			}
-
-			.wrapper.spotlight:nth-child(2n - 1) .image {
-				margin: 0 0 2em 3em;
-			}
-
-			.wrapper.spotlight.style2 {
-				background-color: #45558d;
-			}
-
-				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
-				}
-
-				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
-				}
-
-			.wrapper.spotlight.style3 {
-				background-color: #3f4e85;
-			}
-
-				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
-				}
-
-				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
-				}
-
-			.wrapper.spotlight.style4 {
-				background-color: #39477c;
-			}
-
-				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2339477c%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-				}
-
-				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
-				}
-
-			.wrapper.spotlight.style5 {
-				background-color: #324072;
-			}
-
-				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-				}
-
-				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
-				}
-
-			.wrapper.spotlight.style6 {
-				background-color: #2d3a69;
-			}
-
-				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232d3a69%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style6:before {
-					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
-				}
-
-				.wrapper.spotlight.style6:after {
-					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
-				}
-
+		/* Kolory dla spotlight */
+		.wrapper.spotlight.style2 { background-color: #45558d; }
+		.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E"); }
+		
+		/* Responsywność Wrappera */
 		@media screen and (max-width: 980px) {
-
-			.wrapper {
-				margin: 4.75em 0;
-			}
-
-				.wrapper:before, .wrapper:after {
-					height: 4.75em;
-				}
-
-				.wrapper:before {
-					top: -4.75em;
-				}
-
-				.wrapper:after {
-					bottom: -4.75em;
-					left: 0;
-				}
-
-				.wrapper .inner {
-					padding: 3em 3em 1em 3em ;
-					width: 100%;
-				}
-
-				.wrapper.spotlight .image {
-					margin: 0 2em 2em 0;
-					width: 32em;
-				}
-
-				.wrapper.spotlight:nth-child(2n - 1) .image {
-					margin: 0 0 2em 2em;
-				}
-
+			.wrapper { margin: 4.75em 0; }
+			.wrapper:before, .wrapper:after { height: 4.75em; }
+			.wrapper:before { top: -4.75em; }
+			.wrapper:after { bottom: -4.75em; }
+			.wrapper .inner { padding: 3em 3em 1em 3em; width: 100%; }
+			.wrapper.spotlight .image { margin: 0 2em 2em 0; width: 250px !important; height: 250px !important; min-width: 250px !important; }
+			.wrapper.spotlight:nth-child(2n - 1) .image { margin: 0 0 2em 2em; }
 		}
 
 		@media screen and (max-width: 736px) {
-
-			.wrapper {
-				margin: 2.5em 0;
-			}
-
-				.wrapper:before, .wrapper:after {
-					height: 2.5em;
-				}
-
-				.wrapper:before {
-					top: -2.5em;
-				}
-
-				.wrapper:after {
-					bottom: -2.5em;
-					left: 0;
-				}
-
-				.wrapper .inner {
-					padding: 2em 2em 0.1em 2em ;
-				}
-
-				.wrapper.spotlight .inner {
-					-moz-align-items: -moz-flex-start;
-					-webkit-align-items: -webkit-flex-start;
-					-ms-align-items: -ms-flex-start;
-					align-items: flex-start;
-				}
-
-				.wrapper.spotlight .image {
-					width: 19em;
-					margin: 0 1.75em 2em 0;
-				}
-
-				.wrapper.spotlight:nth-child(2n - 1) .image {
-					margin: 0 0 2em 1.75em;
-				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.wrapper.spotlight .inner {
-				display: block;
-			}
-
-			.wrapper.spotlight .image {
-				margin: 0 0 1em 0 !important;
-				max-width: 85%;
-				width: 12em;
-			}
-
-		}
-
-		@media screen and (max-width: 360px) {
-
-			.wrapper .inner {
-				padding: 2em 1.5em 0.1em 1.5em ;
-			}
-
+			.wrapper { margin: 2.5em 0; }
+			.wrapper:before, .wrapper:after { height: 2.5em; }
+			.wrapper:before { top: -2.5em; }
+			.wrapper:after { bottom: -2.5em; }
+			.wrapper .inner { padding: 2em 2em 0.1em 2em; }
+			.wrapper.spotlight .inner { display: block; text-align: center !important; }
+			.wrapper.spotlight .image { margin: 0 auto 2em auto !important; }
+			.wrapper.spotlight:nth-child(2n - 1) .inner { flex-direction: row; }
+			.wrapper.spotlight:nth-child(2n - 1) .image { margin: 0 auto 2em auto !important; }
 		}
 
 /* Footer */
 
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: row;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
-		flex-direction: row;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		margin: 0 auto;
-		width: 55em;
+		/* --- FIX STOPKI: CENTROWANIE I SZEROKOŚĆ --- */
+		width: 60em !important;
+		max-width: 90% !important;
+		margin: 0 auto !important;
+		display: block !important;
+		padding: 5em 0 3em 0;
 	}
 
-		#footer .inner > * {
-			width: 100%;
-		}
+	#footer .inner > * {
+		width: 100%;
+	}
+	
+	/* --- FIX: ODSTĘP FORMULARZ <-> IKONY --- */
 
-		#footer .inner form {
-			margin: 0 3em 0 0;
-			width: calc(50% - 1.5em);
-		}
-
-		#footer .inner .contact {
-			width: calc(50% - 1.5em);
-		}
-
-		#footer .inner .copyright {
-			border-top: solid 2px rgba(255, 255, 255, 0.125);
-			list-style: none;
-			margin: 4em 0 2em 0;
-			padding: 2em 0 0 0;
-			width: 100%;
-		}
-
-			#footer .inner .copyright li {
-				border-left: solid 2px rgba(255, 255, 255, 0.125);
-				color: rgba(255, 255, 255, 0.35);
-				display: inline-block;
-				font-size: 0.9em;
-				line-height: 1;
-				margin-left: 1em;
-				padding: 0;
-				padding-left: 1em;
-			}
-
-				#footer .inner .copyright li:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-
-				#footer .inner .copyright li a {
-					color: inherit;
-				}
-
-	@media screen and (max-width: 1280px) {
-
-		#footer {
-			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, center;
-			margin-top: -6.5em;
-			padding-top: 6.5em;
-		}
-
+	/* Odsuwamy prawą kolumnę (tę z ikonami) od lewej */
+	#footer .row > .col-6:last-child {
+		padding-left: 5em !important; /* Zmień na 3em lub 7em, żeby regulować */
 	}
 
+	/* NA TELEFONIE (Reset) */
+	/* Musimy usunąć ten odstęp na małych ekranach, bo tam elementy są jeden pod drugim */
 	@media screen and (max-width: 980px) {
-
-		#footer {
-			margin-top: -4.75em;
-			padding-top: 4.75em;
+		#footer .row > .col-6:last-child {
+			padding-left: 0 !important;
+			margin-top: 3em !important; /* Dodatkowy odstęp pionowy na telefonie */
 		}
+	}
+	
+	
+	/* --- FIX ODSTĘPÓW W FORMULARZU --- */
 
-			#footer .inner {
-				padding: 3em 3em 1em 3em ;
-				display: block;
-				width: 100%;
-			}
-
-				#footer .inner form {
-					width: 100%;
-					margin: 0 0 4em 0;
-				}
-
-				#footer .inner .contact {
-					width: 100%;
-					margin: 0 0 4em 0;
-				}
-
-				#footer .inner .copyright {
-					margin: 4em 0 2em 0;
-				}
-
+	/* 1. Zmniejszamy odstęp między boksami (Imię / Email / Wiadomość) */
+	#footer .field {
+		margin-bottom: 0.5em !important; /* Było dużo więcej, teraz jest zwarcie */
 	}
 
+	/* 2. Przybliżamy napis (np. "Imię") do samego pola do wpisywania */
+	#footer label {
+		margin-bottom: 0.2em !important; /* Etykieta bliżej inputa */
+		font-size: 0.8em !important;     /* Opcjonalnie: nieco mniejszy tekst etykiety */
+	}
+
+	/* 3. Usuwamy margines pod ostatnim elementem (przyciskiem) */
+	#footer ul.actions {
+		margin-top: 1em !important;      /* Odstęp przycisku "Wyślij" od pola Wiadomość */
+		margin-bottom: 0 !important;
+	}
+
+	/* Naprawa formularza - Resetowanie stylów */
+	#footer form { margin: 0 0 2em 0; }
+	
+	/* Pola formularza - Wygląd */
+	#footer input,
+	#footer textarea {
+		background: rgba(255, 255, 255, 0.05) !important;
+		border: 1px solid rgba(255, 255, 255, 0.2) !important;
+		border-radius: 4px;
+		color: #ffffff;
+		width: 100% !important;
+	}
+	
+	#footer input:focus,
+	#footer textarea:focus {
+		background: rgba(255, 255, 255, 0.15) !important;
+		border-color: #ffffff !important;
+		outline: none;
+	}
+
+	/* Kontakt po prawej */
+	#footer .contact {
+		list-style: none;
+		padding: 0;
+	}
+	#footer .contact li {
+		margin: 1.5em 0 0 0;
+		padding-left: 3.5em;
+		position: relative;
+	}
+	#footer .contact li:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 2.5em;
+		height: 2.5em;
+		border: 2px solid rgba(255,255,255,0.125);
+		border-radius: 100%;
+		text-align: center;
+		line-height: 2.3em;
+	}
+
+	/* Copyright */
+	#footer .copyright {
+		border-top: solid 2px rgba(255, 255, 255, 0.125);
+		list-style: none;
+		margin: 4em 0 2em 0;
+		padding: 2em 0 0 0;
+		text-align: center;
+	}
+	#footer .copyright li {
+		display: inline-block;
+		border-left: solid 1px rgba(255, 255, 255, 0.125);
+		margin-left: 1em;
+		padding-left: 1em;
+		color: rgba(255, 255, 255, 0.35);
+	}
+	#footer .copyright li:first-child { border: 0; margin: 0; padding: 0; }
+
+	/* Responsywność Stopki */
+	@media screen and (max-width: 980px) {
+		#footer { margin-top: -4.75em; padding-top: 4.75em; }
+		#footer .inner { width: 100% !important; padding: 3em 2em; }
+	}
+
+/* --- FIX GALERII (ALBUMY W 3 KOLUMNACH) --- */
+
+	.albums-grid {
+		display: grid !important;
+		grid-template-columns: repeat(3, 1fr) !important; 
+		gap: 30px !important;
+		width: 100% !important;
+		margin-top: 2em;
+	}
+
+	.album-card {
+		background: none !important;
+		border: none !important;
+		margin: 0 !important;
+		position: relative;
+		transition: transform 0.3s ease;
+	}
+
+	.album-card:hover {
+		transform: translateY(-5px);
+	}
+
+	/* Usuwanie kreski pod linkiem - PRIORYTET */
+	.album-card a {
+		border-bottom: none !important;
+		background-image: none !important;
+		display: block !important;
+		text-decoration: none !important;
+	}
+
+	/* Styl zdjęcia w galerii - ORYGINALNE PROPORCJE */
+	.album-card img {
+		width: 100% !important;       /* Szerokość dopasowuje się do kolumny */
+		height: auto !important;      /* Wysokość oblicza się sama (zachowuje proporcje) */
+		object-fit: contain !important; /* Wyświetla całe zdjęcie, nic nie ucina */
+		border-radius: 4px !important;
+		display: block !important;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Dodajemy lekki cień dla estetyki */
+	}
+
+	/* Tytuł pod zdjęciem */
+	.album-title {
+		margin-top: 10px !important;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9em;
+		color: #ffffff;
+		text-align: center;
+	}
+	
+	.album-title span {
+		display: block;
+		font-size: 0.8em;
+		color: rgba(255,255,255,0.5);
+		font-weight: 400;
+		text-transform: none;
+		margin-top: 0.2em;
+	}
+
+	/* Responsywność Galerii */
+	@media screen and (max-width: 980px) {
+		.albums-grid { grid-template-columns: repeat(2, 1fr) !important; }
+	}
+	@media screen and (max-width: 600px) {
+		.albums-grid { grid-template-columns: 1fr !important; }
+		.album-card img { height: 250px !important; }
+	}
+	
+	
+		/* ================================================= */
+		/* FIX: JAJOWATE ZDJĘCIA NA MOBILU (Naprawa)         */
+		/* ================================================= */
+
+		/* 1. Dla Tabletów i mniejszych ekranów (poniżej 980px) */
+		@media screen and (max-width: 980px) {
+			.wrapper.spotlight .image {
+				/* Ustawiamy mniejszy, ale IDEALNY kwadrat */
+				width: 280px !important;
+				height: 280px !important;
+				
+				/* Blokujemy możliwość ściskania */
+				min-width: 280px !important;
+				min-height: 280px !important;
+				
+				/* Wyśrodkowanie kółka */
+				margin: 0 auto 2em auto !important;
+				border-radius: 50% !important;
+			}
+			
+			/* Upewniamy się, że zdjęcie w środku wypełnia kółko */
+			.wrapper.spotlight .image img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				object-position: center center !important; 
+			}
+		}
+
+		/* 2. Dla Telefonów (poniżej 480px) */
+		@media screen and (max-width: 480px) {
+			.wrapper.spotlight .image {
+				/* Jeszcze mniejszy kwadrat, żeby się mieścił */
+				width: 220px !important;
+				height: 220px !important;
+				
+				/* Betonowa blokada wymiarów */
+				min-width: 220px !important;
+				min-height: 220px !important;
+			}
+		}
+		
+		/* ================================================= */
+		/* FIX: LOGO - WERSJA "EMBLEMAT" (Białe tło)         */
+		/* ================================================= */
+
+		#banner .logo {
+			width: 120px !important;       /* Nieco większe */
+			height: 120px !important;
+			line-height: 120px !important;
+			
+			/* TWORZYMY BIAŁE KÓŁKO */
+			background: #ffffff !important; 
+			border: none !important;       /* Bez ramki, samo białe tło wystarczy */
+			border-radius: 50% !important; /* Idealne koło */
+			
+			/* Odstępy */
+			padding: 1px !important;      /* Żeby aparat nie dotykał krawędzi koła */
+			margin-bottom: 1.5em !important;
+			
+			/* Wyśrodkowanie */
+			display: inline-flex !important;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden !important;
+			
+			/* Cień dla efektu 3D (opcjonalnie) */
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+		}
+
+		#banner .logo img {
+			width: 100% !important;
+			height: 100% !important;
+			
+			/* WAŻNE: 'contain' sprawi, że widać cały aparat, nic nie utnie */
+			object-fit: contain !important; 
+			
+			border-radius: 0 !important;
+			display: block !important;
+			transform: scale(1.3) translateX(2px) translateY(-2px) !important;
+			
+		}
+
+		/* Mniejsze na telefon */
+		@media screen and (max-width: 736px) {
+			#banner .logo {
+				width: 90px !important;
+				height: 90px !important;
+				padding: 0px !important;
+			}
+		}
+
+
+	/* ================================================= */
+	/* FIX: BANNER - SYMETRIA I CZYTELNOŚĆ               */
+	/* ================================================= */
+
+	/* 1. Ustawienie kontenera bannera */
+	#banner .inner {
+		text-align: center !important; /* Wszystko na środek */
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important; /* To centruje Logo w pionie */
+	}
+
+	/* 2. Logo - Idealnie na środku */
+	#banner .logo {
+		margin: 0 auto 1.5em auto !important; /* Lewy/Prawy margines AUTO to klucz do środka */
+		/* Zachowujemy style wyglądu z poprzedniego kroku... */
+		width: 120px !important;
+		height: 120px !important;
+		background: #ffffff !important; 
+		border-radius: 50% !important;
+		padding: 5px !important;
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#banner .logo img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: contain !important;
+		border-radius: 0 !important;
+	}
+
+	/* 3. Tytuł (FokusNaLuz) - Wyrównany */
+	#banner h1 {
+		font-size: 3.5em !important;
+		font-weight: 700 !important; /* Wróciłem do grubszego, żeby był wyraźny */
+		letter-spacing: 0.1em !important;
+		text-transform: uppercase !important;
+		margin: 0 0 0.5em 0 !important;
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	/* 4. Tekst opisu - Większy i czytelny */
+	#banner p.banner-text {
+		font-size: 1.1em !important; /* Powiększenie tekstu */
+		line-height: 1.8 !important;  /* Większy odstęp między liniami */
+		font-weight: 300 !important;
+		color: rgba(255, 255, 255, 0.9) !important;
+		max-width: 900px !important;
+		margin: 0 auto 2.5em auto !important;
+		text-align: center !important;
+		text-transform: uppercase !important; /* Eleganckie wielkie litery */
+		letter-spacing: 0.05em !important;
+	}
+
+	/* Responsywność na telefonie */
 	@media screen and (max-width: 736px) {
+		#banner h1 { font-size: 2.2em !important; }
+		#banner p.banner-text { font-size: 0.9em !important; }
+		#banner .logo { width: 90px !important; height: 90px !important; }
+	}
+	
+	
+	
+	/* ================================================= */
+	/* FIX: PRZESUNIĘCIE TREŚCI BANNERA W GÓRĘ           */
+	/* ================================================= */
 
-		#footer {
-			margin-top: -2.5em;
-			padding-top: 2.5em;
-		}
-
-			#footer .inner {
-				padding: 2em 2em 0.1em 2em ;
-			}
-
-				#footer .inner form {
-					margin: 0 0 3em 0;
-				}
-
-				#footer .inner .contact {
-					margin: 0 0 3em 0;
-				}
-
+	#banner {
+		/* Domyślnie jest tu aż 10em lub więcej. Zmniejszamy! */
+		/* Im mniejsza liczba, tym wyżej będzie treść. */
+		padding-top: 7em !important; 
+		
+		/* Opcjonalnie: Zwiększamy dół, żeby zachować wysokość sekcji (dla równowagi) */
+		padding-bottom: 6em !important;
 	}
 
-	@media screen and (max-width: 480px) {
-
-		#footer .inner .copyright li {
-			border-left: 0;
-			display: block;
-			margin: 1em 0 0 0;
-			padding-left: 0;
+	/* Wersja na telefon - też delikatnie podnosimy */
+	@media screen and (max-width: 736px) {
+		#banner {
+			padding-top: 4em !important; /* Na telefonie standardowo jest 5em */
 		}
+	}
+	
+	
+	
+	/* ================================================= */
+	/* STYLE FILTROWANIA - POPRAWIONE (Centrowanie i Rozmiar) */
+	/* ================================================= */
 
-			#footer .inner .copyright li:first-child {
-				margin-top: 0;
-			}
-
+	/* Kontener filtrów (bez zmian) */
+	.gallery-controls {
+		display: none;
+		flex-wrap: wrap;
+		justify-content: center; /* Wyśrodkowanie przycisków w panelu */
+		align-items: center;
+		margin-bottom: 2em;
+		border: 1px solid rgba(255,255,255,0.1);
+		padding: 1.5em;
+		border-radius: 4px;
+		background: rgba(0,0,0,0.2);
+		gap: 1em; /* Odstęp między grupami przycisków */
 	}
 
-	@media screen and (max-width: 360px) {
+	.gallery-controls.visible {
+		display: flex !important;
+		animation: fadeIn 0.5s ease;
+	}
 
-		#footer .inner {
-			padding: 2em 1.5em 0.1em 1.5em ;
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(-10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	.gallery-controls .label {
+		margin-right: 10px;
+		font-size: 0.7em;
+		opacity: 0.6;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	/* --- POPRAWKA MAŁYCH PRZYCISKÓW (Filtry) --- */
+	.filter-btn {
+		background: transparent;
+		border: 1px solid rgba(255,255,255,0.3);
+		color: #fff;
+		
+		/* Zmniejszenie rozmiaru i wyśrodkowanie */
+		height: 2.5em !important;       /* Stała, mała wysokość */
+		padding: 0 1.2em !important;    /* Mniejsze boki */
+		font-size: 0.7em !important;    /* Mniejsza czcionka */
+		line-height: 1 !important;      /* Reset linii */
+		
+		/* Idealne centrowanie tekstu w środku */
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+		
+		margin: 3px;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		min-width: 80px; /* Żeby najkrótsze słowa nie robiły mikroskopijnych przycisków */
+	}
+
+	.filter-btn:hover, 
+.filter-btn.active {
+    background: #ffffff !important;       /* Białe tło */
+    color: #2e3141 !important;            /* CIEMNY TEKST (kluczowa zmiana) */
+    border-color: #ffffff !important;     /* Biała ramka */
+    font-weight: 700 !important;          /* Opcjonalnie: pogrubienie aktywnego */
+}
+
+	/* --- POPRAWKA GŁÓWNEGO PRZYCISKU (Toggle) --- */
+	#filter-toggle-btn {
+		margin-bottom: 0;
+		
+		/* TO NAPRAWIA SKAKANIE ROZMIARU: */
+		min-width: 260px !important; /* Sztywna szerokość - nie zmieni się po zmianie tekstu */
+		text-align: center !important; /* Tekst na środku */
+		
+		/* Centrowanie ikony i tekstu */
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Responsywność */
+	@media screen and (max-width: 736px) {
+		.gallery-controls.visible {
+			flex-direction: column;
+			align-items: center;
 		}
+		/* Na telefonie przycisk też musi być szeroki */
+		#filter-toggle-btn {
+			width: 100% !important; 
+		}
+		.filter-btn {
+			width: 100% !important; /* Na telefonie pełna szerokość dla wygody */
+			margin-bottom: 5px;
+		}
+	}
+	
+	
+	
+	
+	
+	/* ================================================= */
+	/* FIX: TEKST I PRZYCISK W JEDNEJ LINII              */
+	/* ================================================= */
 
+	.gallery-header-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 2em !important; /* Odstęp od zdjęć */
+    width: 100% !important;
+    
+    /* TU BYŁA ZMIANA: Usuwamy linię */
+    border-bottom: none !important; 
+    padding-bottom: 0 !important;
+	}
+
+	/* Reset marginesu tekstu, żeby nie wypychał przycisku */
+	.gallery-header-row p {
+		margin: 0 !important;
+		max-width: 60%; /* Żeby tekst nie wjechał na przycisk */
+	}
+
+	/* Reset kontenera przycisku */
+	.gallery-header-row .filter-trigger {
+		margin: 0 !important;
+		text-align: right !important;
+	}
+
+	/* WERSJA MOBILNA (Telefon) */
+	@media screen and (max-width: 600px) {
+		.gallery-header-row {
+			flex-direction: column !important; /* Jeden pod drugim */
+			align-items: flex-start !important; /* Do lewej */
+			gap: 1em; /* Odstęp między tekstem a przyciskiem */
+		}
+		
+		.gallery-header-row p {
+			max-width: 100% !important;
+		}
+		
+		.gallery-header-row .filter-trigger {
+			width: 100% !important;
+		}
+		
+		#filter-toggle-btn {
+			width: 100% !important; /* Pełna szerokość przycisku na telefonie */
+		}
 	}
