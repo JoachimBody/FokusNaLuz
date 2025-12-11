@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css?v=2" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+						<!-- Header -->
+						<header id="header" class="alt">
+							<h1><a href="index.html">FokusNaLuz</a></h1>
+							<nav>
+								<a href="#menu">Menu</a>
+							</nav>
+						</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="portfolio.html">Generic</a></li>
+								<li><a href="index.html#footer">Elements</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+					<!-- Banner Portfolio -->
+					<section id="banner">
+						<div class="inner">
+							<!-- Logo (To samo co na głównej dla spójności) -->
+							<div class="logo">
+								<img src="images/nowy.png" alt="FokusNaLuz - Portfolio Fotograficzne" />
+							</div>
+							
+							<!-- H1: Jasna informacja dla Google co tu jest -->
+							<h1>Portfolio</h1>
+							
+							<!-- Opis SEO + Korzyść dla klienta -->
+							<p class="banner-text">
+								Wybrane kadry i historie z moich sesji.<br>
+								Fotografia portretowa, buduarowa i kreatywna w Poznaniu.<br>
+								<span style="display: block; margin-top: 1em; font-size: 0.8em; opacity: 0.9; text-transform: none; line-height: 1.6;">
+									Zobacz, jak wyglądają efekty pracy w luźnej atmosferze.
+								</span>
+							</p>
+						</div>
+					</section>
+
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						
+
+							
+							
+							<div class="wrapper">
+								<div class="inner">
+									<h2 class="major">Moje Sesje</h2>
+
+									<!-- TO JEST NOWY KONTENER, KTÓRY USTAWI ELEMENTY W LINII -->
+									<div class="gallery-header-row">
+										
+										<!-- Lewa strona: Tekst -->
+										<p>Kliknij w zdjęcie, aby zobaczyć całą sesję.</p>
+										
+										<!-- Prawa strona: Przycisk -->
+										<div class="filter-trigger">
+											<button id="filter-toggle-btn" class="button small icon solid fa-sliders-h">
+												Filtry i Sortowanie
+											</button>
+										</div>
+
+									</div>
+
+									<!-- UKRYTY PANEL (Domyślnie schowany) -->
+									<div id="filters-panel" class="gallery-controls hidden">
+										
+										<!-- Filtrowanie po kategorii -->
+										<div class="filter-buttons">
+											<span class="label">Pokaż:</span>
+											<button class="filter-btn active" onclick="filterGallery('all')">Wszystkie</button>
+											<button class="filter-btn" onclick="filterGallery('portret')">Portret</button>
+											<button class="filter-btn" onclick="filterGallery('boudoir')">Boudoir</button>
+											<button class="filter-btn" onclick="filterGallery('kreatywne')">Kreatywne</button>
+										</div>
+
+										<!-- Sortowanie po dacie -->
+										<div class="sort-buttons">
+											<span class="label">Sortuj:</span>
+											<button class="filter-btn" onclick="sortGallery('newest')">Najnowsze</button>
+											<button class="filter-btn" onclick="sortGallery('oldest')">Najstarsze</button>
+										</div>
+
+									</div>				
+					<!-- KONTENER NA ALBUMY -->
+									<div class="albums-grid">
+
+										<!-- === ALBUM 1: Krwawa Sesja === -->
+										<div class="album-card">
+											
+											<!-- 1. W "href" podajemy DUŻE zdjęcie (to, co się otworzy po kliknięciu) -->
+											<a href="images/krwawa_duze.jpg" data-lightbox="sesja-1" data-title="Krwawa Sesja">
+												
+												<!-- 2. W "src" podajemy MAŁE zdjęcie (to, co widać na stronie, żeby było szybko) -->
+												<img src="images/krwawa_male.jpg" alt="Moon Sasha" />
+												
+												<div class="album-title">Krwawa sesja <br><span>(10 zdjęć)</span></div>
+											</a>
+
+											<!-- Pozostałe zdjęcia w albumie (te ukryte) mogą zostać duże, 
+												 bo ładują się dopiero po otwarciu galerii -->
+											<a href="images/krwawa_duze2.jpg" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
+											<a href="images/krwawa_duze3.jpg" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
+											<a href="images/krwawa_duze4.jpg" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
+
+										</div>
+
+										<!-- === ALBUM 2: Neon Vibes === -->
+										<div class="album-card">
+												<!-- 1. W "href" podajemy DUŻE zdjęcie (to, co się otworzy po kliknięciu) -->
+											<a href="images/krwawa_duze.jpg" data-lightbox="sesja-1" data-title="Moon Sasha - Portret">
+												
+												<!-- 2. W "src" podajemy MAŁE zdjęcie (to, co widać na stronie, żeby było szybko) -->
+												<img src="images/alice_male.jpg" alt="Moon Sasha" />
+												
+												<div class="album-title">Krwawa sesja <br><span>(5 zdjęć)</span></div>
+											</a>
+
+											<!-- Pozostałe zdjęcia w albumie (te ukryte) mogą zostać duże, 
+												 bo ładują się dopiero po otwarciu galerii -->
+											<a href="images/krwawa_duze2.jpg" data-lightbox="sesja-2" data-title="Profil" style="display:none"></a>
+											<a href="images/krwawa_duze3.jpg" data-lightbox="sesja-2" data-title="Detal" style="display:none"></a>
+											<a href="images/krwawa_duze4.jpg" data-lightbox="sesja-2" data-title="Detal" style="display:none"></a>
+
+										</div>
+
+										<!-- === ALBUM 3 (Kolejna sesja) === -->
+										<div class="album-card">
+											
+											<!-- 1. W "href" podajemy DUŻE zdjęcie (to, co się otworzy po kliknięciu) -->
+											<a href="images/krwawa_duze.jpg" data-lightbox="sesja-1" data-title="Moon Sasha - Portret">
+												
+												<!-- 2. W "src" podajemy MAŁE zdjęcie (to, co widać na stronie, żeby było szybko) -->
+												<img src="images/frieren_male.jpg" alt="Moon Sasha" />
+												
+												<div class="album-title">Krwawa sesja <br><span>(5 zdjęć)</span></div>
+											</a>
+
+											<!-- Pozostałe zdjęcia w albumie (te ukryte) mogą zostać duże, 
+												 bo ładują się dopiero po otwarciu galerii -->
+											<a href="images/krwawa_duze2.jpg" data-lightbox="sesja-3" data-title="Profil" style="display:none"></a>
+											<a href="images/krwawa_duze3.jpg" data-lightbox="sesja-3" data-title="Detal" style="display:none"></a>
+											<a href="images/krwawa_duze4.jpg" data-lightbox="sesja-3" data-title="Detal" style="display:none"></a>
+
+										</div>
+										
+										
+										<div class="album-card">
+											
+											<!-- 1. W "href" podajemy DUŻE zdjęcie (to, co się otworzy po kliknięciu) -->
+											<a href="images/krwawa_duze.jpg" data-lightbox="sesja-1" data-title="Moon Sasha - Portret">
+												
+												<!-- 2. W "src" podajemy MAŁE zdjęcie (to, co widać na stronie, żeby było szybko) -->
+												<img src="images/zakonnica_male.jpg" alt="Moon Sasha" />
+												
+												<div class="album-title">Krwawa sesja <br><span>(5 zdjęć)</span></div>
+											</a>
+
+											<!-- Pozostałe zdjęcia w albumie (te ukryte) mogą zostać duże, 
+												 bo ładują się dopiero po otwarciu galerii -->
+											<a href="images/krwawa_duze2.jpg" data-lightbox="sesja-4" data-title="Profil" style="display:none"></a>
+											<a href="images/krwawa_duze3.jpg" data-lightbox="sesja-4" data-title="Detal" style="display:none"></a>
+											<a href="images/krwawa_duze4.jpg" data-lightbox="sesja-4" data-title="Detal" style="display:none"></a>
+
+										</div>
+
+									</div>
+									
+									<br><br>
+									<ul class="actions">
+										<li><a href="index.html#footer" class="button">Umów się na sesję</a></li>
+									</ul>
+								</div>
+							</div>
+
+					</section>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+			<script>
+				lightbox.option({
+				  'resizeDuration': 200,
+				  'wrapAround': true,
+				  'albumLabel': "Zdjęcie %1 z %2"
+				})
+			</script>
+
+			<script>
+    // --- FUNKCJA FILTROWANIA (Kategorie) ---
+    function filterGallery(category) {
+        const cards = document.querySelectorAll('.album-card');
+        const buttons = document.querySelectorAll('.filter-buttons .filter-btn');
+
+        // Obsługa aktywnego przycisku (zmiana koloru)
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        cards.forEach(card => {
+            // Jeśli wybrano 'all' LUB kategoria się zgadza -> pokaż
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block'; // lub 'initial' w zależności od css
+            } else {
+                card.style.display = 'none'; // ukryj
+            }
+        });
+    }
+
+    // --- FUNKCJA SORTOWANIA (Daty) ---
+    function sortGallery(order) {
+        const grid = document.querySelector('.albums-grid');
+        const cards = Array.from(document.querySelectorAll('.album-card'));
+        const buttons = document.querySelectorAll('.sort-buttons .filter-btn');
+
+        // Obsługa aktywnego przycisku
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Sortowanie tablicy kart
+        cards.sort((a, b) => {
+            const dateA = new Date(a.getAttribute('data-date'));
+            const dateB = new Date(b.getAttribute('data-date'));
+
+            if (order === 'newest') {
+                return dateB - dateA; // Od najnowszej
+            } else {
+                return dateA - dateB; // Od najstarszej
+            }
+        });
+
+        // Wyczyszczenie siatki i wklejenie posortowanych kart
+        grid.innerHTML = '';
+        cards.forEach(card => grid.appendChild(card));
+        
+        // Ważne: Po sortowaniu trzeba upewnić się, że filtry nadal działają
+        // (W tej prostej wersji po sortowaniu widzimy wszystkie, 
+        // chyba że chcemy skomplikować kod. To wystarczy na start).
+        const activeCategoryBtn = document.querySelector('.filter-buttons .filter-btn.active');
+        if(activeCategoryBtn && activeCategoryBtn.innerText !== 'WSZYSTKIE') {
+             // Opcjonalnie: można tu wywołać ponowne filtrowanie, 
+             // ale prościej jest zresetować filtry po sortowaniu lub zostawić jak jest.
+        }
+    }
+	// --- OBSŁUGA ROZWIJANIA PANELU ---
+    document.getElementById('filter-toggle-btn').addEventListener('click', function() {
+        const panel = document.getElementById('filters-panel');
+        const btn = this; // 'this' to kliknięty przycisk
+        
+        // Przełącz klasę 'visible' (pokaż/ukryj)
+        if (panel.classList.contains('visible')) {
+            panel.classList.remove('visible');
+            btn.innerHTML = 'Filtry i Sortowanie'; // Zmień tekst z powrotem
+            btn.classList.remove('primary'); // Usuń kolor wyróżnienia
+        } else {
+            panel.classList.add('visible');
+            btn.innerHTML = 'Ukryj Filtry'; // Zmień tekst na "Ukryj"
+            btn.classList.add('primary'); // Dodaj kolor wyróżnienia
+        }
+    });
+	
+</script>
+
+	</body>
+</html>
