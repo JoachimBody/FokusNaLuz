@@ -127,7 +127,7 @@
 											<a href="images/krwawa_duze2.webp" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
 											<a href="images/krwawa_duze3.webp" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
 											<a href="images/krwawa_duze4.webp" data-lightbox="sesja-1" data-title="Krwawa Sesja" style="display:none"></a>
-webp
+
 										</div>
 
 										<!-- === ALBUM 2: Neon Vibes === -->
@@ -197,10 +197,93 @@ webp
 									</ul>
 								</div>
 							</div>
+							
+				
 
 					</section>
+					
+			<section id="footer">
+    <!-- KLUCZOWE: Style wpisane w linię, które naprawiają szerokość i centrowanie -->
+    <div class="inner" style="width: 60em; max-width: 90%; margin: 0 auto !important; display: block;">
+        
+        <h2 class="major">Kontakt</h2>
+        <p>Skontaktuj się ze mną, aby omówić szczegóły Twojej sesji.</p>
+        
+        <div class="row">
+            
+            <!-- LEWA STRONA (Formularz) -->
+            <div class="col-6 col-12-medium">
+                <!-- Pamiętaj, że tutaj jest Twój link do Formspree -->
+                <form method="post" action="https://formspree.io/f/xrbnoezk">
+                    <div class="fields">
+                        
+                        <!-- IMIĘ -->
+                        <div class="field" style="width: 100%; margin-bottom: 1.5em;">
+                            <label for="name">Imię</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        
+                        <!-- EMAIL -->
+                        <div class="field" style="width: 100%; margin-bottom: 1.5em;">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        
+                        <!-- WIADOMOŚĆ -->
+                        <div class="field" style="width: 100%; margin-bottom: 1.5em;">
+                            <label for="message">Wiadomość</label>
+                            <textarea name="message" id="message" rows="4" required></textarea>
+                        </div>
 
-				
+                        <!-- ZGODA RODO (Opcjonalnie - warto dodać) -->
+                        <div class="field" style="margin-bottom: 1em;">
+                            <input type="checkbox" id="rodo" name="rodo" required>
+                            <label for="rodo" style="font-size: 0.8em;">Zapoznałem/am się z <a href="polityka.html" target="_blank">Polityką Prywatności</a></label>
+                        </div>
+
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Wyślij" /></li>
+                    </ul>
+                </form>
+            </div>
+            
+            <!-- PRAWA STRONA (Dane kontaktowe) -->
+            <div class="col-6 col-12-medium">
+                <ul class="contact">
+                    <!-- Adres z poprawioną estetyką -->
+                    <li class="icon solid fa-map-marker-alt" style="align-items: center;">
+                        <strong style="color: #ffffff; font-size: 1.2em; letter-spacing: 1px; line-height: 1.2;">
+                            FokusNaLuz
+                        </strong>
+                        <br />
+                        <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em; font-weight: 300;">
+                            Poznań i okolice
+                        </span>
+                    </li>
+                    
+                    <!-- Telefon z odstępem -->
+                    <li class="icon solid fa-phone" style="margin-top: 1.2em;">
+                        500 293 121
+                    </li>
+                    
+                    <li class="icon solid fa-envelope">mikolaj.zielonka234@gmail.com</li>
+                    <li class="icon brands fa-facebook-f"><a href="#">facebook.com/fokusnaluz</a></li>
+                    <li class="icon brands fa-instagram"><a href="#">instagram.com/fnl_fokusnaluz</a></li>
+                    <li class="icon brands fa-pinterest"><a href="#">pinterest.com/fokusnaluz</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <ul class="copyright">
+            <li>&copy; FokusNaLuz. Wszelkie prawa zastrzeżone.</li>
+            <li><a href="polityka.html">Polityka Prywatności</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</section>
+							
 
 			</div>
 
@@ -294,6 +377,8 @@ webp
     });
 	
 </script>
+
+
 
 	</body>
 </html>
