@@ -325,6 +325,33 @@
 <!-- </section> -->
 
 		<!-- Scripts -->
+		
+			<!-- FIX: Płynne przewijanie (Passive Event Listeners) -->
+			<script>
+				(function() {
+					var supportsPassive = false;
+					try {
+						var opts = Object.defineProperty({}, 'passive', {
+							get: function() { supportsPassive = true; }
+						});
+						window.addEventListener("testPassive", null, opts);
+						window.removeEventListener("testPassive", null, opts);
+					} catch (e) {}
+
+					if (supportsPassive) {
+						var originalAddEventListener = EventTarget.prototype.addEventListener;
+						EventTarget.prototype.addEventListener = function(type, listener, options) {
+							if (type === 'scroll' || type === 'touchstart' || type === 'touchmove') {
+								if (typeof options === 'object') { options.passive = true; }
+								else if (typeof options === 'boolean') { options = { passive: true, capture: options }; }
+								else { options = { passive: true }; }
+							}
+							originalAddEventListener.call(this, type, listener, options);
+						}
+					}
+				})();
+			</script>	
+		
 			<!-- <script src="assets/js/jquery.min.js"></script> -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
