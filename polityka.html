@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pl">
 	<head>
 		<title>Polityka Prywatności - FokusNaLuz</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css?v=2" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <meta name="robots" content="noindex" /> <!-- Nie chcemy, żeby Google indeksowało samą politykę jako wynik wyszukiwania -->
@@ -11,6 +11,7 @@
 		<!-- 1. Optymalizacja połączenia z Google (Preconnect) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://ajax.googleapis.com">
 
 		<!-- 2. Google Fonts (Ładowanie asynchroniczne) -->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -22,7 +23,9 @@
 		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'">
 		<noscript>
 			<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-		</noscript>							
+		</noscript>		
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="icon" href="images/favicon.png" type="image/png">
 		
 	</head>
 	<body class="is-preload">
@@ -127,13 +130,65 @@
 			</div>
 
 		<!-- Scripts -->
+		<!-- FIX: Płynne przewijanie (Passive Event Listeners) -->
+			<script>
+				(function() {
+					var supportsPassive = false;
+					try {
+						var opts = Object.defineProperty({}, 'passive', {
+							get: function() { supportsPassive = true; }
+						});
+						window.addEventListener("testPassive", null, opts);
+						window.removeEventListener("testPassive", null, opts);
+					} catch (e) {}
+
+					if (supportsPassive) {
+						var originalAddEventListener = EventTarget.prototype.addEventListener;
+						EventTarget.prototype.addEventListener = function(type, listener, options) {
+							if (type === 'scroll' || type === 'touchstart' || type === 'touchmove') {
+								if (typeof options === 'object') { options.passive = true; }
+								else if (typeof options === 'boolean') { options = { passive: true, capture: options }; }
+								else { options = { passive: true }; }
+							}
+							originalAddEventListener.call(this, type, listener, options);
+						}
+					}
+				})();
+			</script>	defer
 			<!-- <script src="assets/js/jquery.min.js"></script> -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+			<script src="assets/js/jquery.scrollex.min.js" defer></script>
+			<script src="assets/js/browser.min.js" defer></script>
+			<script src="assets/js/breakpoints.min.js" defer></script>
+			<script src="assets/js/util.js" defer></script>
+			<script src="assets/js/main.js" defer></script>
+			
+			<!-- Lazy Load Google Tag Manager (Wydajność) -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					var gtmLoaded = false;
+
+					function loadGTM() {
+						if (gtmLoaded) return;
+						gtmLoaded = true;
+
+						// Tutaj jest Twój oryginalny kod GTM (ID: GTM-PM7FNF4C)
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-PM7FNF4C');
+					}
+
+					// GTM załaduje się dopiero po ruchu myszką, dotknięciu ekranu lub scrollowaniu
+					window.addEventListener('mousemove', loadGTM, {passive: true});
+					window.addEventListener('touchstart', loadGTM, {passive: true});
+					window.addEventListener('scroll', loadGTM, {passive: true});
+
+					// Lub automatycznie po 4 sekundach (jeśli użytkownik nic nie zrobi)
+					setTimeout(loadGTM, 4000);
+				});
+			</script>
 
 	</body>
 </html>

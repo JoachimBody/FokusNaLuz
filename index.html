@@ -55,6 +55,8 @@
 					<noscript>
 						<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 					</noscript>
+					<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 					
 					
 				</head>
@@ -197,6 +199,80 @@
 								</section>
 
 					</section>
+					
+					
+					
+					<!-- Kontener główny Swipera -->
+					<section id="five" class="wrapper style2">
+					<div class="inner">
+						<h2 class="major">Co mówią klienci?</h2>
+					<div class="swiper myTestimonials">
+						<div class="swiper-wrapper">
+							
+							<!-- OPINIA 1 -->
+							<div class="swiper-slide">
+								<div class="box testimonial">
+									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
+									<div class="stars">
+										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
+									</div>
+									<p>„Strasznie stresowałam się przed sesją, ale Mikołaj to totalnie »spoko gość«. Wprowadził taki luz, że po 5 minutach zapomniałam o aparacie.”</p>
+									<h4>— Anna</h4>
+								</div>
+							</div>
+
+							<!-- OPINIA 2 -->
+							<div class="swiper-slide">
+								<div class="box testimonial">
+									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
+									<div class="stars">
+										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
+									</div>
+									<p>„Szukałam kogoś do sesji buduarowej. Pełen profesjonalizm i dyskrecja. Efekt końcowy przerósł moje oczekiwania. Polecam z całego serca.”</p>
+									<h4>— Karolina</h4>
+								</div>
+							</div>
+
+							<!-- OPINIA 3 -->
+							<div class="swiper-slide">
+								<div class="box testimonial">
+									<div class="source oferteo"><span class="icon solid fa-check-circle"></span> Opinia z Oferteo</div>
+									<div class="stars">
+										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
+									</div>
+									<p>„Świetne oko i kreatywne pomysły. Nie chciałem sztywnych zdjęć do CV, tylko coś z charakterem. Mikołaj idealnie wyczuł klimat.”</p>
+									<h4>— Piotr</h4>
+								</div>
+							</div>
+
+							<!-- OPINIA 4 (Dodatkowa, żeby było co przewijać) -->
+							<div class="swiper-slide">
+								<div class="box testimonial">
+									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
+									<div class="stars">
+										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
+									</div>
+									<p>„Współpraca na najwyższym poziomie. Szybki kontakt, konkretne ustalenia i luźna atmosfera podczas zdjęć. Efekty powalają!”</p>
+									<h4>— Marta</h4>
+								</div>
+							</div>
+
+						</div>
+						
+						<!-- Strzałki nawigacji -->
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+					
+					</div>
+				</section>
+									
+					
+					
+					
+					
+					
 
 				<!-- Footer -->
 				
@@ -243,16 +319,16 @@
             <div class="col-6 col-12-medium">
                 <ul class="contact">
                     <li class="icon solid fa-map-marker-alt" style="align-items: center;">
-    <!-- Nazwa marki: Biała, grubsza, z lekkim odstępem liter -->
-    <strong style="color: #ffffff; font-size: 1.2em; letter-spacing: 1px; line-height: 1.2;">
-        FokusNaLuz
-    </strong>
-    <br />
-    <!-- Lokalizacja: Mniejsza, szara, cieńsza czcionka -->
-    <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em; font-weight: 300;">
-        Poznań i okolice
-    </span>
-</li>
+						<!-- Nazwa marki: Biała, grubsza, z lekkim odstępem liter -->
+						<strong style="color: #ffffff; font-size: 1.2em; letter-spacing: 1px; line-height: 1.2;">
+							FokusNaLuz
+						</strong>
+						<br />
+						<!-- Lokalizacja: Mniejsza, szara, cieńsza czcionka -->
+						<span style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em; font-weight: 300;">
+							Poznań i okolice
+						</span>
+					</li>
                     <li class="icon solid fa-phone" style="margin-top: 1.2em;">
 						500 293 121
 					</li>
@@ -334,6 +410,87 @@
 
 					// Lub automatycznie po 4 sekundach (jeśli użytkownik nic nie zrobi)
 					setTimeout(loadGTM, 4000);
+				});
+			</script>
+			
+			<!-- FLOATING COOKIE CARD -->
+			<div id="cookie-card">
+				<h4>🍪 Ciasteczka</h4>
+				<p>
+					Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. 
+					Korzystając ze strony, zgadzasz się na ich użycie.
+				</p>
+				<div class="cookie-actions">
+					<a href="polityka.html">Polityka Prywatności</a>
+					<button id="accept-cookies">Akceptuję</button>
+				</div>
+			</div>
+
+			<script>
+				// 1. Sprawdź, czy użytkownik już zaakceptował
+				if (!localStorage.getItem('cookiesAccepted')) {
+					// Jeśli nie, pokaż okienko z małym opóźnieniem (animacja wjazdu)
+					setTimeout(function() {
+						document.getElementById('cookie-card').style.display = 'block';
+					}, 1000);
+				}
+
+				// 2. Obsługa kliknięcia "Akceptuję"
+				document.getElementById('accept-cookies').addEventListener('click', function() {
+					// Zapamiętaj decyzję w przeglądarce
+					localStorage.setItem('cookiesAccepted', 'true');
+					
+					// Animacja znikania (opacity + przesunięcie w dół)
+					var card = document.getElementById('cookie-card');
+					card.style.opacity = '0';
+					card.style.transform = 'translateY(20px)';
+					card.style.transition = 'all 0.5s ease';
+					
+					// Usuń element po zakończeniu animacji
+					setTimeout(function() {
+						card.style.display = 'none';
+					}, 500);
+				});
+			</script>
+			
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+			
+			<script>
+				var swiper = new Swiper(".myTestimonials", {
+					// TELEFON
+					slidesPerView: 1,
+					spaceBetween: 0,
+					
+					loop: true,
+					grabCursor: true,
+					speed: 800,
+					
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					
+					breakpoints: {
+						// TABLET (Poniżej 1200px pokazujemy 2, żeby było luźno)
+						768: {
+							slidesPerView: 2, 
+							spaceBetween: 30,
+						},
+						// KOMPUTER (Powyżej 1200px pokazujemy 3)
+						1200: {
+							slidesPerView: 3,
+							spaceBetween: 40,
+						}
+					},
 				});
 			</script>
 

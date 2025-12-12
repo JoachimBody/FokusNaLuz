@@ -29,6 +29,8 @@
 		<noscript>
 			<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 		</noscript>
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="icon" href="images/favicon.png" type="image/png">
 				
 	</head>
 	<body class="is-preload">
@@ -49,9 +51,9 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="portfolio.html">Generic</a></li>
-								<li><a href="index.html#footer">Elements</a></li>
+								<li><a href="index.html">Strona główna</a></li>
+								<li><a href="portfolio.html">Portfolio</a></li>
+								<li><a href="index.html#footer">Kontakt</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -451,7 +453,45 @@
 			});
 		</script>
 
+				<!-- FLOATING COOKIE CARD -->
+				<div id="cookie-card">
+					<h4>🍪 Ciasteczka</h4>
+					<p>
+						Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. 
+						Korzystając ze strony, zgadzasz się na ich użycie.
+					</p>
+					<div class="cookie-actions">
+						<a href="polityka.html">Polityka Prywatności</a>
+						<button id="accept-cookies">Akceptuję</button>
+					</div>
+				</div>
 
+				<script>
+					// 1. Sprawdź, czy użytkownik już zaakceptował
+					if (!localStorage.getItem('cookiesAccepted')) {
+						// Jeśli nie, pokaż okienko z małym opóźnieniem (animacja wjazdu)
+						setTimeout(function() {
+							document.getElementById('cookie-card').style.display = 'block';
+						}, 1000);
+					}
+
+					// 2. Obsługa kliknięcia "Akceptuję"
+					document.getElementById('accept-cookies').addEventListener('click', function() {
+						// Zapamiętaj decyzję w przeglądarce
+						localStorage.setItem('cookiesAccepted', 'true');
+						
+						// Animacja znikania (opacity + przesunięcie w dół)
+						var card = document.getElementById('cookie-card');
+						card.style.opacity = '0';
+						card.style.transform = 'translateY(20px)';
+						card.style.transition = 'all 0.5s ease';
+						
+						// Usuń element po zakończeniu animacji
+						setTimeout(function() {
+							card.style.display = 'none';
+						}, 500);
+					});
+				</script>
 
 	</body>
 </html>
