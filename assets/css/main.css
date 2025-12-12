@@ -4279,3 +4279,25 @@ input, select, textarea {
 			width: 100% !important; /* Pełna szerokość przycisku na telefonie */
 		}
 	}
+	
+	/* ================================================= */
+	/* FIX WYDAJNOŚCI (Wersja Bezpieczna - Bez dziur)    */
+	/* ================================================= */
+
+	/* 1. USUNIĘTO: content-visibility (Powodowało błędy graficzne/dziury) */
+
+	/* 2. Optymalizacja animacji (To jest bezpieczne) */
+	.spotlight .image, 
+	.spotlight .content {
+		/* Pomaga przeglądarce przygotować się na ruch, ale nie zmienia układu */
+		will-change: transform, opacity; 
+	}
+
+	/* 3. Wyłączenie ciężkich efektów na słabszych telefonach */
+	@media screen and (max-width: 736px) {
+		*, *:before, *:after {
+			/* Wyłącza efekt paralaksy i płynnego wjazdu na telefonie, co przyspiesza stronę */
+			transition: none !important; 
+			scroll-behavior: auto !important;
+		}
+	}
