@@ -4301,3 +4301,271 @@ input, select, textarea {
 			scroll-behavior: auto !important;
 		}
 	}
+	
+	
+	/* ================================================= */
+	/* CIASTECZKA (Cookie Floating Card)                 */
+	/* ================================================= */
+
+	#cookie-card {
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
+		width: 320px;
+		max-width: 90%; /* Żeby na telefonie nie wystawało */
+		background: #353849; /* Ciemne tło pasujące do motywu */
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 8px;
+		padding: 20px;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Cień "lewitacji" */
+		z-index: 99999;
+		font-family: "Source Sans Pro", sans-serif;
+		display: none; /* Domyślnie ukryte, JS to pokaże */
+		animation: slideUp 0.5s ease-out;
+	}
+
+	@keyframes slideUp {
+		from { transform: translateY(50px); opacity: 0; }
+		to { transform: translateY(0); opacity: 1; }
+	}
+
+	#cookie-card h4 {
+		margin: 0 0 10px 0;
+		font-size: 1.1em;
+		color: #ffffff;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+
+	#cookie-card p {
+		font-size: 0.85em;
+		color: rgba(255, 255, 255, 0.7);
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+
+	#cookie-card .cookie-actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#cookie-card a {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.8em;
+		text-decoration: underline;
+		border: none;
+		transition: color 0.2s;
+	}
+
+	#cookie-card a:hover {
+		color: #ffffff;
+	}
+
+	/* Styl przycisku "Akceptuję" */
+	#cookie-card button {
+		background: #ffffff !important;       /* Białe tło */
+		color: #2e3141 !important;            /* CIEMNY TEKST (To naprawia problem!) */
+		border: none !important;
+		padding: 8px 20px !important;
+		border-radius: 4px !important;
+		font-size: 0.8em !important;
+		font-weight: 700 !important;
+		text-transform: uppercase !important;
+		cursor: pointer !important;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+		
+		/* Reset stylów szablonu */
+		height: auto !important;
+		line-height: normal !important;
+	}
+
+	/* Efekt po najechaniu myszką */
+	#cookie-card button:hover {
+		background: #dcdcdc !important;       /* Lekko szary po najechaniu */
+		color: #2e3141 !important;            /* Tekst nadal ciemny */
+		transform: translateY(-2px);
+	}
+	
+	
+	
+	/* ================================================= */
+	/* SEKCJA OPINII (TESTIMONIALS) - Styling            */
+	/* ================================================= */
+
+	.box.testimonial {
+		text-align: center;
+		padding: 2em 1.5em;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		position: relative;
+		transition: transform 0.3s ease;
+	}
+
+	.box.testimonial:hover {
+		transform: translateY(-5px);
+		background: rgba(255, 255, 255, 0.06);
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+
+	/* Oznaczenie źródła (Google/Oferteo) */
+	.testimonial .source {
+		font-size: 0.7em;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 1em;
+		font-weight: 700;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		opacity: 0.7;
+	}
+
+	/* Kolor dla Google */
+	.testimonial .source.google .icon {
+		color: #4285F4; /* Niebieski kolor Google */
+	}
+
+	/* Kolor dla Oferteo (lub ogólny weryfikacyjny) */
+	.testimonial .source.oferteo .icon {
+		color: #2ecc71; /* Zielony kolor sukcesu/weryfikacji */
+	}
+
+	/* Gwiazdki */
+	.testimonial .stars {
+		color: #FFD700; /* Złoto */
+		margin-bottom: 1em;
+		font-size: 0.85em;
+	}
+
+	/* Cytat */
+	.testimonial p {
+		font-style: italic;
+		font-size: 0.95em;
+		line-height: 1.6;
+		margin-bottom: auto; /* Wypycha podpis na dół */
+		padding-bottom: 1.5em;
+		color: rgba(255,255,255,0.9);
+	}
+
+	/* Podpis autora */
+	.testimonial h4 {
+		margin: 0;
+		font-size: 0.9em;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ffffff;
+		border-top: 1px solid rgba(255,255,255,0.1);
+		padding-top: 1em;
+	}
+
+	/* Responsywność */
+	@media screen and (max-width: 980px) {
+		.col-4 { margin-bottom: 2em; }
+		.box.testimonial { height: auto; }
+	}
+	
+/* ================================================= */
+/* FIX OSTATECZNY: SLIDER - CZYSZCZENIE              */
+/* ================================================= */
+
+/* 1. KONTENER GŁÓWNY */
+.swiper.myTestimonials {
+    width: 100% !important;
+    margin: 0 auto !important;
+    
+    /* TO JEST KLUCZ DO KROPEK I STRZAŁEK: */
+    /* Góra: 10px */
+    /* Prawa: 50px (miejsce na strzałkę, żeby nie wchodziła na tekst) */
+    /* Dół: 60px (MIEJSCE TYLKO DLA KROPEK - odsuwa je od tekstu) */
+    /* Lewa: 50px (miejsce na strzałkę) */
+    padding: 10px 50px 60px 50px !important; 
+    
+    /* TO UCINA WYSTAJĄCE SLAJDY (Koniec z wystawaniem z boku) */
+    overflow: hidden !important; 
+    
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. POJEDYNCZY SLAJD */
+.swiper-slide {
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    /* Odstęp między samymi kafelkami */
+    padding: 0 15px !important; 
+    box-sizing: border-box !important;
+}
+
+/* 3. PUDEŁKO OPINII */
+.swiper-slide .box.testimonial {
+    width: 100% !important;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 4. MNIEJSZE STRZAŁKI */
+.swiper-button-prev,
+.swiper-button-next {
+    /* Zmniejszyłem z 50px na 35px */
+    width: 35px !important; 
+    height: 60px !important; /* Wyższe, żeby łatwiej trafić */
+    top: 50% !important;
+    transform: translateY(-60%) !important; /* Lekka korekta pionowa */
+    margin: 0 !important;
+    
+    /* Ciemne tło */
+    background-color: rgba(0,0,0,0.3) !important; 
+    color: #ffffff !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 4px !important;
+    z-index: 20 !important;
+}
+
+/* Przyklejone do krawędzi kontenera (w strefie paddingu) */
+.swiper-button-prev { left: 5px !important; }
+.swiper-button-next { right: 5px !important; }
+
+/* Ikona strzałki w środku też mniejsza */
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 15px !important; 
+}
+
+/* 5. KROPKI - PRZESUNIĘTE NA DÓŁ */
+.swiper-pagination {
+    bottom: 5px !important; /* Siedzą na samym dnie paddingu */
+    left: 0 !important;
+    width: 100% !important;
+}
+
+/* 6. RESPONS - TELEFON */
+@media screen and (max-width: 736px) {
+    .swiper.myTestimonials {
+        /* Mniej miejsca po bokach na telefonie */
+        padding: 10px 30px 60px 30px !important; 
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 25px !important; /* Jeszcze mniejsze strzałki */
+        height: 40px !important;
+    }
+}
+
+
+#five {
+    margin-top: 4em !important;
+}
