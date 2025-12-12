@@ -8,11 +8,11 @@
 	<head>
 	
 		<!-- Google Tag Manager -->
-			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-PM7FNF4C');</script>
+			<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': -->
+			<!-- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], -->
+			<!-- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= -->
+			<!-- 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); -->
+			<!-- })(window,document,'script','dataLayer','GTM-PM7FNF4C');</script> -->
 			<!-- End Google Tag Manager -->
 					<title>FokusNaLuz Fotografia</title>
 					<meta charset="utf-8" />
@@ -274,56 +274,6 @@
 </section>
 
 
-				
-					<!-- <section id="footer"> -->
-    <!-- Ta klasa "inner" jest kluczowa -->
-    <!-- <div class="inner"> -->
-        <!-- <h2 class="major">Kontakt</h2> -->
-        
-        <!-- <div class="row"> -->
-            <!-- LEWA STRONA (Formularz) -->
-            <!-- <div class="col-6 col-12-medium"> -->
-                <!-- <form method="post" action="https://formspree.io/f/TWOJE_ID"> -->
-                    <!-- <div class="fields"> -->
-                        <!-- <div class="field half"> -->
-                            <!-- <label for="name">Imię</label> -->
-                            <!-- <input type="text" name="name" id="name" required /> -->
-                        <!-- </div> -->
-                        <!-- <div class="field half"> -->
-                            <!-- <label for="email">Email</label> -->
-                            <!-- <input type="email" name="email" id="email" required /> -->
-                        <!-- </div> -->
-                        <!-- <div class="field"> -->
-                            <!-- <label for="message">Wiadomość</label> -->
-                            <!-- <textarea name="message" id="message" rows="4" required></textarea> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <ul class="actions"> -->
-                        <!-- <li><input type="submit" value="Wyślij" class="primary" /></li> -->
-                    <!-- </ul> -->
-                <!-- </form> -->
-            <!-- </div> -->
-            
-            <!-- PRAWA STRONA (Kontakt) -->
-            <!-- <div class="col-6 col-12-medium"> -->
-                <!-- <ul class="contact"> -->
-                    <!-- <li class="icon solid fa-home"> -->
-                        <!-- FokusNaLuz<br /> -->
-                        <!-- Poznań i okolice -->
-                    <!-- </li> -->
-                    <!-- <li class="icon solid fa-phone">500 293 121</li> -->
-                    <!-- <li class="icon solid fa-envelope">mikolaj.zielonka234@gmail.com</li> -->
-                    <!-- <li class="icon brands fa-instagram"><a href="#">@fnl_fokusnaluz</a></li> -->
-                    <!-- <li class="icon brands fa-facebook-f"><a href="#">Facebook</a></li> -->
-                <!-- </ul> -->
-            <!-- </div> -->
-        <!-- </div> -->
-        
-        <!-- <ul class="copyright"> -->
-            <!-- <li>&copy; FokusNaLuz. All rights reserved.</li> -->
-        <!-- </ul> -->
-    <!-- </div> -->
-<!-- </section> -->
 
 		<!-- Scripts -->
 		
@@ -360,6 +310,32 @@
 			<script src="assets/js/breakpoints.min.js" defer></script>
 			<script src="assets/js/util.js" defer></script>
 			<script src="assets/js/main.js" defer></script>
+			<!-- Lazy Load Google Tag Manager (Wydajność) -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					var gtmLoaded = false;
+
+					function loadGTM() {
+						if (gtmLoaded) return;
+						gtmLoaded = true;
+
+						// Tutaj jest Twój oryginalny kod GTM (ID: GTM-PM7FNF4C)
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-PM7FNF4C');
+					}
+
+					// GTM załaduje się dopiero po ruchu myszką, dotknięciu ekranu lub scrollowaniu
+					window.addEventListener('mousemove', loadGTM, {passive: true});
+					window.addEventListener('touchstart', loadGTM, {passive: true});
+					window.addEventListener('scroll', loadGTM, {passive: true});
+
+					// Lub automatycznie po 4 sekundach (jeśli użytkownik nic nie zrobi)
+					setTimeout(loadGTM, 4000);
+				});
+			</script>
 
 	</body>
 </html>
