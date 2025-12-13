@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   
+   <!-- Strona Główna (Ważność 100%) -->
+   <url>
+      <loc>https://www.fokusnaluz.com/</loc>
+      <lastmod>2025-12-13</lastmod>
+      <priority>1.00</priority>
+   </url>
+   
+   <!-- Portfolio (Ważność 80%) -->
+   <url>
+      <loc>https://www.fokusnaluz.com/portfolio.html</loc>
+      <lastmod>2025-12-13</lastmod>
+      <priority>0.80</priority>
+   </url>
 
-
-<url>
-  <loc>https://www.fokusnaluz.com/</loc>
-  <lastmod>2025-12-12T10:10:53+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.fokusnaluz.com/index.html</loc>
-  <lastmod>2025-12-12T10:10:53+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fokusnaluz.com/portfolio.html</loc>
-  <lastmod>2025-12-12T10:10:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
+   <!-- Polityka Prywatności (Ważność 50% - warto żeby była w indeksie dla wiarygodności) -->
+   <url>
+      <loc>https://www.fokusnaluz.com/polityka.html</loc>
+      <lastmod>2025-12-13</lastmod>
+      <priority>0.50</priority>
+   </url>
 
 </urlset>
