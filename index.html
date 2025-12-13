@@ -304,8 +304,8 @@
 						
 						<!-- Strzałki nawigacji -->
 						<div class="swiper-pagination"></div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev" id="custom-prev"></div>
+						<div class="swiper-button-next" id="custom-next"></div>
 					</div>
 					
 					</div>
@@ -542,19 +542,14 @@
 			
 			<script>
 				var swiper = new Swiper(".myTestimonials", {
-					// --- USTAWIENIA BAZOWE ---
+					// --- GWARANCJA DZIAŁANIA ---
+					loop: false,   // Wyłączamy pętlę (to ona psuła przyciski)
+					rewind: true,  // Włączamy przewijanie (działa tak samo, ale stabilnie)
+					
 					slidesPerView: 1,
-					spaceBetween: 30,
-					loop: true,
-					
-					// --- WYDAJNOŚĆ I OBSŁUGA BŁĘDÓW ---
-					observer: true,           // Śledzi zmiany w DOM (ważne przy "Rozwiń")
-					observeParents: true,     // Śledzi zmiany rodzica (ważne przy skalowaniu)
-					speed: 600,               // Nieco szybciej niż 1000ms, płynniej na telefonie
-					
-					// --- DOTYK ---
+					spaceBetween: 30, // Odstęp między slajdami
 					grabCursor: true,
-					touchStartPreventDefault: false, // Ważne dla płynnego scrollowania strony góra-dół
+					speed: 600,
 					
 					autoplay: {
 						delay: 6000,
@@ -565,7 +560,6 @@
 						el: ".swiper-pagination",
 						clickable: true,
 					},
-					
 					navigation: {
 						nextEl: ".swiper-button-next",
 						prevEl: ".swiper-button-prev",
@@ -574,13 +568,17 @@
 					breakpoints: {
 						768: {
 							slidesPerView: 2,
-							spaceBetween: 30,
+							spaceBetween: 40,
 						},
 						1200: {
 							slidesPerView: 3,
-							spaceBetween: 40,
+							spaceBetween: 50,
 						}
 					},
+					
+					// Fixy odświeżania
+					observer: true,
+					observeParents: true,
 				});
 			</script>
 
