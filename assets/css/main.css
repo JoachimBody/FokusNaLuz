@@ -4692,3 +4692,46 @@ input, select, textarea {
 		width: 100% !important;
 		margin-bottom: 0 !important;
 	}
+	
+	/* ================================================= */
+	/* FIX: WYRÓŻNIENIE "MASZ PYTANIE?" (CTA Box)        */
+	/* ================================================= */
+
+	.faq-cta-box {
+		background: rgba(76, 92, 150, 0.15) !important; /* Lekki odcień Twojego koloru firmowego */
+		border: 1px solid rgba(76, 92, 150, 0.5) !important; /* Delikatna ramka */
+		border-radius: 6px !important;
+		
+		padding: 3em 2em !important;
+		margin-top: 4em !important; /* Odstęp od listy pytań */
+		text-align: center !important;
+		
+		/* Efekt poświaty */
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+		transition: transform 0.3s ease, background 0.3s ease;
+	}
+
+	.faq-cta-box:hover {
+		transform: translateY(-5px); /* Unosi się po najechaniu */
+		background: rgba(76, 92, 150, 0.25) !important;
+	}
+
+	.faq-cta-box h3 {
+		font-size: 1.5em !important;
+		color: #ffffff !important;
+		margin-bottom: 0.5em !important;
+	}
+
+	.faq-cta-box p {
+		max-width: 600px;
+		margin: 0 auto 1.5em auto !important;
+		opacity: 0.8;
+	}
+
+	/* Na telefonie trochę mniej miejsca */
+	@media screen and (max-width: 736px) {
+		.faq-cta-box {
+			padding: 2em 1em !important;
+			margin-top: 3em !important;
+		}
+	}
