@@ -4694,44 +4694,84 @@ input, select, textarea {
 	}
 	
 	/* ================================================= */
-	/* FIX: WYRÓŻNIENIE "MASZ PYTANIE?" (CTA Box)        */
+	/* FIX: WYRÓŻNIENIE "MASZ PYTANIE?" (Wersja Compact) */
 	/* ================================================= */
 
 	.faq-cta-box {
-		background: rgba(76, 92, 150, 0.15) !important; /* Lekki odcień Twojego koloru firmowego */
-		border: 1px solid rgba(76, 92, 150, 0.5) !important; /* Delikatna ramka */
+		background: rgba(76, 92, 150, 0.15) !important;
+		border: 1px solid rgba(76, 92, 150, 0.5) !important;
 		border-radius: 6px !important;
 		
-		padding: 3em 2em !important;
-		margin-top: 4em !important; /* Odstęp od listy pytań */
-		text-align: center !important;
+		/* TU ZMIANA: Mniejsze odstępy w środku */
+		padding: 1.5em 2em !important; 
 		
-		/* Efekt poświaty */
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+		margin-top: 3em !important;
+		text-align: center !important;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
 		transition: transform 0.3s ease, background 0.3s ease;
+		width: 100% !important;       /* Na telefonie zajmij całość */
+    max-width: 700px !important;  /* Na komputerze nie bądź szerszy niż 700px */
+    margin: 3em auto 0 auto !important; /* 'auto' po bokach centruje box */
 	}
 
 	.faq-cta-box:hover {
-		transform: translateY(-5px); /* Unosi się po najechaniu */
+		transform: translateY(-3px);
 		background: rgba(76, 92, 150, 0.25) !important;
 	}
 
 	.faq-cta-box h3 {
-		font-size: 1.5em !important;
+		/* TU ZMIANA: Mniejszy nagłówek */
+		font-size: 1.2em !important; 
 		color: #ffffff !important;
-		margin-bottom: 0.5em !important;
+		margin-bottom: 0.3em !important;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
 
 	.faq-cta-box p {
 		max-width: 600px;
-		margin: 0 auto 1.5em auto !important;
+		/* TU ZMIANA: Mniejszy odstęp od przycisku */
+		margin: 0 auto 1em auto !important; 
 		opacity: 0.8;
+		font-size: 0.9em !important;
 	}
 
-	/* Na telefonie trochę mniej miejsca */
+	/* Na telefonie */
 	@media screen and (max-width: 736px) {
 		.faq-cta-box {
-			padding: 2em 1em !important;
-			margin-top: 3em !important;
+			padding: 1.5em 1em !important;
+			margin-top: 2em !important;
+		}
+	}
+	
+	/* ================================================= */
+	/* FIX: NAPRAWA TOUCH I PŁYNNOŚCI (Mobile)           */
+	/* ================================================= */
+
+	/* 1. Naprawa strzałek (żeby działały na dotyk) */
+	.swiper-button-prev,
+	.swiper-button-next {
+		z-index: 100 !important; /* Muszą być NAJWYŻEJ, nad slajdami */
+		pointer-events: auto !important; /* Wymuszenie reakcji na kliknięcie */
+		cursor: pointer !important;
+	}
+
+	/* 2. Naprawa płynności (usunięcie konfliktu z szablonem) */
+	.swiper-wrapper {
+		/* Szablon Solid State narzuca tranzycje, które kłócą się ze Swiperem. Wyłączamy je. */
+		transition-timing-function: ease-out !important; 
+		-webkit-transition-timing-function: ease-out !important;
+	}
+
+	.swiper-slide {
+		/* To sprawia, że przesuwanie palcem jest 1:1, bez opóźnień */
+		transition-property: transform, opacity !important;
+	}
+
+	/* 3. Poprawka dla samego kontenera na telefonie */
+	@media screen and (max-width: 736px) {
+		.swiper.myTestimonials {
+			/* Upewniamy się, że warstwa dotykowa nie blokuje strzałek */
+			touch-action: pan-y !important; 
 		}
 	}
