@@ -218,15 +218,25 @@
 					<div class="swiper myTestimonials">
 						<div class="swiper-wrapper">
 							
-							<!-- OPINIA 1 -->
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
 									<div class="stars">
 										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
 									</div>
-									<p>„Strasznie stresowałam się przed sesją, ale Mikołaj to totalnie »spoko gość«. Wprowadził taki luz, że po 5 minutach zapomniałam o aparacie.”</p>
-									<h4>— Anna</h4>
+									
+									<!-- WRAPPER DO TEKSTU (Kluczowe dla działania) -->
+									<div class="review-wrapper">
+										<p class="testimonial-text">
+											„Polecam fotografa, profesjonalne podejście, przyjazna atmosfera i bardzo szybko dostałam zdjęcia! ☺️✨”
+										</p>
+										<div class="fade-overlay"></div>
+									</div>
+									
+									<!-- Przycisk (Domyślnie ukryty style="display:none", JS go pokaże jak trzeba) -->
+									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
+									
+									<h4>Aleksandra</h4>
 								</div>
 							</div>
 
@@ -237,8 +247,16 @@
 									<div class="stars">
 										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
 									</div>
-									<p>„Szukałam kogoś do sesji buduarowej. Pełen profesjonalizm i dyskrecja. Efekt końcowy przerósł moje oczekiwania. Polecam z całego serca.”</p>
-									<h4>— Karolina</h4>
+									
+									<div class="review-wrapper">
+										<p class="testimonial-text">
+											„Polecam Serdecznie super fotki ,świetna atmosfera, pełen profesjonalizm 🫶🤩”
+										</p>
+										<div class="fade-overlay"></div>
+									</div>
+									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
+									
+									<h4>Jagoda</h4>
 								</div>
 							</div>
 
@@ -249,20 +267,36 @@
 									<div class="stars">
 										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
 									</div>
-									<p>„Świetne oko i kreatywne pomysły. Nie chciałem sztywnych zdjęć do CV, tylko coś z charakterem. Mikołaj idealnie wyczuł klimat.”</p>
-									<h4>— Piotr</h4>
+									
+									<div class="review-wrapper">
+										<p class="testimonial-text">
+											„Przecudowny fotograf . Miałam już okazję 2 razy robić z nim fotki. Jeśli widać jakieś rzeczy do poprawki to odrazu poprawia i mówi, żeby modelka na zdjęciach wyszła jak najlepiej 🫶 polecam.”
+										</p>
+										<div class="fade-overlay"></div>
+									</div>
+									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
+									
+									<h4>Alicja</h4>
 								</div>
 							</div>
 
-							<!-- OPINIA 4 (Dodatkowa, żeby było co przewijać) -->
+							<!-- OPINIA 4 -->
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
 									<div class="stars">
 										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
 									</div>
-									<p>„Współpraca na najwyższym poziomie. Szybki kontakt, konkretne ustalenia i luźna atmosfera podczas zdjęć. Efekty powalają!”</p>
-									<h4>— Marta</h4>
+									
+									<div class="review-wrapper">
+										<p class="testimonial-text">
+											„Byłam już kolejny raz u Mikołaja na sesji, naprawdę nie wiem czy jest też ktoś z takim poczuciem humoru oraz profesjonalnym podejściem. Z całego serca mogę powiedzieć że nie będzie to ostatnia współpraca. Bardzo dobry kontakt ze strony fotografa, wiele pomysłów, propozycji odnośnie pozowania”
+										</p>
+										<div class="fade-overlay"></div>
+									</div>
+									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
+									
+									<h4>Milena</h4>
 								</div>
 							</div>
 
@@ -544,5 +578,60 @@
 				});
 			</script>
 
+
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					checkReviewLengths();
+				});
+
+				// Funkcja sprawdzająca, czy tekst jest długi
+				function checkReviewLengths() {
+					const wrappers = document.querySelectorAll('.review-wrapper');
+					
+					wrappers.forEach(wrapper => {
+						const text = wrapper.querySelector('.testimonial-text');
+						const btn = wrapper.parentElement.querySelector('.read-more-btn');
+						const fade = wrapper.querySelector('.fade-overlay');
+
+						// Jeśli tekst jest wyższy niż ustawiony limit (140px)
+						if (text.scrollHeight > wrapper.clientHeight) {
+							btn.style.display = 'block'; // Pokaż przycisk
+							fade.style.display = 'block'; // Pokaż cień
+						} else {
+							btn.style.display = 'none';  // Ukryj przycisk
+							fade.style.display = 'none'; // Ukryj cień
+						}
+					});
+				}
+
+				// Funkcja obsługująca kliknięcie
+				function toggleTestimonial(btn) {
+					// Szukamy wrapper'a w tym samym pudełku
+					var box = btn.parentElement;
+					var wrapper = box.querySelector('.review-wrapper');
+					var fade = wrapper.querySelector('.fade-overlay');
+					
+					if (wrapper.classList.contains('expanded')) {
+						// ZWIJANIE
+						wrapper.classList.remove('expanded');
+						fade.style.opacity = '1'; // Pokaż cień z powrotem
+						btn.innerText = "Rozwiń";
+					} else {
+						// ROZWIJANIE
+						wrapper.classList.add('expanded');
+						fade.style.opacity = '0'; // Ukryj cień
+						btn.innerText = "Zwiń";
+					}
+
+					// Aktualizacja Slidera (żeby się nie rozjechał)
+					setTimeout(function() {
+						if (typeof swiper !== 'undefined') {
+							swiper.update();
+						}
+					}, 300);
+				}
+			</script>
+			
 	</body>
 </html>
