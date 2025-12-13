@@ -3396,6 +3396,7 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 			margin: 0 0 1.3em 0;
+			
 		}
 
 			#banner .logo .icon {
@@ -3408,6 +3409,7 @@ input, select, textarea {
 				line-height: 2.25em;
 				text-align: center;
 				width: 2.25em;
+				
 			}
 
 		#banner h2 {
@@ -3997,7 +3999,7 @@ input, select, textarea {
 			line-height: 120px !important;
 			
 			/* TWORZYMY BIAŁE KÓŁKO */
-			background: #ffffff !important; 
+			background: rgba(255, 255, 255, 0.2) !important;
 			border: none !important;       /* Bez ramki, samo białe tło wystarczy */
 			border-radius: 50% !important; /* Idealne koło */
 			
@@ -4056,7 +4058,7 @@ input, select, textarea {
 		/* Zachowujemy style wyglądu z poprzedniego kroku... */
 		width: 120px !important;
 		height: 120px !important;
-		background: #ffffff !important; 
+		background: rgba(255, 255, 255, 0.6) !important;
 		border-radius: 50% !important;
 		padding: 5px !important;
 		display: inline-flex !important;
@@ -4189,7 +4191,7 @@ input, select, textarea {
 	}
 
 	.filter-btn:hover, 
-.filter-btn.active {
+	.filter-btn.active {
     background: #ffffff !important;       /* Białe tło */
     color: #2e3141 !important;            /* CIEMNY TEKST (kluczowa zmiana) */
     border-color: #ffffff !important;     /* Biała ramka */
@@ -4473,99 +4475,220 @@ input, select, textarea {
 		.box.testimonial { height: auto; }
 	}
 	
-/* ================================================= */
-/* FIX OSTATECZNY: SLIDER - CZYSZCZENIE              */
-/* ================================================= */
+	/* ================================================= */
+	/* FIX OSTATECZNY: SLIDER - CZYSZCZENIE              */
+	/* ================================================= */
 
-/* 1. KONTENER GŁÓWNY */
-.swiper.myTestimonials {
-    width: 100% !important;
-    margin: 0 auto !important;
-    
-    /* TO JEST KLUCZ DO KROPEK I STRZAŁEK: */
-    /* Góra: 10px */
-    /* Prawa: 50px (miejsce na strzałkę, żeby nie wchodziła na tekst) */
-    /* Dół: 60px (MIEJSCE TYLKO DLA KROPEK - odsuwa je od tekstu) */
-    /* Lewa: 50px (miejsce na strzałkę) */
-    padding: 10px 50px 60px 50px !important; 
-    
-    /* TO UCINA WYSTAJĄCE SLAJDY (Koniec z wystawaniem z boku) */
-    overflow: hidden !important; 
-    
-    position: relative !important;
-    box-sizing: border-box !important;
-}
+	/* 1. KONTENER GŁÓWNY */
+	.swiper.myTestimonials {
+		width: 100% !important;
+		margin: 0 auto !important;
+		
+		/* TO JEST KLUCZ DO KROPEK I STRZAŁEK: */
+		/* Góra: 10px */
+		/* Prawa: 50px (miejsce na strzałkę, żeby nie wchodziła na tekst) */
+		/* Dół: 60px (MIEJSCE TYLKO DLA KROPEK - odsuwa je od tekstu) */
+		/* Lewa: 50px (miejsce na strzałkę) */
+		padding: 10px 50px 60px 50px !important; 
+		
+		/* TO UCINA WYSTAJĄCE SLAJDY (Koniec z wystawaniem z boku) */
+		overflow: hidden !important; 
+		
+		position: relative !important;
+		box-sizing: border-box !important;
+	}
 
-/* 2. POJEDYNCZY SLAJD */
-.swiper-slide {
-    height: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    opacity: 1 !important;
-    /* Odstęp między samymi kafelkami */
-    padding: 0 15px !important; 
-    box-sizing: border-box !important;
-}
+	/* 2. POJEDYNCZY SLAJD */
+	.swiper-slide {
+		height: auto !important;
+		display: flex !important;
+		justify-content: center !important;
+		opacity: 1 !important;
+		/* Odstęp między samymi kafelkami */
+		padding: 0 15px !important; 
+		box-sizing: border-box !important;
+	}
 
-/* 3. PUDEŁKO OPINII */
-.swiper-slide .box.testimonial {
-    width: 100% !important;
-    margin: 0 !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
+	/* 3. PUDEŁKO OPINII */
+	.swiper-slide .box.testimonial {
+		width: 100% !important;
+		margin: 0 !important;
+		background: rgba(255, 255, 255, 0.05) !important;
+		border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	}
 
-/* 4. MNIEJSZE STRZAŁKI */
-.swiper-button-prev,
-.swiper-button-next {
-    /* Zmniejszyłem z 50px na 35px */
-    width: 35px !important; 
-    height: 60px !important; /* Wyższe, żeby łatwiej trafić */
-    top: 50% !important;
-    transform: translateY(-60%) !important; /* Lekka korekta pionowa */
-    margin: 0 !important;
-    
-    /* Ciemne tło */
-    background-color: rgba(0,0,0,0.3) !important; 
-    color: #ffffff !important;
-    
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 4px !important;
-    z-index: 20 !important;
-}
+	/* 4. MNIEJSZE STRZAŁKI */
+	.swiper-button-prev,
+	.swiper-button-next {
+		/* Zmniejszyłem z 50px na 35px */
+		width: 35px !important; 
+		height: 60px !important; /* Wyższe, żeby łatwiej trafić */
+		top: 50% !important;
+		transform: translateY(-60%) !important; /* Lekka korekta pionowa */
+		margin: 0 !important;
+		
+		/* Ciemne tło */
+		background-color: rgba(0,0,0,0.3) !important; 
+		color: #ffffff !important;
+		
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		border-radius: 4px !important;
+		z-index: 20 !important;
+	}
 
-/* Przyklejone do krawędzi kontenera (w strefie paddingu) */
-.swiper-button-prev { left: 5px !important; }
-.swiper-button-next { right: 5px !important; }
+	/* Przyklejone do krawędzi kontenera (w strefie paddingu) */
+	.swiper-button-prev { left: 5px !important; }
+	.swiper-button-next { right: 5px !important; }
 
-/* Ikona strzałki w środku też mniejsza */
-.swiper-button-prev:after, .swiper-button-next:after {
-    font-size: 15px !important; 
-}
+	/* Ikona strzałki w środku też mniejsza */
+	.swiper-button-prev:after, .swiper-button-next:after {
+		font-size: 15px !important; 
+	}
 
-/* 5. KROPKI - PRZESUNIĘTE NA DÓŁ */
-.swiper-pagination {
-    bottom: 5px !important; /* Siedzą na samym dnie paddingu */
-    left: 0 !important;
-    width: 100% !important;
-}
+	/* 5. KROPKI - PRZESUNIĘTE NA DÓŁ */
+	.swiper-pagination {
+		bottom: 5px !important; /* Siedzą na samym dnie paddingu */
+		left: 0 !important;
+		width: 100% !important;
+	}
 
-/* 6. RESPONS - TELEFON */
-@media screen and (max-width: 736px) {
-    .swiper.myTestimonials {
-        /* Mniej miejsca po bokach na telefonie */
-        padding: 10px 30px 60px 30px !important; 
-    }
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 25px !important; /* Jeszcze mniejsze strzałki */
-        height: 40px !important;
-    }
-}
+	/* 6. RESPONS - TELEFON */
+	@media screen and (max-width: 736px) {
+		.swiper.myTestimonials {
+			/* Mniej miejsca po bokach na telefonie */
+			padding: 10px 30px 60px 30px !important; 
+		}
+		.swiper-button-prev,
+		.swiper-button-next {
+			width: 25px !important; /* Jeszcze mniejsze strzałki */
+			height: 40px !important;
+		}
+	}
 
 
-#five {
-    margin-top: 4em !important;
-}
+
+	/* ================================================= */
+	/* FIX TŁA: RESET GEOMETRII + BEZPIECZNY ODSTĘP      */
+	/* ================================================= */
+
+	/* 1. Przywracamy "sklejanie się" sekcji (Naprawa tła) */
+	#five {
+		margin-top: 0 !important;
+		padding-top: 0 !important; /* Usuwamy to, co zepsuło skośną linię */
+		margin-bottom: 0 !important;
+		position: relative !important;
+		z-index: 2 !important; /* Upewniamy się, że jest na wierzchu */
+	}
+
+	/* 2. Robimy odstęp WEWNĄTRZ (To jest bezpieczne dla tła) */
+	#five .inner {
+		/* Tu robimy "powietrze", żeby tekst nie dotykał góry */
+		padding-top: 4em !important; 
+		padding-bottom: 4em !important;
+	}
+
+	/* 3. Poprawka dla FAQ poniżej (żeby też dobrze przylegało) */
+	#faq {
+		margin-top: 0 !important;
+	}
+
+	/* 4. Wersja mobilna */
+	@media screen and (max-width: 736px) {
+		#five .inner {
+			padding-top: 4em !important;
+		}
+	}
+	#faq .inner {
+    /* Zwiększamy odstęp wewnętrzny od góry. */
+    /* Domyślnie jest ok. 3em. Dajemy 7em, żeby tekst zjechał w dół. */
+    padding-top: 7em !important; 
+	}
+
+	/* Wersja na telefon (trochę mniej, bo ekran mniejszy) */
+	@media screen and (max-width: 736px) {
+		#faq .inner {
+			padding-top: 5em !important;
+		}
+	}
+	
+	/* ================================================= */
+	/* FIX: INTELIGENTNE ROZWIJANIE OPINII               */
+	/* ================================================= */
+
+	/* Kontener trzymający tekst */
+	.review-wrapper {
+		position: relative;
+		/* TU USTALASZ WYSOKOŚĆ STARTOWĄ: */
+		max-height: 140px; /* Zwiększyłem z 80px -> mieści ok. 5-6 linijek */
+		overflow: hidden;
+		transition: max-height 0.5s ease;
+		margin-bottom: 1em;
+	}
+
+	/* Klasa dodawana po kliknięciu "Rozwiń" */
+	.review-wrapper.expanded {
+		max-height: 1000px; /* Wystarczająco dużo, by pokazać każdą opinię */
+	}
+
+	/* Sam tekst */
+	.testimonial-text {
+		margin-bottom: 0 !important;
+	}
+
+	/* Cień/Gradient na dole */
+	.fade-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		/* Gradient od przezroczystego do koloru tła boxa (ciemny szary) */
+		background: linear-gradient(to bottom, rgba(53, 56, 73, 0), rgba(53, 56, 73, 1));
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+
+	/* Przycisk "Rozwiń" */
+	.read-more-btn {
+		background: transparent !important;
+		border: none !important;
+		color: #4c5c96 !important;
+		font-size: 0.8em !important;
+		text-transform: uppercase;
+		font-weight: 700;
+		cursor: pointer;
+		padding: 5px 0 !important;
+		margin: 0 auto 10px auto !important; /* Wyśrodkowanie */
+		display: block;
+		box-shadow: none !important;
+		height: auto !important;
+		line-height: normal !important;
+	}
+
+	.read-more-btn:hover {
+		text-decoration: underline;
+		color: #fff !important;
+	}
+	
+	/* ================================================= */
+	/* FIX: WYRÓWNANIE IMIENIA DO DOŁU                   */
+	/* ================================================= */
+
+	/* 1. Upewniamy się, że pudełko jest elastyczne */
+	.box.testimonial {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	/* 2. Wypychamy imię na sam dół */
+	.testimonial h4 {
+		margin-top: auto !important; /* To jest ta "sprężyna" */
+		
+		/* Kosmetyka (odstęp i linia nad imieniem) */
+		padding-top: 15px !important;
+		border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+		width: 100% !important;
+		margin-bottom: 0 !important;
+	}
