@@ -76,6 +76,16 @@
 			<noscript>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 			</noscript>
+			
+			<!-- Słowa kluczowe (Dla Bing, Yahoo, DuckDuckGo) -->
+			<meta name="keywords" content="fotograf poznań, sesja zdjęciowa poznań, fotografia kreatywna, cosplay poznań, fotograf wielkopolska, sesje artystyczne, fotograf portretowy, fokusnaluz, sesje buduarowe, zdjęcia na tinder, fotograf do cosplayu">
+
+			<!-- Geo Tagi (Lokalne pozycjonowanie) -->
+			<meta name="geo.region" content="PL-WP" /> <!-- Wielkopolska -->
+			<meta name="geo.placename" content="Poznań" />
+			<meta name="geo.position" content="52.406374;16.925168" /> <!-- Współrzędne centrum Poznania -->
+			<meta name="ICBM" content="52.406374, 16.925168" />
+
 
 		</head>
 					
@@ -107,8 +117,6 @@
 								<li><a href="index.html">Strona główna</a></li>
 								<li><a href="portfolio.html">Portfolio</a></li>
 								<li><a href="#footer">Kontakt</a></li>
-								<!-- <li><a href="#">Log In</a></li> -->
-								<!-- <li><a href="#">Sign Up</a></li> -->
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -656,7 +664,50 @@
 
 
 
-			
+			<!-- Dane Strukturalne dla wyszukiwarek (Schema.org) -->
+			<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "ProfessionalService",
+			  "name": "FokusNaLuz - Fotografia Kreatywna Poznań",
+			  "image": "https://www.fokusnaluz.com/images/social-share.jpg",
+			  "@id": "https://www.fokusnaluz.com",
+			  "url": "https://www.fokusnaluz.com",
+			  "telephone": "+48500293121",
+			  "email": "mikolaj.zielonka234@gmail.com",
+			  "address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Poznań",
+				"addressRegion": "Wielkopolska",
+				"addressCountry": "PL"
+			  },
+			  "geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 52.406374,
+				"longitude": 16.925168
+			  },
+			  "priceRange": "$$",
+			  "description": "Kreatywna fotografia portretowa, cosplay i artystyczna w Poznaniu. Pełne wsparcie w pozowaniu i luźna atmosfera.",
+			  "openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+				  "Monday",
+				  "Tuesday",
+				  "Wednesday",
+				  "Thursday",
+				  "Friday",
+				  "Saturday",
+				  "Sunday"
+				],
+				"opens": "09:00",
+				"closes": "20:00"
+			  },
+			  "sameAs": [
+				"https://www.facebook.com/fokusnaluz",
+				"https://www.instagram.com/fnl_fokusnaluz"
+			  ]
+			}
+			</script>
 		
 
 			
