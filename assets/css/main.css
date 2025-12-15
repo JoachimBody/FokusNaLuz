@@ -4343,9 +4343,11 @@ input, select, textarea {
 		font-weight: 700;
 	}
 
+	/* Tekst główny w ciasteczkach */
 	#cookie-card p {
-		font-size: 0.85em;
-		color: rgba(255, 255, 255, 0.7);
+		font-size: 0.9em !important; /* Troszkę większa czcionka dla czytelności */
+		color: #ffffff !important;   /* Czysta biel (Naprawa błędu kontrastu) */
+		opacity: 1 !important;       /* Wyłączenie przezroczystości */
 		line-height: 1.5;
 		margin-bottom: 20px;
 	}
@@ -4357,15 +4359,15 @@ input, select, textarea {
 	}
 
 	#cookie-card a {
-		color: rgba(255, 255, 255, 0.5);
-		font-size: 0.8em;
-		text-decoration: underline;
-		border: none;
-		transition: color 0.2s;
+    color: #ffffff !important;   /* Też biały, żeby był kontrast */
+    font-weight: 700 !important; /* Pogrubiony, żeby odróżniał się od tekstu */
+    font-size: 0.9em;
+    text-decoration: underline !important; /* Podkreślenie, żeby widać było, że to link */
+    border: none;
 	}
 
 	#cookie-card a:hover {
-		color: #ffffff;
+		color: #ffd700 !important; /* Po najechaniu zmienia się na złoty/żółty */
 	}
 
 	/* Styl przycisku "Akceptuję" */
