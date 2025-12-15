@@ -555,16 +555,16 @@
 			</script>
 			
 			
-			<!-- 1. Biblioteka Swiper (Musi być załadowana pierwsza) -->
+			<!-- 1. BIBLIOTEKA SWIPER (Musi być pierwsza) -->
 			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-			<!-- 2. Konfiguracja Swipera (Uruchamia się dopiero po załadowaniu biblioteki) -->
+			<!-- 2. KONFIGURACJA SLIDERA (Wersja Stabilna) -->
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
 					var swiper = new Swiper(".myTestimonials", {
-						// --- GWARANCJA DZIAŁANIA ---
+						// GWARANCJA DZIAŁANIA PRZYCISKÓW:
 						loop: false,   
-						rewind: true,  
+						rewind: true,  // To sprawia, że strzałki działają zawsze
 						
 						slidesPerView: 1,
 						spaceBetween: 0, // Odstępy są w CSS
@@ -580,87 +580,66 @@
 							el: ".swiper-pagination",
 							clickable: true,
 						},
+						
+						// Podpięcie strzałek po ID (dla pewności)
 						navigation: {
-							nextEl: ".swiper-button-next",
-							prevEl: ".swiper-button-prev",
+							nextEl: "#custom-next",
+							prevEl: "#custom-prev",
 						},
 						
 						breakpoints: {
-							768: {
-								slidesPerView: 2,
-								spaceBetween: 30,
-							},
-							1200: {
-								slidesPerView: 3,
-								spaceBetween: 50,
-							}
-						},
-						
-						// Fixy odświeżania
-						observer: true,
-						observeParents: true,
+							768: { slidesPerView: 2, spaceBetween: 30 },
+							1200: { slidesPerView: 3, spaceBetween: 40 }
+						}
 					});
 				});
 			</script>
 
-
-
+			<!-- 3. OBSŁUGA PRZYCISKU "ROZWIŃ" -->
 			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					checkReviewLengths();
-				});
-
-				// Funkcja sprawdzająca, czy tekst jest długi
-				function checkReviewLengths() {
-					const wrappers = document.querySelectorAll('.review-wrapper');
-					
-					wrappers.forEach(wrapper => {
-						const text = wrapper.querySelector('.testimonial-text');
-						const btn = wrapper.parentElement.querySelector('.read-more-btn');
-						const fade = wrapper.querySelector('.fade-overlay');
-
-						// Jeśli tekst jest wyższy niż ustawiony limit (140px)
-						if (text.scrollHeight > wrapper.clientHeight) {
-							btn.style.display = 'block'; // Pokaż przycisk
-							fade.style.display = 'block'; // Pokaż cień
-						} else {
-							btn.style.display = 'none';  // Ukryj przycisk
-							fade.style.display = 'none'; // Ukryj cień
-						}
-					});
-				}
-
-				// Funkcja obsługująca kliknięcie
+				// Funkcja globalna do przycisku
 				function toggleTestimonial(btn) {
-					// Szukamy wrapper'a w tym samym pudełku
 					var box = btn.parentElement;
 					var wrapper = box.querySelector('.review-wrapper');
 					var fade = wrapper.querySelector('.fade-overlay');
 					
 					if (wrapper.classList.contains('expanded')) {
-						// ZWIJANIE
 						wrapper.classList.remove('expanded');
-						fade.style.opacity = '1'; // Pokaż cień z powrotem
+						fade.style.opacity = '1';
 						btn.innerText = "Rozwiń";
 					} else {
-						// ROZWIJANIE
 						wrapper.classList.add('expanded');
-						fade.style.opacity = '0'; // Ukryj cień
+						fade.style.opacity = '0';
 						btn.innerText = "Zwiń";
 					}
-
-					// Aktualizacja Slidera (żeby się nie rozjechał)
+					
+					// Aktualizacja slidera, żeby się nie rozjechał
 					setTimeout(function() {
-						if (typeof swiper !== 'undefined') {
-							swiper.update();
-						}
+						var swiperInstance = document.querySelector('.swiper.myTestimonials').swiper;
+						if (swiperInstance) swiperInstance.update();
 					}, 300);
 				}
-			</script>
-			
-		
 
-			<!-- 3. Google Tag Manager (Opóźniony - to zostawiamy, bo działa) -->
+				// Sprawdzanie długości tekstów na start
+				document.addEventListener("DOMContentLoaded", function() {
+					const wrappers = document.querySelectorAll('.review-wrapper');
+					wrappers.forEach(wrapper => {
+						const text = wrapper.querySelector('.testimonial-text');
+						const btn = wrapper.parentElement.querySelector('.read-more-btn');
+						const fade = wrapper.querySelector('.fade-overlay');
+
+						if (text.scrollHeight > wrapper.clientHeight) {
+							btn.style.display = 'block';
+							fade.style.display = 'block';
+						} else {
+							btn.style.display = 'none';
+							fade.style.display = 'none';
+						}
+					});
+				});
+			</script>
+
+			<!-- 4. GOOGLE TAG MANAGER (Prosty, działający) -->
 			<script>
 				function loadGTM() {
 					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -669,10 +648,18 @@
 					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 					})(window,document,'script','dataLayer','GTM-PM7FNF4C');
 				}
+				// Ładujemy po ruchu lub po 4 sekundach
 				window.addEventListener('scroll', loadGTM, {passive: true, once: true});
 				window.addEventListener('mousemove', loadGTM, {passive: true, once: true});
-				setTimeout(loadGTM, 5000);
+				setTimeout(loadGTM, 4000);
 			</script>
+
+
+
+			
+		
+
+			
 			
 			
 			
