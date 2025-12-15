@@ -554,7 +554,6 @@
 				});
 			</script>
 			
-			<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 			
 			<script>
 				var swiper = new Swiper(".myTestimonials", {
@@ -654,83 +653,135 @@
 			</script>
 			
 			<!-- INTELIGENTNE ŁADOWANIE SKRYPTÓW (PERFORMANCE FIX) -->
+			<!-- <script> -->
+				<!-- document.addEventListener("DOMContentLoaded", function() { -->
+					
+					<!-- // --- 1. OBSŁUGA GOOGLE TAG MANAGER (Opóźniona) --- -->
+					<!-- var gtmLoaded = false; -->
+					<!-- function loadGTM() { -->
+						<!-- if (gtmLoaded) return; -->
+						<!-- gtmLoaded = true; -->
+						<!-- (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': -->
+						<!-- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], -->
+						<!-- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= -->
+						<!-- 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); -->
+						<!-- })(window,document,'script','dataLayer','GTM-PM7FNF4C'); -->
+					<!-- } -->
+
+					<!-- // Ładujemy GTM na interakcję LUB po 7 sekundach (żeby nie psuć wyniku PageSpeed) -->
+					<!-- window.addEventListener('mousemove', loadGTM, {passive: true, once: true}); -->
+					<!-- window.addEventListener('touchstart', loadGTM, {passive: true, once: true}); -->
+					<!-- window.addEventListener('scroll', loadGTM, {passive: true, once: true}); -->
+					<!-- setTimeout(loadGTM, 7000); // Zwiększyłem czas z 4000 na 7000ms -->
+
+					<!-- // --- 2. OBSŁUGA SWIPERA (Tylko gdy potrzebny) --- -->
+					<!-- // Sprawdzamy, czy użytkownik dojechał do sekcji opinii (#five) -->
+					<!-- var swiperLoaded = false; -->
+					<!-- var testimonialSection = document.getElementById('five'); -->
+
+					<!-- if (testimonialSection) { -->
+						<!-- var observer = new IntersectionObserver(function(entries) { -->
+							<!-- if (entries[0].isIntersecting && !swiperLoaded) { -->
+								<!-- swiperLoaded = true; -->
+								<!-- console.log("Ładowanie Swipera..."); -->
+								
+								<!-- // Tworzymy skrypt dynamicznie -->
+								<!-- var script = document.createElement('script'); -->
+								<!-- script.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; -->
+								<!-- script.onload = function() { -->
+									<!-- // Inicjalizacja Swipera dopiero jak skrypt się pobierze -->
+									<!-- initSwiper(); -->
+								<!-- }; -->
+								<!-- document.body.appendChild(script); -->
+								<!-- observer.disconnect(); // Przestań obserwować -->
+							<!-- } -->
+						<!-- }, { rootMargin: "200px" }); // Zacznij ładować 200px przed dojechaniem -->
+
+						<!-- observer.observe(testimonialSection); -->
+					<!-- } -->
+
+					<!-- // Funkcja startująca Swiper (Twoja konfiguracja) -->
+					<!-- function initSwiper() { -->
+						<!-- var swiper = new Swiper(".myTestimonials", { -->
+							<!-- slidesPerView: 1, -->
+							<!-- spaceBetween: 0, // Odstępy w CSS -->
+							<!-- loop: false, -->
+							<!-- rewind: true, -->
+							<!-- grabCursor: true, -->
+							<!-- speed: 600, -->
+							<!-- autoplay: { -->
+								<!-- delay: 6000, -->
+								<!-- disableOnInteraction: false, -->
+							<!-- }, -->
+							<!-- pagination: { -->
+								<!-- el: ".swiper-pagination", -->
+								<!-- clickable: true, -->
+							<!-- }, -->
+							<!-- navigation: { -->
+								<!-- nextEl: ".swiper-button-next", -->
+								<!-- prevEl: ".swiper-button-prev", -->
+							<!-- }, -->
+							<!-- breakpoints: { -->
+								<!-- 768: { slidesPerView: 2, spaceBetween: 30 }, -->
+								<!-- 1200: { slidesPerView: 3, spaceBetween: 40 } -->
+							<!-- }, -->
+							<!-- observer: true, -->
+							<!-- observeParents: true, -->
+						<!-- }); -->
+					<!-- } -->
+				<!-- }); -->
+			<!-- </script> -->
+			
+			
+			<!-- 1. Biblioteka Swiper (Musi być pierwsza) -->
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+			
+			
+			<!-- 2. Konfiguracja Swipera (Musi być druga) -->
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
-					
-					// --- 1. OBSŁUGA GOOGLE TAG MANAGER (Opóźniona) ---
-					var gtmLoaded = false;
-					function loadGTM() {
-						if (gtmLoaded) return;
-						gtmLoaded = true;
-						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-						})(window,document,'script','dataLayer','GTM-PM7FNF4C');
-					}
-
-					// Ładujemy GTM na interakcję LUB po 7 sekundach (żeby nie psuć wyniku PageSpeed)
-					window.addEventListener('mousemove', loadGTM, {passive: true, once: true});
-					window.addEventListener('touchstart', loadGTM, {passive: true, once: true});
-					window.addEventListener('scroll', loadGTM, {passive: true, once: true});
-					setTimeout(loadGTM, 7000); // Zwiększyłem czas z 4000 na 7000ms
-
-					// --- 2. OBSŁUGA SWIPERA (Tylko gdy potrzebny) ---
-					// Sprawdzamy, czy użytkownik dojechał do sekcji opinii (#five)
-					var swiperLoaded = false;
-					var testimonialSection = document.getElementById('five');
-
-					if (testimonialSection) {
-						var observer = new IntersectionObserver(function(entries) {
-							if (entries[0].isIntersecting && !swiperLoaded) {
-								swiperLoaded = true;
-								console.log("Ładowanie Swipera...");
-								
-								// Tworzymy skrypt dynamicznie
-								var script = document.createElement('script');
-								script.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
-								script.onload = function() {
-									// Inicjalizacja Swipera dopiero jak skrypt się pobierze
-									initSwiper();
-								};
-								document.body.appendChild(script);
-								observer.disconnect(); // Przestań obserwować
-							}
-						}, { rootMargin: "200px" }); // Zacznij ładować 200px przed dojechaniem
-
-						observer.observe(testimonialSection);
-					}
-
-					// Funkcja startująca Swiper (Twoja konfiguracja)
-					function initSwiper() {
-						var swiper = new Swiper(".myTestimonials", {
-							slidesPerView: 1,
-							spaceBetween: 0, // Odstępy w CSS
-							loop: false,
-							rewind: true,
-							grabCursor: true,
-							speed: 600,
-							autoplay: {
-								delay: 6000,
-								disableOnInteraction: false,
-							},
-							pagination: {
-								el: ".swiper-pagination",
-								clickable: true,
-							},
-							navigation: {
-								nextEl: ".swiper-button-next",
-								prevEl: ".swiper-button-prev",
-							},
-							breakpoints: {
-								768: { slidesPerView: 2, spaceBetween: 30 },
-								1200: { slidesPerView: 3, spaceBetween: 40 }
-							},
-							observer: true,
-							observeParents: true,
-						});
-					}
+					var swiper = new Swiper(".myTestimonials", {
+						slidesPerView: 1,
+						spaceBetween: 30, // Odstęp w CSS, tu bezpiecznik
+						loop: false,
+						rewind: true,     // To naprawia klikanie
+						grabCursor: true,
+						speed: 600,
+						
+						autoplay: {
+							delay: 6000,
+							disableOnInteraction: false,
+						},
+						
+						pagination: {
+							el: ".swiper-pagination",
+							clickable: true,
+						},
+						navigation: {
+							nextEl: ".swiper-button-next",
+							prevEl: ".swiper-button-prev",
+						},
+						
+						breakpoints: {
+							768: { slidesPerView: 2, spaceBetween: 30 },
+							1200: { slidesPerView: 3, spaceBetween: 40 }
+						}
+					});
 				});
+			</script>
+
+			<!-- 3. Google Tag Manager (Opóźniony - to zostawiamy, bo działa) -->
+			<script>
+				function loadGTM() {
+					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+					})(window,document,'script','dataLayer','GTM-PM7FNF4C');
+				}
+				window.addEventListener('scroll', loadGTM, {passive: true, once: true});
+				window.addEventListener('mousemove', loadGTM, {passive: true, once: true});
+				setTimeout(loadGTM, 5000);
 			</script>
 			
 			
