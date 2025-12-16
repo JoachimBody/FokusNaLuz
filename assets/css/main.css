@@ -4798,8 +4798,8 @@ input, select, textarea {
 		top: 50% !important;
 		transform: translateY(-60%) !important;
 		z-index: 100 !important;      /* Musi być nad slajdami */
-pointer-events: auto !important; /* Musi być klikalne */
-cursor: pointer !important;   /* Łapka */
+		pointer-events: auto !important; /* Musi być klikalne */
+		cursor: pointer !important;   /* Łapka */
 		
 		color: rgba(255,255,255,0.5) !important;
 		background: rgba(0,0,0,0.2) !important;
@@ -4836,5 +4836,24 @@ cursor: pointer !important;   /* Łapka */
 			width: 25px !important;
 			height: 50px !important;
 			background: rgba(0,0,0,0.5) !important;
+		}
+	}
+	
+	//* ================================================= */
+	/* FIX: ODSTĘP W PORTFOLIO (Tylko padding)           */
+	/* ================================================= */
+
+	#four .inner {
+		/* Zwiększamy tylko odstęp w pionie. */
+		/* Nie ruszamy width, display ani text-align! */
+		padding-top: 6em !important;
+		padding-bottom: 6em !important;
+	}
+
+	/* Na telefonie trochę mniej */
+	@media screen and (max-width: 736px) {
+		#four .inner {
+			padding-top: 4em !important;
+			padding-bottom: 4em !important;
 		}
 	}
