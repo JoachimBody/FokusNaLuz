@@ -5,261 +5,217 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="pl">
-	
-	
-		<head>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			
-			<!-- PRELOAD LCP IMAGE (To naprawia błąd) -->
-			<link rel="preload" as="image" href="images/bg.webp" fetchpriority="high">
-			
-			<!-- 1. SEO: Tytuł i Opis (Zoptymalizowane pod Art & Wsparcie) -->
-			<title>Kreatywne Sesje Zdjęciowe Poznań | FokusNaLuz - Fotografia Artystyczna</title>
-			<meta name="description" content="Tworzę niepowtarzalne, artystyczne sesje zdjęciowe w Poznaniu. Pełne wsparcie w pozowaniu i luźna atmosfera. Odważne portrety i kreatywne projekty – sprawdź!">
-			<link rel="canonical" href="https://www.fokusnaluz.com/">
-			
-			<!-- Weryfikacja domeny -->
-			<meta name="p:domain_verify" content="4f8a653645f2f7491e299609ba23a340"/>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- PRELOAD LCP IMAGE (Przyspieszenie ładowania tła) -->
+		<link rel="preload" as="image" href="images/bg.webp" fetchpriority="high">
+		
+		<!-- 1. SEO -->
+		<title>Kreatywne Sesje Zdjęciowe Poznań | FokusNaLuz - Fotografia Artystyczna</title>
+		<meta name="description" content="Tworzę niepowtarzalne, artystyczne sesje zdjęciowe w Poznaniu. Pełne wsparcie w pozowaniu i luźna atmosfera. Odważne portrety i kreatywne projekty – sprawdź!">
+		<link rel="canonical" href="https://www.fokusnaluz.com/">
+		
+		<!-- Weryfikacja domeny -->
+		<meta name="p:domain_verify" content="4f8a653645f2f7491e299609ba23a340"/>
+		
+		<!-- Słowa kluczowe i Geo Tagi -->
+		<meta name="keywords" content="fotograf poznań, sesja zdjęciowa poznań, fotografia kreatywna, cosplay poznań, fotograf wielkopolska, sesje artystyczne, fotograf portretowy, fokusnaluz, sesje buduarowe, zdjęcia na tinder, fotograf do cosplayu">
+		<meta name="geo.region" content="PL-WP" />
+		<meta name="geo.placename" content="Poznań" />
+		<meta name="geo.position" content="52.406374;16.925168" />
+		<meta name="ICBM" content="52.406374, 16.925168" />
 
-			<!-- 2. SOCIAL MEDIA (Open Graph - Wygląd linku na FB/Insta) -->
-			<meta property="og:type" content="website">
-			<meta property="og:site_name" content="FokusNaLuz">
-			<meta property="og:url" content="https://www.fokusnaluz.com/">
-			
-			<!-- Tytuł na Facebooku -->
-			<meta property="og:title" content="FokusNaLuz - Artystyczna Fotografia w Poznaniu">
-			
-			<!-- Opis na Facebooku -->
-			<meta property="og:description" content="Marzy Ci się wyjątkowa sesja? Zapewniam pełne wsparcie w pozowaniu i luźną atmosferę. Zrealizujmy Twój kreatywny pomysł razem!">
-			
-			<!-- Miniatura linku (1200x630px) -->
-			<meta property="og:image" content="https://www.fokusnaluz.com/images/social-share.webp">
-			<meta property="og:image:width" content="1200">
-			<meta property="og:image:height" content="630">
+		<!-- 2. SOCIAL MEDIA (Open Graph) -->
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="FokusNaLuz">
+		<meta property="og:url" content="https://www.fokusnaluz.com/">
+		<meta property="og:title" content="FokusNaLuz - Artystyczna Fotografia w Poznaniu">
+		<meta property="og:description" content="Marzy Ci się wyjątkowa sesja? Zapewniam pełne wsparcie w pozowaniu i luźną atmosferę. Zrealizujmy Twój kreatywny pomysł razem!">
+		<meta property="og:image" content="https://www.fokusnaluz.com/images/social-share.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
 
-			<!-- Twitter Card -->
-			<meta name="twitter:card" content="summary_large_image">
-			<meta name="twitter:url" content="https://www.fokusnaluz.com/">
-			<meta name="twitter:title" content="FokusNaLuz - Artystyczna Fotografia">
-			<meta name="twitter:description" content="Tworzę niepowtarzalne, artystyczne sesje zdjęciowe w Poznaniu.">
-			<meta name="twitter:image" content="https://www.fokusnaluz.com/images/social-share.webp">
-			
-			<!-- IKONY (Favicon & Mobile) -->
-			<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-			<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-			<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-			<link rel="manifest" href="site.webmanifest">
-			<link rel="icon" href="favicon.ico"> <!-- Dla starych przeglądarek i Google -->
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="https://www.fokusnaluz.com/">
+		<meta name="twitter:title" content="FokusNaLuz - Artystyczna Fotografia">
+		<meta name="twitter:description" content="Tworzę niepowtarzalne, artystyczne sesje zdjęciowe w Poznaniu.">
+		<meta name="twitter:image" content="https://www.fokusnaluz.com/images/social-share.jpg">
+		
+		<!-- 3. IKONY -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="icon" href="favicon.ico">
 
-			<!-- 4. STYLE CSS (Wersja v=3 wymusza odświeżenie zmian u klientów) -->
-			<link rel="stylesheet" href="assets/css/main.css?v=3" />
-			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- 4. STYLE CSS -->
+		<link rel="stylesheet" href="assets/css/main.css?v=3" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-			<!-- 5. OPTYMALIZACJA (Szybkie ładowanie fontów i bibliotek) -->
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link rel="preconnect" href="https://ajax.googleapis.com">
+		<!-- 5. OPTYMALIZACJA (Fonty i Biblioteki) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://ajax.googleapis.com">
 
-			<!-- Google Fonts (Async) -->
-			<link href="https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-			<noscript>
-				<link href="https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap" rel="stylesheet">
-			</noscript>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+		<noscript><link href="https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap" rel="stylesheet"></noscript>
 
-			<!-- Font Awesome (Async) -->
-			<link rel="stylesheet" href="assets/css/fontawesome-all.min.css?v=2" media="print" onload="this.media='all'">
-			<noscript>
-				<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-			</noscript>
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css?v=2" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="assets/css/fontawesome-all.min.css"></noscript>
 
-			<!-- Swiper CSS (Async) -->
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
-			<noscript>
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-			</noscript>
-			
-			<!-- Słowa kluczowe (Dla Bing, Yahoo, DuckDuckGo) -->
-			<meta name="keywords" content="fotograf poznań, sesja zdjęciowa poznań, fotografia kreatywna, cosplay poznań, fotograf wielkopolska, sesje artystyczne, fotograf portretowy, fokusnaluz, sesje buduarowe, zdjęcia na tinder, fotograf do cosplayu">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+	</head>
 
-			<!-- Geo Tagi (Lokalne pozycjonowanie) -->
-			<meta name="geo.region" content="PL-WP" /> <!-- Wielkopolska -->
-			<meta name="geo.placename" content="Poznań" />
-			<meta name="geo.position" content="52.406374;16.925168" /> <!-- Współrzędne centrum Poznania -->
-			<meta name="ICBM" content="52.406374, 16.925168" />
-
-
-		</head>
-					
-					
-			
-				<body class="is-preload">
-				
-				<!-- Google Tag Manager (noscript) -->
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM7FNF4C"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-			<!-- End Google Tag Manager (noscript) -->
+	<body class="is-preload">
 
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">FokusNaLuz</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">FokusNaLuz</a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Strona główna</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="#footer">Kontakt</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+			<!-- Menu -->
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="index.html">Strona główna</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="#footer">Kontakt</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<!-- Logo -->
-							<div class="logo">
-								<img src="images/nowy.webp" alt="FokusNaLuz" width="120" height="120" />
-							</div>
-							
-							<!-- Tytuł -->
-							<h1>FokusNaLuz</h1>
-							
-							<!-- Opis: Większy, konkretny, z Poznaniem wplecionym w zdanie -->
-							<p class="banner-text">
-								KREATYWNA FOTOGRAFIA PORTRETOWA I ARTYSTYCZNA W POZNANIU.<br>
-								Masz szalony pomysł na sesję? Zrealizujmy Twoją wizję.<br>
-								<span style="display: block; margin-top: 1em; font-size: 0.8em; opacity: 0.9; text-transform: none; line-height: 1.6;">
-									Pełne wsparcie w pozowaniu • Luźna atmosfera • Nieszablonowe kadry
-								</span>
-							</p>
-							
-							<!-- Przycisk -->
-							<ul class="actions special">
-								<li><a href="portfolio.html" class="button primary">Zobacz realizacje</a></li>
-							</ul>
-						</div>
-					</section>
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<div class="logo">
+						<img src="images/nowy.webp" alt="FokusNaLuz" width="120" height="120" />
+					</div>
+					<h1>FokusNaLuz</h1>
+					<p class="banner-text">
+						KREATYWNA FOTOGRAFIA PORTRETOWA I ARTYSTYCZNA W POZNANIU.<br>
+						Masz szalony pomysł na sesję? Zrealizujmy Twoją wizję.<br>
+						<span style="display: block; margin-top: 1em; font-size: 0.8em; opacity: 0.9; text-transform: none; line-height: 1.6;">
+							Pełne wsparcie w pozowaniu • Luźna atmosfera • Nieszablonowe kadry
+						</span>
+					</p>
+					<ul class="actions special">
+						<li><a href="portfolio.html" class="button primary">Zobacz realizacje</a></li>
+					</ul>
+				</div>
+			</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper" role="main">
+			<!-- Wrapper -->
+			<section id="wrapper" role="main">
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.webp" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Nie tylko fotograf, ale i "spoko gość"</h2>
-										<p>Nazywam się Mikołaj. Wiem, że stanięcie przed obiektywem wymaga odwagi. 
-										Moim celem nie jest tylko zrobienie zdjęcia, ale stworzenie atmosfery, w której poczujesz się bezpiecznie i pięknie – niezależnie od tego, czy to Twoja pierwsza sesja, czy kolejna.</p>
-										<p>FokusNaLuz to obietnica: zero presji, dużo śmiechu i kadry, które pokażą Twoją prawdziwą naturę.</p>
-										<a href="portfolio.html" class="special">Zobacz moje prace</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<div class="image">
-										<video autoplay loop muted playsinline poster="images/.webp">
-											<source src="images/filmik.mp4" type="video/mp4">
-											Twoja przeglądarka nie obsługuje wideo.
-										</video>
-									</div>
-									<div class="content">
-										<h2 class="major">Fotografia</h2>
-										<p>Zajmuję się fotografią zawodowo i ciągle rozwijam swój styl. Szukam nowych pomysłów, żeby każde zdjęcie miało charakter i emocje. 
-										Moim celem jest, żeby każda sesja była swobodna, dopasowana do Ciebie i po prostu… na luzie.
-										Pracuję głównie w województwie wielkopolskim, ale z chęcią realizuję zlecenia w całej Polsce.
-										FokusNaLuz to więcej niż zdjęcia. To dobra atmosfera, autentyczne emocje i wspomnienia, do których chcesz wracać. 
-										Jeśli szukasz fotografa, który zadba o klimat i jakość, jesteś w dobrym miejscu.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<!-- Tutaj musi być zdjęcie, żeby układ się trzymał. 
-										 Możesz zmienić "images/pic03.jpg" na swoje zdjęcie, np. "images/o-mnie.jpg" -->
-									<a href="portfolio.html" class="image"><img src="images/pic03.webp" alt="" /></a>
-									
-									<div class="content" style="text-align: left;">
-										<h2 class="major">Sesje dla Ciebie</h2>
-										<p>Szukasz prezentu dla siebie lub bliskiej osoby? Chcesz uwiecznić swoją kobiecość, zrobić coś szalonego, a może po prostu potrzebujesz pamiątki z ważnego momentu?</p>
-										<p>Realizuję sesje:</p>
-										<ul class="alt">
-											<li style="border-top: 1px solid rgba(255,255,255,0.3);">
-												<span class="icon solid fa-user"></span> <strong>Portretowe i Wizerunkowe</strong> <br>
-												<span style="font-size: 0.9em; opacity: 0.8;">Pokaż swoją osobowość w naturalnym lub stylizowanym świetle.</span>
-											</li>
-											<!-- ZMIANA TUTAJ: -->
-											<li style="border-top: 1px solid rgba(255,255,255,0.3);">
-												<span class="icon solid fa-paint-brush"></span> <strong>Sesje Kreatywne i Artystyczne</strong> <br>
-												<span style="font-size: 0.9em; opacity: 0.8;">Neony, dym, farby, nietypowe lokacje? Wchodzę w to!</span>
-											</li>
-											<li style="border-top: 1px solid rgba(255,255,255,0.3);">
-												<span class="icon solid fa-lightbulb"></span> <strong>Twoje Szalone Pomysły</strong> <br>
-												<span style="font-size: 0.9em; opacity: 0.8;">Masz wizję, której nikt inny nie rozumie? Zróbmy to razem.</span>
-											</li>
-										</ul>
-										<a href="#footer" class="button">Umów się na sesję</a>
-									</div>
-								</div>
-							</section>
-
-							<!-- Four -->
-								<section id="four" class="wrapper alt style1">
-									<div class="inner">
-										<h2 class="major">Moje Portfolio</h2>
-										<p>Każda sesja to inna historia. Zobacz więcej moich prac, od delikatnych portretów po odważne kadry buduarowe i kreatywne eksperymenty.</p>
-										
-										<!-- Przycisk prowadzący do galerii -->
-										<ul class="actions special">
-											<li><a href="portfolio.html" class="button primary fit">Otwórz pełną galerię</a></li>
-										</ul>
-									</div>
-								</section>
-
-					</section>
-					
-					
-					
-					<!-- Kontener główny Swipera -->
-					<section id="five" class="wrapper style2">
+				<!-- One -->
+				<section id="one" class="wrapper spotlight style1">
 					<div class="inner">
-						<h2 class="major">Co mówią klienci?</h2>
+						<a href="#" class="image"><img src="images/pic01.webp" alt="Fotograf Poznań - Mikołaj" /></a>
+						<div class="content">
+							<h2 class="major">Nie tylko fotograf, ale i "spoko gość"</h2>
+							<p>Nazywam się Mikołaj. Wiem, że stanięcie przed obiektywem wymaga odwagi. 
+							Moim celem nie jest tylko zrobienie zdjęcia, ale stworzenie atmosfery, w której poczujesz się bezpiecznie i pięknie.</p>
+							<p>FokusNaLuz to obietnica: zero presji, dużo śmiechu i kadry, które oddadzą Twój niepowtarzalny charakter.</p>
+							<a href="portfolio.html" class="special">Zobacz moje prace</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Two -->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner">
+						<div class="image">
+							<!-- Tutaj jest Twój kod wideo. -->
+							<!-- 'poster' to zdjęcie, które widać, gdy film się jeszcze nie załadował lub nie istnieje -->
+							<video autoplay loop muted playsinline poster="images/bg.webp">
+								<source src="images/filmik.mp4" type="video/mp4">
+								<!-- Tekst dla bardzo starych przeglądarek -->
+								Twoja przeglądarka nie obsługuje wideo.
+							</video>
+						</div>
+						<div class="content">
+							<h2 class="major">Fotografia</h2>
+							<p>Zajmuję się fotografią zawodowo i ciągle rozwijam swój styl. Szukam nowych pomysłów, żeby każde zdjęcie miało charakter i emocje. 
+							Moim celem jest, żeby każda sesja była swobodna, dopasowana do Ciebie i po prostu… na luzie.
+							Pracuję głównie w województwie wielkopolskim, ale z chęcią realizuję zlecenia w całej Polsce.
+							FokusNaLuz to więcej niż zdjęcia. To dobra atmosfera, autentyczne emocje i wspomnienia, do których chcesz wracać. 
+							Jeśli szukasz fotografa, który zadba o klimat i jakość, jesteś w dobrym miejscu.</p>
+							<a href="#footer" class="special">Zapytaj o wolny termin</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner">
+						<!-- Pamiętaj o zdjęciu - tu było pic03.webp -->
+						<a href="portfolio.html" class="image"><img src="images/pic03.webp" alt="Kreatywna sesja zdjęciowa" /></a>
+						
+						<div class="content" style="text-align: left;">
+							<h2 class="major">Sesje dla Ciebie</h2>
+							<p>Szukasz prezentu dla siebie lub bliskiej osoby? Chcesz uwiecznić swoją wizję, zrobić coś szalonego, a może po prostu potrzebujesz pamiątki z ważnego momentu?</p>
+							
+							<ul class="alt">
+								<li style="border-top: 1px solid rgba(255,255,255,0.3);">
+									<span class="icon solid fa-user"></span> <strong>Portretowe i Wizerunkowe</strong> <br>
+									<span style="font-size: 0.9em; opacity: 0.8;">Pokaż swoją osobowość w naturalnym lub stylizowanym świetle.</span>
+								</li>
+								<li style="border-top: 1px solid rgba(255,255,255,0.3);">
+									<span class="icon solid fa-paint-brush"></span> <strong>Sesje Kreatywne i Artystyczne</strong> <br>
+									<span style="font-size: 0.9em; opacity: 0.8;">Neony, dym, farby, nietypowe lokacje? Wchodzę w to!</span>
+								</li>
+								<li style="border-top: 1px solid rgba(255,255,255,0.3);">
+									<span class="icon solid fa-lightbulb"></span> <strong>Twoje Szalone Pomysły</strong> <br>
+									<span style="font-size: 0.9em; opacity: 0.8;">Masz wizję, której nikt inny nie rozumie? Zróbmy to razem.</span>
+								</li>
+							</ul>
+							<a href="#footer" class="button">Umów się na sesję</a>
+						</div>
+					</div>
+
+				<!-- Four -->
+				<section id="four" class="wrapper alt style1">
+					<div class="inner">
+						<h2 class="major">Moje Portfolio</h2>
+						<p>Każda sesja to inna historia. Zobacz więcej moich prac, od delikatnych portretów po odważne kadry buduarowe i kreatywne eksperymenty.</p>
+						<ul class="actions special">
+							<li><a href="portfolio.html" class="button primary fit">Otwórz pełną galerię</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</section>
+			
+			<!-- Five: Opinie -->
+			<section id="five" class="wrapper style2">
+				<div class="inner">
+					<h2 class="major">Co mówią klienci?</h2>
+					
 					<div class="swiper myTestimonials">
 						<div class="swiper-wrapper">
 							
+							<!-- OPINIA 1 -->
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
-									<div class="stars">
-										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
-									</div>
+									<div class="stars"><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span></div>
 									
-									<!-- WRAPPER DO TEKSTU (Kluczowe dla działania) -->
 									<div class="review-wrapper">
-										<p class="testimonial-text">
-											„Polecam fotografa, profesjonalne podejście, przyjazna atmosfera i bardzo szybko dostałam zdjęcia! ☺️✨”
-										</p>
+										<p class="testimonial-text">„Polecam fotografa, profesjonalne podejście, przyjazna atmosfera i bardzo szybko dostałam zdjęcia! ☺️✨”</p>
 										<div class="fade-overlay"></div>
 									</div>
-									
-									<!-- Przycisk (Domyślnie ukryty style="display:none", JS go pokaże jak trzeba) -->
 									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
 									
 									<h4>Aleksandra</h4>
@@ -270,14 +226,10 @@
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
-									<div class="stars">
-										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
-									</div>
+									<div class="stars"><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span></div>
 									
 									<div class="review-wrapper">
-										<p class="testimonial-text">
-											„Polecam Serdecznie super fotki ,świetna atmosfera, pełen profesjonalizm 🫶🤩”
-										</p>
+										<p class="testimonial-text">„Polecam Serdecznie super fotki ,świetna atmosfera, pełen profesjonalizm 🫶🤩”</p>
 										<div class="fade-overlay"></div>
 									</div>
 									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
@@ -290,14 +242,10 @@
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source oferteo"><span class="icon solid fa-check-circle"></span> Opinia z Oferteo</div>
-									<div class="stars">
-										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
-									</div>
+									<div class="stars"><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span></div>
 									
 									<div class="review-wrapper">
-										<p class="testimonial-text">
-											„Przecudowny fotograf . Miałam już okazję 2 razy robić z nim fotki. Jeśli widać jakieś rzeczy do poprawki to odrazu poprawia i mówi, żeby modelka na zdjęciach wyszła jak najlepiej 🫶 polecam.”
-										</p>
+										<p class="testimonial-text">„Przecudowny fotograf . Miałam już okazję 2 razy robić z nim fotki. Jeśli widać jakieś rzeczy do poprawki to odrazu poprawia i mówi, żeby modelka na zdjęciach wyszła jak najlepiej 🫶 polecam.”</p>
 										<div class="fade-overlay"></div>
 									</div>
 									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
@@ -310,14 +258,10 @@
 							<div class="swiper-slide">
 								<div class="box testimonial">
 									<div class="source google"><span class="icon brands fa-google"></span> Opinia z Google</div>
-									<div class="stars">
-										<span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span>
-									</div>
+									<div class="stars"><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span><span class="icon solid fa-star"></span></div>
 									
 									<div class="review-wrapper">
-										<p class="testimonial-text">
-											„Byłam już kolejny raz u Mikołaja na sesji, naprawdę nie wiem czy jest też ktoś z takim poczuciem humoru oraz profesjonalnym podejściem. Z całego serca mogę powiedzieć że nie będzie to ostatnia współpraca. Bardzo dobry kontakt ze strony fotografa, wiele pomysłów, propozycji odnośnie pozowania”
-										</p>
+										<p class="testimonial-text">„Byłam już kolejny raz u Mikołaja na sesji, naprawdę nie wiem czy jest też ktoś z takim poczuciem humoru oraz profesjonalnym podejściem. Z całego serca mogę powiedzieć że nie będzie to ostatnia współpraca. Bardzo dobry kontakt ze strony fotografa, wiele pomysłów, propozycji odnośnie pozowania”</p>
 										<div class="fade-overlay"></div>
 									</div>
 									<button class="read-more-btn" onclick="toggleTestimonial(this)" style="display:none;">Rozwiń</button>
@@ -325,120 +269,93 @@
 									<h4>Milena</h4>
 								</div>
 							</div>
-
 						</div>
 						
-						<!-- Strzałki nawigacji -->
+						<!-- Nawigacja -->
 						<div class="swiper-pagination"></div>
 						<div class="swiper-button-prev" id="custom-prev"></div>
 						<div class="swiper-button-next" id="custom-next"></div>
 					</div>
-					
-					</div>
-				</section>
-									
-					
-				<!-- Six: FAQ (Pytania i Odpowiedzi) -->
-				<section id="faq" class="wrapper style3">
-					<div class="inner">
-						<h2 class="major">Często zadawane pytania (FAQ)</h2>
-						<p>Wiem, że przed sesją (zwłaszcza tą kreatywną) pojawia się sporo pytań. Oto odpowiedzi na te najczęstsze.</p>
-
-						<div class="row">
+				</div>
+			</section>
 							
-							<!-- Pytanie 1 -->
-							<div class="col-6 col-12-medium">
-								<h3><span class="icon solid fa-camera-retro"></span> Czy muszę umieć pozować?</h3>
-								<p>Absolutnie nie! To moje zadanie, żeby Cię poprowadzić. W trakcie sesji cały czas podpowiadam, co robić, gdzie spojrzeć i jak się ustawić. Działamy na luzie – najlepsze ujęcia wychodzą wtedy, gdy zapominasz o obiektywie.</p>
-							</div>
+			<!-- Six: FAQ (Pytania i Odpowiedzi) -->
+			<section id="faq" class="wrapper style3">
+				<div class="inner">
+					<h2 class="major">Często zadawane pytania (FAQ)</h2>
+					<p>Wiem, że przed sesją (zwłaszcza tą kreatywną) pojawia się sporo pytań. Oto odpowiedzi na te najczęstsze.</p>
 
-							<!-- Pytanie 2 -->
-							<div class="col-6 col-12-medium">
-								<h3><span class="icon solid fa-lightbulb"></span> Mam szalony pomysł na zdjęcia...</h3>
-								<p>To świetnie trafiłaś/eś! Uwielbiam nietypowe projekty. Cosplay, urbex, neony, farby, stylizacje fantasy? Jestem otwarty na każdą kreatywną wizję. Napisz do mnie, a razem wymyślimy, jak to zrealizować w Poznaniu lub okolicach.</p>
-							</div>
-
-							<!-- Pytanie 3 (Zaktualizowane) -->
-							<div class="col-6 col-12-medium">
-								<h3><span class="icon solid fa-map-marked-alt"></span> Gdzie odbywają się sesje?</h3>
-								<p>Lokalizację wybieramy wspólnie podczas rozmowy, bazując na naszych ulubionych miejscówkach i dostępnym budżecie. Może to być miasto, las, opuszczony budynek, a nawet… stara wanna znaleziona na wysypisku! Wszystko zależy od naszej kreatywności.</p>
-							</div>
-
-							<!-- Pytanie 4 -->
-							<div class="col-6 col-12-medium">
-								<h3><span class="icon solid fa-images"></span> Ile czeka się na zdjęcia?</h3>
-								<p>Wiem, że nie możesz się doczekać efektów! Gotowe, poddane autorskiej obróbce zdjęcia otrzymasz w ciągu maksymalnie 14 dni roboczych od momentu wyboru ujęć. Często udaje się szybciej.</p>
-							</div>
-
-						</div>
+					<div class="row">
 						
-						<!-- Wyróżniony Box CTA -->
-						<div class="faq-cta-box">
-							<h3><span class="icon solid fa-comments"></span> Masz inne pytanie?</h3>
-							<p>Nie znalazłaś/eś odpowiedzi powyżej? Napisz do mnie śmiało, chętnie rozwieję Twoje wątpliwości.</p>
-							<a href="#footer" class="button primary">Skontaktuj się ze mną</a>
+						<!-- Pytanie 1 -->
+						<div class="col-6 col-12-medium">
+							<h3><span class="icon solid fa-camera-retro"></span> Czy muszę umieć pozować?</h3>
+							<p>Absolutnie nie! To moje zadanie, żeby Cię poprowadzić. W trakcie sesji cały czas podpowiadam, co robić, gdzie spojrzeć i jak się ustawić. Działamy na luzie – najlepsze ujęcia wychodzą wtedy, gdy zapominasz o obiektywie.</p>
+						</div>
+
+						<!-- Pytanie 2 -->
+						<div class="col-6 col-12-medium">
+							<h3><span class="icon solid fa-lightbulb"></span> Mam szalony pomysł na zdjęcia...</h3>
+							<p>To świetnie trafiłaś/eś! Uwielbiam nietypowe projekty. Cosplay, urbex, neony, farby, stylizacje fantasy? Jestem otwarty na każdą kreatywną wizję. Napisz do mnie, a razem wymyślimy, jak to zrealizować w Poznaniu lub okolicach.</p>
+						</div>
+
+						<!-- Pytanie 3 (To z wanną na wysypisku!) -->
+						<div class="col-6 col-12-medium">
+							<h3><span class="icon solid fa-map-marked-alt"></span> Gdzie odbywają się sesje?</h3>
+							<p>Lokalizację wybieramy wspólnie podczas rozmowy, bazując na naszych ulubionych miejscówkach i dostępnym budżecie. Może to być miasto, las, opuszczony budynek, a nawet… stara wanna znaleziona na wysypisku! Wszystko zależy od naszej kreatywności.</p>
+						</div>
+
+						<!-- Pytanie 4 -->
+						<div class="col-6 col-12-medium">
+							<h3><span class="icon solid fa-images"></span> Ile czeka się na zdjęcia?</h3>
+							<p>Wiem, że nie możesz się doczekać efektów! Gotowe, poddane autorskiej obróbce zdjęcia otrzymasz w ciągu maksymalnie 14 dni roboczych od momentu wyboru ujęć. Często udaje się szybciej.</p>
 						</div>
 
 					</div>
-				</section>	
 					
-					
-					
+					<!-- Wyróżniony Box CTA -->
+					<div class="faq-cta-box">
+						<h3><span class="icon solid fa-comments"></span> Masz inne pytanie?</h3>
+						<p>Nie znalazłaś/eś odpowiedzi powyżej? Napisz do mnie śmiało, chętnie rozwieję Twoje wątpliwości.</p>
+						<a href="#footer" class="button primary">Skontaktuj się ze mną</a>
+					</div>
 
-				<!-- Footer -->
-				
-				<section id="footer">
-				<!-- TUTAJ JEST ZMIANA: Style wpisane bezpośrednio. To musi zadziałać. -->
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
 				<div class="inner" style="width: 60em; max-width: 90%; margin: 0 auto !important; display: block;">
-					
 					<h2 class="major">Get in touch</h2>
 					<p>Skontaktuj się ze mną, aby omówić szczegóły Twojej sesji.</p>
 					
 					<div class="row">
-						
-						<!-- LEWA STRONA (Formularz) -->
 						<div class="col-6 col-12-medium">
 							<form method="post" action="https://formspree.io/f/xrbnoezk">
 								<div class="fields">
-									
-									<!-- IMIĘ -->
 									<div class="field" style="width: 100%; margin-bottom: 1.5em;">
 										<label for="name">Imię</label>
 										<input type="text" name="name" id="name" required />
 									</div>
-									
-									<!-- EMAIL -->
 									<div class="field" style="width: 100%; margin-bottom: 1.5em;">
 										<label for="email">Email</label>
 										<input type="email" name="email" id="email" required />
 									</div>
-									
-									<!-- WIADOMOŚĆ -->
 									<div class="field" style="width: 100%; margin-bottom: 1.5em;">
 										<label for="message">Wiadomość</label>
 										<textarea name="message" id="message" rows="4" required></textarea>
 									</div>
-
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Wyślij" /></li>
 								</ul>
 							</form>
 						</div>
-						
-						<!-- PRAWA STRONA (Dane kontaktowe) -->
 						<div class="col-6 col-12-medium">
 							<ul class="contact">
 								<li class="icon solid fa-map-marker-alt" style="align-items: center;">
-									<!-- Nazwa marki: Biała, grubsza, z lekkim odstępem liter -->
-									<strong style="color: #ffffff; font-size: 1.2em; letter-spacing: 1px; line-height: 1.2;">
-										FokusNaLuz
-									</strong>
-									<br />
-									<!-- Lokalizacja: Mniejsza, szara, cieńsza czcionka -->
-									<span style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em; font-weight: 300;">
-										Poznań i okolice
-									</span>
+									<strong style="color: #ffffff; font-size: 1.2em; letter-spacing: 1px; line-height: 1.2;">FokusNaLuz</strong><br />
+									<span style="color: rgba(255, 255, 255, 0.6); font-size: 0.9em; font-weight: 300;">Poznań i okolice</span>
 								</li>
 								<li class="icon solid fa-phone" style="margin-top: 1.2em;">
 									<a href="tel:500293121" style="border:none;">500 293 121</a>
@@ -449,9 +366,7 @@
 								<li class="icon brands fa-pinterest"><a href="https://www.pinterest.com/fokusnaluz" target="_blank" rel="noopener noreferrer">pinterest.com/fokusnaluz</a></li>
 							</ul>
 						</div>
-
 					</div>
-					
 					<ul class="copyright">
 						<li>&copy; FokusNaLuz. Wszelkie prawa zastrzeżone.</li>
 						<li><a href="polityka.html">Polityka Prywatności</a></li>
@@ -460,261 +375,181 @@
 				</div>
 			</section>
 
-
+		</div>
 
 		<!-- Scripts -->
 		
-			<!-- FIX: Płynne przewijanie (Passive Event Listeners) -->
-			<script>
-				(function() {
-					var supportsPassive = false;
-					try {
-						var opts = Object.defineProperty({}, 'passive', {
-							get: function() { supportsPassive = true; }
-						});
-						window.addEventListener("testPassive", null, opts);
-						window.removeEventListener("testPassive", null, opts);
-					} catch (e) {}
+		<!-- 1. PODSTAWOWE SKRYPTY (DEFER) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+		<script src="assets/js/jquery.scrollex.min.js" defer></script>
+		<script src="assets/js/browser.min.js" defer></script>
+		<script src="assets/js/breakpoints.min.js" defer></script>
+		<script src="assets/js/util.js" defer></script>
+		<script src="assets/js/main.js" defer></script>
 
-					if (supportsPassive) {
-						var originalAddEventListener = EventTarget.prototype.addEventListener;
-						EventTarget.prototype.addEventListener = function(type, listener, options) {
-							if (type === 'scroll' || type === 'touchstart' || type === 'touchmove') {
-								if (typeof options === 'object') { options.passive = true; }
-								else if (typeof options === 'boolean') { options = { passive: true, capture: options }; }
-								else { options = { passive: true }; }
-							}
-							originalAddEventListener.call(this, type, listener, options);
+		<!-- 2. FIX PŁYNNOŚCI (Google Passive) -->
+		<script>
+			(function() {
+				var supportsPassive = false;
+				try {
+					var opts = Object.defineProperty({}, 'passive', {
+						get: function() { supportsPassive = true; }
+					});
+					window.addEventListener("testPassive", null, opts);
+					window.removeEventListener("testPassive", null, opts);
+				} catch (e) {}
+
+				if (supportsPassive) {
+					var originalAddEventListener = EventTarget.prototype.addEventListener;
+					EventTarget.prototype.addEventListener = function(type, listener, options) {
+						if (type === 'scroll' || type === 'touchstart' || type === 'touchmove') {
+							if (typeof options === 'object') { options.passive = true; }
+							else if (typeof options === 'boolean') { options = { passive: true, capture: options }; }
+							else { options = { passive: true }; }
 						}
+						originalAddEventListener.call(this, type, listener, options);
 					}
-				})();
-			</script>	
+				}
+			})();
+		</script>
 		
-			<!-- <script src="assets/js/jquery.min.js"></script> -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-			<script src="assets/js/jquery.scrollex.min.js" defer></script>
-			<script src="assets/js/browser.min.js" defer></script>
-			<script src="assets/js/breakpoints.min.js" defer></script>
-			<script src="assets/js/util.js" defer></script>
-			<script src="assets/js/main.js" defer></script>
-			<!-- Lazy Load Google Tag Manager (Wydajność) -->
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					var gtmLoaded = false;
-
-					function loadGTM() {
-						if (gtmLoaded) return;
-						gtmLoaded = true;
-
-						// Tutaj jest Twój oryginalny kod GTM (ID: GTM-PM7FNF4C)
-						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-						})(window,document,'script','dataLayer','GTM-PM7FNF4C');
-					}
-
-					// GTM załaduje się dopiero po ruchu myszką, dotknięciu ekranu lub scrollowaniu
-					window.addEventListener('mousemove', loadGTM, {passive: true});
-					window.addEventListener('touchstart', loadGTM, {passive: true});
-					window.addEventListener('scroll', loadGTM, {passive: true});
-
-					// Lub automatycznie po 4 sekundach (jeśli użytkownik nic nie zrobi)
-					setTimeout(loadGTM, 4000);
-				});
-			</script>
-			
-			<!-- FLOATING COOKIE CARD -->
-			<div id="cookie-card">
-				<h4>🍪 Ciasteczka</h4>
-				<p>
-					Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. 
-					Korzystając ze strony, zgadzasz się na ich użycie.
-				</p>
-				<div class="cookie-actions">
-					<a href="polityka.html">Polityka Prywatności</a>
-					<button id="accept-cookies">Akceptuję</button>
-				</div>
+		<!-- 3. COOKIES -->
+		<div id="cookie-card">
+			<h4>🍪 Ciasteczka</h4>
+			<p>Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. Korzystając ze strony, zgadzasz się na ich użycie.</p>
+			<div class="cookie-actions">
+				<a href="polityka.html">Polityka Prywatności</a>
+				<button id="accept-cookies">Akceptuję</button>
 			</div>
-
-			<script>
-				// 1. Sprawdź, czy użytkownik już zaakceptował
-				if (!localStorage.getItem('cookiesAccepted')) {
-					// Jeśli nie, pokaż okienko z małym opóźnieniem (animacja wjazdu)
-					setTimeout(function() {
-						document.getElementById('cookie-card').style.display = 'block';
-					}, 1000);
-				}
-
-				// 2. Obsługa kliknięcia "Akceptuję"
-				document.getElementById('accept-cookies').addEventListener('click', function() {
-					// Zapamiętaj decyzję w przeglądarce
-					localStorage.setItem('cookiesAccepted', 'true');
-					
-					// Animacja znikania (opacity + przesunięcie w dół)
-					var card = document.getElementById('cookie-card');
-					card.style.opacity = '0';
-					card.style.transform = 'translateY(20px)';
-					card.style.transition = 'all 0.5s ease';
-					
-					// Usuń element po zakończeniu animacji
-					setTimeout(function() {
-						card.style.display = 'none';
-					}, 500);
-				});
-			</script>
-			
-			
-			<!-- 1. BIBLIOTEKA SWIPER (Musi być pierwsza) -->
-			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-			<!-- 2. KONFIGURACJA SLIDERA (Wersja Stabilna) -->
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					var swiper = new Swiper(".myTestimonials", {
-						// GWARANCJA DZIAŁANIA PRZYCISKÓW:
-						loop: false,   
-						rewind: true,  // To sprawia, że strzałki działają zawsze
-						
-						slidesPerView: 1,
-						spaceBetween: 0, // Odstępy są w CSS
-						grabCursor: true,
-						speed: 600,
-						
-						autoplay: {
-							delay: 6000,
-							disableOnInteraction: false,
-						},
-						
-						pagination: {
-							el: ".swiper-pagination",
-							clickable: true,
-						},
-						
-						// Podpięcie strzałek po ID (dla pewności)
-						navigation: {
-							nextEl: "#custom-next",
-							prevEl: "#custom-prev",
-						},
-						
-						breakpoints: {
-							768: { slidesPerView: 2, spaceBetween: 30 },
-							1200: { slidesPerView: 3, spaceBetween: 40 }
-						}
-					});
-				});
-			</script>
-
-			<!-- 3. OBSŁUGA PRZYCISKU "ROZWIŃ" -->
-			<script>
-				// Funkcja globalna do przycisku
-				function toggleTestimonial(btn) {
-					var box = btn.parentElement;
-					var wrapper = box.querySelector('.review-wrapper');
-					var fade = wrapper.querySelector('.fade-overlay');
-					
-					if (wrapper.classList.contains('expanded')) {
-						wrapper.classList.remove('expanded');
-						fade.style.opacity = '1';
-						btn.innerText = "Rozwiń";
-					} else {
-						wrapper.classList.add('expanded');
-						fade.style.opacity = '0';
-						btn.innerText = "Zwiń";
-					}
-					
-					// Aktualizacja slidera, żeby się nie rozjechał
-					setTimeout(function() {
-						var swiperInstance = document.querySelector('.swiper.myTestimonials').swiper;
-						if (swiperInstance) swiperInstance.update();
-					}, 300);
-				}
-
-				// Sprawdzanie długości tekstów na start
-				document.addEventListener("DOMContentLoaded", function() {
-					const wrappers = document.querySelectorAll('.review-wrapper');
-					wrappers.forEach(wrapper => {
-						const text = wrapper.querySelector('.testimonial-text');
-						const btn = wrapper.parentElement.querySelector('.read-more-btn');
-						const fade = wrapper.querySelector('.fade-overlay');
-
-						if (text.scrollHeight > wrapper.clientHeight) {
-							btn.style.display = 'block';
-							fade.style.display = 'block';
-						} else {
-							btn.style.display = 'none';
-							fade.style.display = 'none';
-						}
-					});
-				});
-			</script>
-
-			<!-- 4. GOOGLE TAG MANAGER (Prosty, działający) -->
-			<script>
-				function loadGTM() {
-					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-					})(window,document,'script','dataLayer','GTM-PM7FNF4C');
-				}
-				// Ładujemy po ruchu lub po 4 sekundach
-				window.addEventListener('scroll', loadGTM, {passive: true, once: true});
-				window.addEventListener('mousemove', loadGTM, {passive: true, once: true});
-				setTimeout(loadGTM, 4000);
-			</script>
-
-
-
-			<!-- Dane Strukturalne dla wyszukiwarek (Schema.org) -->
-			<script type="application/ld+json">
-			{
-			  "@context": "https://schema.org",
-			  "@type": "ProfessionalService",
-			  "name": "FokusNaLuz - Fotografia Kreatywna Poznań",
-			  "image": "https://www.fokusnaluz.com/images/social-share.jpg",
-			  "@id": "https://www.fokusnaluz.com",
-			  "url": "https://www.fokusnaluz.com",
-			  "telephone": "+48500293121",
-			  "email": "mikolaj.zielonka234@gmail.com",
-			  "address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Poznań",
-				"addressRegion": "Wielkopolska",
-				"addressCountry": "PL"
-			  },
-			  "geo": {
-				"@type": "GeoCoordinates",
-				"latitude": 52.406374,
-				"longitude": 16.925168
-			  },
-			  "priceRange": "$$",
-			  "description": "Kreatywna fotografia portretowa, cosplay i artystyczna w Poznaniu. Pełne wsparcie w pozowaniu i luźna atmosfera.",
-			  "openingHoursSpecification": {
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": [
-				  "Monday",
-				  "Tuesday",
-				  "Wednesday",
-				  "Thursday",
-				  "Friday",
-				  "Saturday",
-				  "Sunday"
-				],
-				"opens": "09:00",
-				"closes": "20:00"
-			  },
-			  "sameAs": [
-				"https://www.facebook.com/fokusnaluz",
-				"https://www.instagram.com/fnl_fokusnaluz"
-			  ]
+		</div>
+		<script>
+			if (!localStorage.getItem('cookiesAccepted')) {
+				setTimeout(function() { document.getElementById('cookie-card').style.display = 'block'; }, 1000);
 			}
-			</script>
+			document.getElementById('accept-cookies').addEventListener('click', function() {
+				localStorage.setItem('cookiesAccepted', 'true');
+				var card = document.getElementById('cookie-card');
+				card.style.opacity = '0'; card.style.transform = 'translateY(20px)'; card.style.transition = 'all 0.5s ease';
+				setTimeout(function() { card.style.display = 'none'; }, 500);
+			});
+		</script>
 		
+		<!-- 4. SLIDER I ROZWIJANIE (Wszystko w jednym bloku) -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		
+		<script>
+			// Funkcja obsługująca przycisk "Rozwiń"
+			function toggleTestimonial(btn) {
+				var box = btn.parentElement;
+				var wrapper = box.querySelector('.review-wrapper');
+				var fade = wrapper.querySelector('.fade-overlay');
+				
+				if (wrapper.classList.contains('expanded')) {
+					wrapper.classList.remove('expanded');
+					fade.style.opacity = '1';
+					btn.innerText = "Rozwiń";
+				} else {
+					wrapper.classList.add('expanded');
+					fade.style.opacity = '0';
+					btn.innerText = "Zwiń";
+				}
+				
+				// Aktualizacja Swipera po zmianie wysokości
+				setTimeout(function() {
+					var swiperInstance = document.querySelector('.swiper.myTestimonials').swiper;
+					if (swiperInstance) swiperInstance.update();
+				}, 300);
+			}
 
-			
-			
-			
-			
+			document.addEventListener("DOMContentLoaded", function() {
+				// 1. Inicjalizacja Swipera (Rewind: true = naprawa przycisków)
+				var swiper = new Swiper(".myTestimonials", {
+					loop: false,   
+					rewind: true,
+					slidesPerView: 1,
+					spaceBetween: 0, 
+					grabCursor: true,
+					speed: 600,
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: "#custom-next",
+						prevEl: "#custom-prev",
+					},
+					breakpoints: {
+						768: { slidesPerView: 2, spaceBetween: 30 },
+						1200: { slidesPerView: 3, spaceBetween: 40 }
+					}
+				});
+
+				// 2. Sprawdzanie długości tekstów opinii
+				const wrappers = document.querySelectorAll('.review-wrapper');
+				wrappers.forEach(wrapper => {
+					const text = wrapper.querySelector('.testimonial-text');
+					const btn = wrapper.parentElement.querySelector('.read-more-btn');
+					const fade = wrapper.querySelector('.fade-overlay');
+
+					if (text && text.scrollHeight > wrapper.clientHeight) {
+						btn.style.display = 'block';
+						fade.style.display = 'block';
+					} else if (btn) {
+						btn.style.display = 'none';
+						fade.style.display = 'none';
+					}
+				});
+			});
+		</script>
+
+		<!-- 5. GOOGLE TAG MANAGER -->
+		<script>
+			function loadGTM() {
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-PM7FNF4C');
+			}
+			window.addEventListener('scroll', loadGTM, {passive: true, once: true});
+			window.addEventListener('mousemove', loadGTM, {passive: true, once: true});
+			setTimeout(loadGTM, 4000);
+		</script>
+
+		<!-- 6. JSON-LD -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "ProfessionalService",
+		  "name": "FokusNaLuz - Fotografia Kreatywna Poznań",
+		  "image": "https://www.fokusnaluz.com/images/social-share.jpg",
+		  "@id": "https://www.fokusnaluz.com",
+		  "url": "https://www.fokusnaluz.com",
+		  "telephone": "+48500293121",
+		  "email": "mikolaj.zielonka234@gmail.com",
+		  "address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Poznań",
+			"addressRegion": "Wielkopolska",
+			"addressCountry": "PL"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": 52.406374,
+			"longitude": 16.925168
+		  },
+		  "priceRange": "$$",
+		  "description": "Kreatywna fotografia portretowa, cosplay i artystyczna w Poznaniu.",
+		  "sameAs": [
+			"https://www.facebook.com/fokusnaluz",
+			"https://www.instagram.com/fnl_fokusnaluz"
+		  ]
+		}
+		</script>
+
 	</body>
 </html>
