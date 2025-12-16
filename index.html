@@ -184,7 +184,8 @@
 							<a href="#footer" class="button">Umów się na sesję</a>
 						</div>
 					</div>
-
+				</section>
+				
 				<!-- Four -->
 				<section id="four" class="wrapper alt style1">
 					<div class="inner">
@@ -196,7 +197,7 @@
 					</div>
 				</section>
 
-			</section>
+			
 			
 			<!-- Five: Opinie -->
 			<section id="five" class="wrapper style2">
@@ -436,9 +437,9 @@
 		
 		<!-- 4. SLIDER I ROZWIJANIE (Wszystko w jednym bloku) -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		
+
 		<script>
-			// Funkcja obsługująca przycisk "Rozwiń"
+			// Funkcja globalna do przycisku "Rozwiń"
 			function toggleTestimonial(btn) {
 				var box = btn.parentElement;
 				var wrapper = box.querySelector('.review-wrapper');
@@ -454,7 +455,7 @@
 					btn.innerText = "Zwiń";
 				}
 				
-				// Aktualizacja Swipera po zmianie wysokości
+				// Aktualizacja slidera
 				setTimeout(function() {
 					var swiperInstance = document.querySelector('.swiper.myTestimonials').swiper;
 					if (swiperInstance) swiperInstance.update();
@@ -462,7 +463,30 @@
 			}
 
 			document.addEventListener("DOMContentLoaded", function() {
-				// 1. Inicjalizacja Swipera (Rewind: true = naprawa przycisków)
+				
+				// Funkcja sprawdzająca długość (wywoływana w odpowiednich momentach)
+				function checkReviewLengths() {
+					const wrappers = document.querySelectorAll('.review-wrapper');
+					wrappers.forEach(wrapper => {
+						const text = wrapper.querySelector('.testimonial-text');
+						const btn = wrapper.parentElement.querySelector('.read-more-btn');
+						const fade = wrapper.querySelector('.fade-overlay');
+
+						if (!text || !btn) return;
+
+						// Margines błędu 2px (czasami przeglądarki mylą się o piksel)
+						// Sprawdzamy: Czy wysokość całej treści jest większa niż widoczne pudełko?
+						if (text.scrollHeight > (wrapper.clientHeight + 2)) {
+							btn.style.display = 'block'; 
+							fade.style.display = 'block';
+						} else {
+							btn.style.display = 'none';  
+							fade.style.display = 'none'; 
+						}
+					});
+				}
+
+				// Inicjalizacja Swipera
 				var swiper = new Swiper(".myTestimonials", {
 					loop: false,   
 					rewind: true,
@@ -485,24 +509,22 @@
 					breakpoints: {
 						768: { slidesPerView: 2, spaceBetween: 30 },
 						1200: { slidesPerView: 3, spaceBetween: 40 }
+					},
+					// Tutaj jest klucz do naprawy:
+					on: {
+						init: function () {
+							// Sprawdź długość DOPIERO jak slider się zbuduje
+							setTimeout(checkReviewLengths, 100);
+						},
+						resize: function () {
+							// Sprawdź ponownie jak ktoś zmieni rozmiar okna
+							setTimeout(checkReviewLengths, 100);
+						}
 					}
 				});
 
-				// 2. Sprawdzanie długości tekstów opinii
-				const wrappers = document.querySelectorAll('.review-wrapper');
-				wrappers.forEach(wrapper => {
-					const text = wrapper.querySelector('.testimonial-text');
-					const btn = wrapper.parentElement.querySelector('.read-more-btn');
-					const fade = wrapper.querySelector('.fade-overlay');
-
-					if (text && text.scrollHeight > wrapper.clientHeight) {
-						btn.style.display = 'block';
-						fade.style.display = 'block';
-					} else if (btn) {
-						btn.style.display = 'none';
-						fade.style.display = 'none';
-					}
-				});
+				// Dodatkowe sprawdzenie, gdy załadują się wszystkie obrazki i czcionki
+				window.addEventListener('load', checkReviewLengths);
 			});
 		</script>
 
