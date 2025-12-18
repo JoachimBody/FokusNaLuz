@@ -5070,3 +5070,38 @@ input, select, textarea {
 			opacity: 0;
 		}
 	}
+	
+	/* ================================================= */
+	/* FIX DLA EKRANÓW 2K / 4K (Szerokie monitory)       */
+	/* ================================================= */
+
+	@media screen and (min-width: 1921px) {
+		
+		/* Korekta dla drugiego zdjęcia (Modelki) */
+		.bg-slideshow span:nth-of-type(2) {
+			/* 
+			   Zmieniamy z 'center top' na 'center 35%'.
+			   To oznacza: "Ustaw 35% wysokości zdjęcia na 35% wysokości ekranu".
+			   Efekt: Zdjęcie przesunie się nieco w górę/dół, centrując twarze.
+			   
+			   Możesz zmieniać 35% na inną liczbę (np. 20% lub 50%), 
+			   żeby idealnie trafić w oczy modelek nad lub pod tekstem.
+			*/
+			background-position: center 35% !important; 
+		}
+		
+		/* Opcjonalnie: Zmniejszamy zoom animacji na dużych ekranach,
+		   żeby zdjęcie nie było aż tak bardzo przybliżone */
+		.bg-slideshow span {
+			animation-name: imageAnimationLarge !important;
+		}
+	}
+
+	/* Definicja delikatniejszej animacji dla dużych ekranów */
+	@keyframes imageAnimationLarge { 
+		0% { opacity: 0; animation-timing-function: ease-in; }
+		3% { opacity: 1; transform: scale(1.0); animation-timing-function: ease-out; } /* Mniejszy start (1.0) */
+		33% { opacity: 1; transform: scale(1.03); } /* Mniejszy zoom (1.03) */
+		45% { opacity: 0; transform: scale(1.05); } /* Koniec na 1.05 zamiast 1.2 */
+		100% { opacity: 0; }
+	}
