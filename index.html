@@ -75,33 +75,43 @@
 		<!-- Page Wrapper -->
 		<div id="page-wrapper">
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="index.html">FokusNaLuz</a></h1>
-				<nav>
+		<!-- NOWY STICKY HEADER -->
+		<header id="header" class="fixed-header">
+			<div class="header-inner">
+				
+				<!-- Logo w pasku menu -->
+				<a href="index.html" class="header-logo">
+					<img src="images/favicon.png" alt="Logo" />
+					FokusNaLuz
+				</a>
+
+				<!-- 2. MENU (Widoczne na komputerze) -->
+				<ul class="desktop-links">
+					<li><a href="index.html">Start</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="#five">Opinie</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#footer">Kontakt</a></li>
+				</ul>
+
+				<!-- 3. PRZYCISK CTA (Po prawej) -->
+				<div class="header-cta">
+					<a href="#footer" class="button small primary">Zapytaj o ofertę ></a>
+				</div>
+
+				<!-- 4. HAMBURGER (Tylko na telefonie) -->
+				<nav class="mobile-trigger">
 					<a href="#menu">Menu</a>
 				</nav>
-			</header>
+				
+			</div>
+		</header>
 
-			<!-- Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
-						<li><a href="index.html">Strona główna</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="#footer">Kontakt</a></li>
-					</ul>
-					<a href="#" class="close">Close</a>
-				</div>
-			</nav>
 
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<div class="logo">
-						<img src="images/nowy.webp" alt="FokusNaLuz" width="120" height="120" />
-					</div>
+					
 					<h1>FokusNaLuz</h1>
 					<p class="banner-text">
 						KREATYWNA FOTOGRAFIA PORTRETOWA I ARTYSTYCZNA W POZNANIU.<br>
@@ -571,6 +581,48 @@
 			"https://www.instagram.com/fnl_fokusnaluz"
 		  ]
 		}
+		</script>
+		
+		<script>
+			// Skrypt Sticky Header
+			window.addEventListener('scroll', function() {
+				var header = document.getElementById('header');
+				
+				// Jeśli przewinęliśmy więcej niż 50px w dół
+				if (window.scrollY > 50) {
+					header.classList.add('scrolled');
+				} else {
+					header.classList.remove('scrolled');
+				}
+			});
+		</script>
+		
+		
+		<!-- SKRYPT USUWAJĄCY SIEROTKI (Samotne litery na końcu linii) -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// Funkcja naprawiająca tekst
+				function fixOrphans(selector) {
+					const elements = document.querySelectorAll(selector);
+					
+					elements.forEach(element => {
+						// Regex szuka: spacja + (a, i, k, o, u, w, z) + spacja
+						// I zamienia drugą spację na "twardą spację" (&nbsp;)
+						let html = element.innerHTML;
+						
+						// Wzór dla języka polskiego (ignoruje tagi HTML)
+						html = html.replace(/ (\w{1,2}) /g, ' $1&nbsp;'); 
+						
+						// Podwójne przejście dla pewności (np. "i w tym")
+						html = html.replace(/&nbsp;(\w{1,2}) /g, '&nbsp;$1&nbsp;');
+						
+						element.innerHTML = html;
+					});
+				}
+
+				// Uruchom dla nagłówków i paragrafów
+				fixOrphans('p, h1, h2, h3, h4, h5, li, span.banner-text');
+			});
 		</script>
 
 	</body>
