@@ -98,10 +98,10 @@ input, select, textarea {
 
 	body {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
+		/* background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp"); */
+		/* background-size: auto, */ /* cover; */
+		/* background-attachment: fixed, */ /* fixed; */
+		/* background-position: center, */ /* center; */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3466,10 +3466,7 @@ input, select, textarea {
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp");
-				background-size: auto, cover;
-				background-position: center, center;
+				
 				margin-bottom: -6.5em;
 			}
 
@@ -3575,10 +3572,7 @@ input, select, textarea {
 	@media screen and (max-width: 1280px) {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
-			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.webp");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			
 			margin-bottom: -6.5em;
 		}
 	}
@@ -4113,7 +4107,7 @@ input, select, textarea {
 	#banner {
 		/* Domyślnie jest tu aż 10em lub więcej. Zmniejszamy! */
 		/* Im mniejsza liczba, tym wyżej będzie treść. */
-		padding-top: 7em !important; 
+		padding-top: 14em !important; 
 		
 		/* Opcjonalnie: Zwiększamy dół, żeby zachować wysokość sekcji (dla równowagi) */
 		padding-bottom: 6em !important;
@@ -4990,5 +4984,89 @@ input, select, textarea {
 			right: 20px;
 			top: 50%;
 			transform: translateY(-50%);
+		}
+	}
+	
+	/* ================================================= */
+	/* ANIMOWANE TŁO (SLIDESHOW)                         */
+	/* ================================================= */
+
+	.bg-slideshow {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -5; /* Głęboko pod spodem */
+		overflow: hidden;
+	}
+
+	/* Ciemna nakładka, żeby tekst był czytelny */
+	.bg-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(46, 49, 65, 0.65); /* Kolor motywu z przezroczystością */
+		z-index: 2; /* Nad zdjęciami */
+	}
+
+	/* Styl zdjęć */
+	.bg-slideshow span {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: transparent;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		opacity: 0;
+		z-index: 1;
+		/* Czas trwania całego cyklu dla jednego zdjęcia (18s) */
+		animation: imageAnimation 18s linear infinite; 
+	}
+
+	/* Opóźnienia dla kolejnych zdjęć (Start co 6 sekund) */
+	.bg-slideshow span:nth-child(2) { 
+		animation-delay: 0s; 
+	}
+	.bg-slideshow span:nth-child(3) { 
+		animation-delay: 6s; 
+	}
+	.bg-slideshow span:nth-child(4) { 
+		animation-delay: 12s; 
+	}
+	
+	/* --- POPRAWKA POZYCJI DLA DRUGIEGO ZDJĘCIA (Modelka) --- */
+	/* nth-of-type(2) oznacza drugie zdjęcie w kolejności w HTML */
+	.bg-slideshow span:nth-of-type(2) {
+		/* Ustawiamy: Środek w poziomie, GÓRA w pionie */
+		background-position: center top !important; 
+	}
+
+	/* Animacja Ken Burns (Zoom + Fade) */
+	@keyframes imageAnimation { 
+		0% { 
+			opacity: 0; 
+			animation-timing-function: ease-in;
+		}
+		8% {
+			opacity: 1;
+			transform: scale(1.05);
+			animation-timing-function: ease-out;
+		}
+		33% {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+		41% {
+			opacity: 0;
+			transform: scale(1.15);
+		}
+		100% { 
+			opacity: 0;
 		}
 	}
