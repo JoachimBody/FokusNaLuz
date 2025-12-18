@@ -5077,31 +5077,41 @@ input, select, textarea {
 
 	@media screen and (min-width: 1921px) {
 		
-		/* Korekta dla drugiego zdjęcia (Modelki) */
+		/* 1. ZWIĘKSZAMY ODSTĘPY (PADDING) */
+		/* To jest kluczowe: Tekst zjedzie mocno w dół, a sekcja się powiększy.
+		   Dzięki temu odsłonimy górę zdjęcia (twarze) i dół. */
+		#banner {
+			padding-top: 16em !important;    /* Było 9.5em -> Dajemy dużo więcej miejsca u góry */
+			padding-bottom: 16em !important; /* Było 6em -> Dajemy dużo więcej miejsca u dołu */
+		}
+
+		/* 2. ZWĘŻAMY TEKST */
+		/* Żeby na szerokim ekranie tekst nie rozlewał się na całą szerokość,
+		   tylko został zgrabnie na środku (lepiej widać boki zdjęcia) */
+		#banner .banner-text {
+			max-width: 800px !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		/* 3. POPRAWKA POZYCJI ZDJĘCIA (Dopasowanie do nowego paddingu) */
 		.bg-slideshow span:nth-of-type(2) {
-			/* 
-			   Zmieniamy z 'center top' na 'center 35%'.
-			   To oznacza: "Ustaw 35% wysokości zdjęcia na 35% wysokości ekranu".
-			   Efekt: Zdjęcie przesunie się nieco w górę/dół, centrując twarze.
-			   
-			   Możesz zmieniać 35% na inną liczbę (np. 20% lub 50%), 
-			   żeby idealnie trafić w oczy modelek nad lub pod tekstem.
-			*/
-			background-position: center 50% !important; 
+			/* Ustawiamy punkt skupienia zdjęcia. 
+			   30% od góry zazwyczaj idealnie celuje w oczy przy takim układzie */
+			background-position: center 30% !important; 
 		}
 		
-		/* Opcjonalnie: Zmniejszamy zoom animacji na dużych ekranach,
-		   żeby zdjęcie nie było aż tak bardzo przybliżone */
+		/* 4. MNIEJSZY ZOOM (Żeby zachować jakość na wielkim ekranie) */
 		.bg-slideshow span {
 			animation-name: imageAnimationLarge !important;
 		}
 	}
 
-	/* Definicja delikatniejszej animacji dla dużych ekranów */
+	/* Definicja delikatniejszej animacji (mniejszy zoom) dla 2K */
 	@keyframes imageAnimationLarge { 
 		0% { opacity: 0; animation-timing-function: ease-in; }
-		3% { opacity: 1; transform: scale(1.0); animation-timing-function: ease-out; } /* Mniejszy start (1.0) */
-		33% { opacity: 1; transform: scale(1.03); } /* Mniejszy zoom (1.03) */
-		45% { opacity: 0; transform: scale(1.05); } /* Koniec na 1.05 zamiast 1.2 */
+		3% { opacity: 1; transform: scale(1.0); animation-timing-function: ease-out; } 
+		33% { opacity: 1; transform: scale(1.03); } /* Minimalne przybliżenie */
+		45% { opacity: 0; transform: scale(1.05); } 
 		100% { opacity: 0; }
 	}
