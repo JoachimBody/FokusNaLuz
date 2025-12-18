@@ -4857,3 +4857,138 @@ input, select, textarea {
 			padding-bottom: 4em !important;
 		}
 	}
+	
+	
+	/* ================================================= */
+	/* STICKY HEADER (Menu jak u Igora)                  */
+	/* ================================================= */
+
+	/* 1. Ustawienie paska na sztywno u góry */
+	#header.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 80px; /* Wysokość paska */
+		z-index: 10000; /* Zawsze na wierzchu */
+		background: transparent; /* Domyślnie przezroczysty */
+		transition: background 0.3s ease, padding 0.3s ease;
+		padding: 0 40px; /* Odstępy po bokach */
+		display: flex;
+		align-items: center;
+	}
+
+	/* 2. Wygląd paska PO PRZEWINIĘCIU (dodawana klasa .scrolled) */
+	#header.fixed-header.scrolled {
+		background: rgba(46, 49, 65, 0.95) !important; /* Ciemne tło (prawie nieprzezroczyste) */
+		box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Cień pod paskiem */
+		height: 70px; /* Lekko się zmniejsza */
+	}
+
+	/* 3. Wnętrze nagłówka */
+	.header-inner {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* ================================================= */
+	/* FIX: MAŁE LOGO W PASKU MENU                       */
+	/* ================================================= */
+
+	.header-logo {
+		display: flex !important;
+		align-items: center !important;
+		gap: 15px !important; /* Odstęp między logiem a napisem */
+		
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.1em;
+		border-bottom: none !important;
+	}
+
+	/* Stylizacja obrazka logo */
+	.header-logo img {
+		height: 50px !important; /* Dopasowane do wysokości paska */
+		width: 50px !important;
+		object-fit: contain !important;
+		
+		/* Opcjonalnie: Białe tło (jak w bannerze), żeby logo było widoczne */
+		background: rgba(255, 255, 255, 0.75) !important; 
+		border-radius: 50% !important; /* Kółeczko */
+		padding: 2px !important; /* Margines wewnątrz kółka */
+	}
+
+	/* 5. Linki na środku (Desktop) */
+	.desktop-links {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 30px; /* Odstęp między linkami */
+	}
+
+	.desktop-links li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.desktop-links a {
+		text-decoration: none;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 0.9em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border-bottom: none !important;
+		transition: color 0.3s;
+	}
+
+	.desktop-links a:hover {
+		color: #ffffff;
+	}
+
+	/* 6. Przycisk CTA (Prawo) */
+	.header-cta .button {
+		height: 40px !important;
+		line-height: 40px !important;
+		padding: 0 20px !important;
+		font-size: 0.8em !important;
+		border-radius: 4px;
+		box-shadow: none !important;
+	}
+
+	/* 7. Ukrywanie hamburgera na PC */
+	.mobile-trigger {
+		display: none; 
+	}
+
+	/* --- RESPONSYWNOŚĆ (Telefon/Tablet) --- */
+	@media screen and (max-width: 980px) {
+		/* Na małym ekranie chowamy linki i przycisk, pokazujemy Hamburger */
+		.desktop-links, .header-cta {
+			display: none !important;
+		}
+		
+		.mobile-trigger {
+			display: block !important;
+		}
+		
+		#header.fixed-header {
+			padding: 0 20px;
+		}
+		
+		/* Na telefonie przycisk Menu musi być po prawej */
+		.mobile-trigger {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
