@@ -4044,6 +4044,7 @@ input, select, textarea {
 		display: flex !important;
 		flex-direction: column !important;
 		align-items: center !important; /* To centruje Logo w pionie */
+		
 	}
 
 	/* 2. Logo - Idealnie na środku */
@@ -5081,8 +5082,8 @@ input, select, textarea {
 		/* To jest kluczowe: Tekst zjedzie mocno w dół, a sekcja się powiększy.
 		   Dzięki temu odsłonimy górę zdjęcia (twarze) i dół. */
 		#banner {
-			padding-top: 16em !important;    /* Było 9.5em -> Dajemy dużo więcej miejsca u góry */
-			padding-bottom: 16em !important; /* Było 6em -> Dajemy dużo więcej miejsca u dołu */
+			padding-top: 23em !important;    /* Było 9.5em -> Dajemy dużo więcej miejsca u góry */
+			padding-bottom: 15em !important; /* Było 6em -> Dajemy dużo więcej miejsca u dołu */
 		}
 
 		/* 2. ZWĘŻAMY TEKST */
@@ -5114,4 +5115,184 @@ input, select, textarea {
 		33% { opacity: 1; transform: scale(1.03); } /* Minimalne przybliżenie */
 		45% { opacity: 0; transform: scale(1.05); } 
 		100% { opacity: 0; }
+	}
+	
+	
+	/* ================================================= */
+	/* CENNIK - STYLE GLASSMORPHISM (Mleczne Szkło)      */
+	/* ================================================= */
+
+	/* 1. Karta Pakietu (Szklany efekt) */
+	.pricing-card {
+		/* Półprzezroczyste ciemne tło */
+		background: rgba(30, 33, 48, 0.5); 
+		
+		/* KLUCZOWY EFEKT: Rozmycie tła pod kartą */
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px); /* Dla Safari */
+		
+		/* Cienka, ledwo widoczna ramka */
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-top: 1px solid rgba(255, 255, 255, 0.2); /* Górna krawędź jaśniejsza (światło) */
+		
+		border-radius: 12px; /* Bardziej zaokrąglone rogi */
+		padding: 2.5em 2em;
+		text-align: center;
+		transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+	}
+
+	/* Efekt po najechaniu myszką */
+	.pricing-card:hover {
+		transform: translateY(-8px);
+		background: rgba(30, 33, 48, 0.65);
+		border-color: rgba(255, 255, 255, 0.3);
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	/* 2. Wyróżniony Pakiet (Standard) */
+	.pricing-card.featured {
+		background: rgba(45, 50, 75, 0.6); /* Nieco jaśniejsze szkło */
+		border: 1px solid rgba(76, 92, 150, 0.5); /* Fioletowa ramka */
+		box-shadow: 0 0 25px rgba(76, 92, 150, 0.25); /* Fioletowa poświata */
+		position: relative;
+		transform: scale(1.05); /* Nieco większy od reszty */
+		z-index: 2;
+	}
+
+	.pricing-card.featured:hover {
+		transform: scale(1.05) translateY(-8px);
+	}
+
+	/* Etykieta "Najczęściej Wybierany" */
+	.featured-label {
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #4c5c96;
+		color: #fff;
+		font-size: 0.7em;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 4px 15px;
+		border-radius: 20px;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+		text-transform: uppercase;
+	}
+
+	/* 3. Typografia Cennika */
+	.pricing-header h3 {
+		font-size: 1.3em;
+		margin-bottom: 0.5em;
+		letter-spacing: 2px;
+		color: #fff;
+	}
+
+	.pricing-price {
+		font-family: "Raleway", sans-serif;
+		font-size: 3em;
+		font-weight: 200; /* Cienki font wygląda luksusowo */
+		color: #ffffff;
+		margin: 0.2em 0;
+		text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	}
+
+	.pricing-price span {
+		font-size: 0.35em;
+		font-weight: 400;
+		opacity: 0.6;
+		vertical-align: middle;
+		margin-left: 5px;
+	}
+
+	.pricing-desc {
+		font-size: 0.9em;
+		opacity: 0.7;
+		margin-bottom: 2em;
+		font-style: italic;
+		min-height: 3em; /* Wyrównanie wysokości opisów */
+	}
+
+	/* 4. Lista Funkcji */
+	.pricing-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2em 0;
+		flex-grow: 1;
+		text-align: left; /* Czytelniej przy liście */
+	}
+
+	.pricing-features li {
+		padding: 10px 0;
+		border-bottom: 1px solid rgba(255,255,255,0.05);
+		font-size: 0.9em;
+		color: rgba(255,255,255,0.8);
+		display: flex;
+		align-items: center;
+	}
+
+	.pricing-features li:last-child {
+		border-bottom: none;
+	}
+
+	/* Ikonka 'check' przed każdym punktem */
+	.pricing-features li:before {
+		content: '\f00c'; /* FontAwesome check */
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		color: #4c5c96;
+		margin-right: 10px;
+	}
+
+	/* 5. Tabela Dodatków (Też Glassmorphism) */
+	.addons-card {
+		background: rgba(30, 33, 48, 0.4);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 8px;
+		padding: 2em;
+		margin-top: 1em;
+	}
+
+	.addons-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.addons-table tr {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		transition: background 0.2s;
+	}
+
+	.addons-table tr:hover {
+		background: rgba(255,255,255,0.03);
+	}
+
+	.addons-table td {
+		padding: 1em 0.5em;
+		font-size: 0.95em;
+	}
+
+	.addons-table td:last-child {
+		text-align: right;
+		font-weight: 700;
+		color: #fff;
+		white-space: nowrap;
+	}
+
+	/* Responsywność dla cennika */
+	@media screen and (max-width: 980px) {
+		.pricing-card.featured {
+			transform: scale(1); /* Wyłączenie powiększenia na tablecie */
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		.pricing-card.featured:hover {
+			transform: translateY(-5px);
+		}
 	}
