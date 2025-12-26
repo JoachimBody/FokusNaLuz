@@ -1,0 +1,30 @@
+# ================================
+# USTAWIENIA CACHE (PAMIĘCI) FOKUSNALUZ
+# ================================
+
+# 1. Obrazy (JPG, PNG, WEBP) - Cache na 1 rok (immutable)
+# Dzięki temu bg.webp nie pobiera się za każdym razem
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 2. Pliki CSS i JS (w folderze assets) - Cache na 1 rok
+# Bezpieczne, bo używasz wersji w HTML (?v=8), więc jak zmienisz plik, przeglądarka i tak pobierze nowy.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 3. Fonty (jeśli są w assets/webfonts)
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 4. Pliki HTML - BRAK DŁUGIEGO CACHE (Ważne!)
+# Chcemy, żeby przeglądarka zawsze sprawdzała, czy nie ma nowej treści (np. nowego cennika)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
