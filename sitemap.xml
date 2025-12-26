@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    
-   <!-- Strona Główna (Ważność 100%) -->
+   <!-- Strona Główna -->
    <url>
       <loc>https://www.fokusnaluz.com/</loc>
-      <lastmod>2025-12-13</lastmod>
+      <lastmod>2025-12-26</lastmod>
       <priority>1.00</priority>
    </url>
    
-   <!-- Portfolio (Ważność 80%) -->
+   <!-- Portfolio -->
    <url>
       <loc>https://www.fokusnaluz.com/portfolio.html</loc>
-      <lastmod>2025-12-13</lastmod>
+      <lastmod>2025-12-26</lastmod>
       <priority>0.80</priority>
    </url>
 
-   <!-- Polityka Prywatności (Ważność 50% - warto żeby była w indeksie dla wiarygodności) -->
+   <!-- Cennik (NOWOŚĆ - Ważne!) -->
+   <url>
+      <loc>https://www.fokusnaluz.com/cennik.html</loc>
+      <lastmod>2025-12-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <!-- Polityka Prywatności -->
    <url>
       <loc>https://www.fokusnaluz.com/polityka.html</loc>
-      <lastmod>2025-12-13</lastmod>
+      <lastmod>2025-12-26</lastmod>
       <priority>0.50</priority>
    </url>
 
