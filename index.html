@@ -68,15 +68,7 @@
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
 		<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS778J4JG7"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-SS778J4JG7');
-		</script>
+		
 	</head>
 
 	<body class="is-preload">
@@ -467,11 +459,9 @@
 			});
 		</script>
 		
-		<!-- 4. SLIDER I ROZWIJANIE (Wszystko w jednym bloku) -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+		<!-- 4. SLIDER I ROZWIJANIE (Lazy Load Fix) -->
 		<script>
-			// Funkcja globalna do przycisku "Rozwiń"
+			// Funkcja globalna dla przycisku Rozwiń
 			function toggleTestimonial(btn) {
 				var box = btn.parentElement;
 				var wrapper = box.querySelector('.review-wrapper');
@@ -486,78 +476,69 @@
 					fade.style.opacity = '0';
 					btn.innerText = "Zwiń";
 				}
-				
-				// Aktualizacja slidera
 				setTimeout(function() {
-					var swiperInstance = document.querySelector('.swiper.myTestimonials').swiper;
-					if (swiperInstance) swiperInstance.update();
+					var swiperEl = document.querySelector('.swiper.myTestimonials');
+					if (swiperEl && swiperEl.swiper) swiperEl.swiper.update();
 				}, 300);
 			}
 
-			document.addEventListener("DOMContentLoaded", function() {
-				
-				// Funkcja sprawdzająca długość (wywoływana w odpowiednich momentach)
-				function checkReviewLengths() {
-					const wrappers = document.querySelectorAll('.review-wrapper');
-					wrappers.forEach(wrapper => {
-						const text = wrapper.querySelector('.testimonial-text');
-						const btn = wrapper.parentElement.querySelector('.read-more-btn');
-						const fade = wrapper.querySelector('.fade-overlay');
+			// Inteligentne ładowanie Swipera
+			var swiperLoaded = false;
+			function loadSwiper() {
+				if (swiperLoaded) return;
+				swiperLoaded = true;
 
-						if (!text || !btn) return;
+				var script = document.createElement('script');
+				script.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+				script.async = true;
+				script.onload = function() {
+					
+					function checkReviewLengths() {
+						const wrappers = document.querySelectorAll('.review-wrapper');
+						wrappers.forEach(wrapper => {
+							const text = wrapper.querySelector('.testimonial-text');
+							const btn = wrapper.parentElement.querySelector('.read-more-btn');
+							const fade = wrapper.querySelector('.fade-overlay');
+							if (!text || !btn) return;
+							if (text.scrollHeight > (wrapper.clientHeight + 2)) {
+								btn.style.display = 'block'; 
+								fade.style.display = 'block';
+							} else {
+								btn.style.display = 'none';  
+								fade.style.display = 'none'; 
+							}
+						});
+					}
 
-						// Margines błędu 2px (czasami przeglądarki mylą się o piksel)
-						// Sprawdzamy: Czy wysokość całej treści jest większa niż widoczne pudełko?
-						if (text.scrollHeight > (wrapper.clientHeight + 2)) {
-							btn.style.display = 'block'; 
-							fade.style.display = 'block';
-						} else {
-							btn.style.display = 'none';  
-							fade.style.display = 'none'; 
+					var swiper = new Swiper(".myTestimonials", {
+						loop: false,   
+						rewind: true,
+						slidesPerView: 1,
+						spaceBetween: 0, 
+						grabCursor: true,
+						speed: 600,
+						autoplay: { delay: 6000, disableOnInteraction: false },
+						pagination: { el: ".swiper-pagination", clickable: true },
+						navigation: { nextEl: "#custom-next", prevEl: "#custom-prev" },
+						breakpoints: {
+							768: { slidesPerView: 2, spaceBetween: 30 },
+							1200: { slidesPerView: 3, spaceBetween: 40 }
+						},
+						on: {
+							init: function () { setTimeout(checkReviewLengths, 100); },
+							resize: function () { setTimeout(checkReviewLengths, 100); }
 						}
 					});
-				}
+					checkReviewLengths();
+				};
+				document.body.appendChild(script);
+			}
 
-				// Inicjalizacja Swipera
-				var swiper = new Swiper(".myTestimonials", {
-					loop: false,   
-					rewind: true,
-					slidesPerView: 1,
-					spaceBetween: 0, 
-					grabCursor: true,
-					speed: 600,
-					autoplay: {
-						delay: 6000,
-						disableOnInteraction: false,
-					},
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-					navigation: {
-						nextEl: "#custom-next",
-						prevEl: "#custom-prev",
-					},
-					breakpoints: {
-						768: { slidesPerView: 2, spaceBetween: 30 },
-						1200: { slidesPerView: 3, spaceBetween: 40 }
-					},
-					// Tutaj jest klucz do naprawy:
-					on: {
-						init: function () {
-							// Sprawdź długość DOPIERO jak slider się zbuduje
-							setTimeout(checkReviewLengths, 100);
-						},
-						resize: function () {
-							// Sprawdź ponownie jak ktoś zmieni rozmiar okna
-							setTimeout(checkReviewLengths, 100);
-						}
-					}
-				});
-
-				// Dodatkowe sprawdzenie, gdy załadują się wszystkie obrazki i czcionki
-				window.addEventListener('load', checkReviewLengths);
-			});
+			// Uruchomienie dopiero po interakcji
+			window.addEventListener('scroll', loadSwiper, {passive: true, once: true});
+			window.addEventListener('mousemove', loadSwiper, {passive: true, once: true});
+			window.addEventListener('touchstart', loadSwiper, {passive: true, once: true});
+			setTimeout(loadSwiper, 3500); // Bezpiecznik
 		</script>
 
 		<!-- 5. GOOGLE TAG MANAGER -->
