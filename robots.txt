@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
+# Mapa strony
 Sitemap: https://fokusnaluz.com/sitemap.xml
