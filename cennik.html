@@ -30,15 +30,18 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 		<link rel="manifest" href="site.webmanifest">
 
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 	</head>
 	<body class="is-preload">
 
 		<!-- ANIMOWANE TŁO -->
 		<div class="bg-slideshow">
 			<div class="bg-overlay"></div>
-			<span style="background-image: url('images/bg.webp')"></span>
-			<span style="background-image: url('images/bg2.webp')"></span>
-			<span style="background-image: url('images/bg3.webp')"></span>
+			<span></span>
+			<span></span>
+			<span></span>
 		</div>
 
 		<!-- Page Wrapper -->
@@ -56,8 +59,8 @@
 					<ul class="desktop-links">
 						<li><a href="index.html">Start</a></li>
 						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="cennik.html" style="color:#ffffff; font-weight:700;">Cennik</a></li>
 						<li><a href="index.html#five">Opinie</a></li>
+						<li><a href="cennik.html" style="color:#ffffff; font-weight:700;">Cennik</a></li>
 						<li><a href="index.html#faq">FAQ</a></li>
 						<li><a href="#footer">Kontakt</a></li>
 					</ul>
@@ -91,7 +94,7 @@
 			<!-- Banner Cennik -->
 			<section id="banner">
 				<div class="inner">
-					<h1>Inwestycja w wspomnienia</h1>
+					<h1>Inwestycja we wspomnienia</h1>
 					<p class="banner-text">
 						Przejrzyste zasady, brak ukrytych kosztów.<br>
 						Wybierz pakiet dopasowany do Twoich potrzeb.<br>
@@ -108,21 +111,21 @@
 						<p>Każdy pakiet zawiera autorską obróbkę, pomoc w pozowaniu i luźną atmosferę. Zdjęcia otrzymujesz w formie pięknej galerii online.</p>
 						
 						<!-- SEKCJA PAKIETÓW -->
-						<div class="row" style="align-items: center;"> <!-- align-items centruje w pionie, bo środkowa karta jest większa -->
+						<div class="row" style="align-items: stretch;"> <!-- align-items centruje w pionie, bo środkowa karta jest większa -->
 							
 							<!-- PAKIET MINI -->
 							<div class="col-4 col-12-medium">
 								<div class="pricing-card">
 									<div class="pricing-header">
 										<h3>Pakiet Mini</h3>
-										<div class="pricing-price">400<span>PLN</span></div>
+										<div class="pricing-price">300<span>PLN</span></div>
 										<p class="pricing-desc">Idealny na szybkie odświeżenie wizerunku lub zdjęcia na social media.</p>
 									</div>
 									
 									<ul class="pricing-features">
 										<li>Sesja do <strong>1h</strong></li>
-										<li><strong>5</strong> zdjęć z retuszem</li>
-										<li><strong>1</strong> stylizacja</li>
+										<li><strong>10 - 15</strong>&nbsp;zdjęć z retuszem</li>
+										<li><strong>1</strong>&nbsp;stylizacja</li>
 										<li>Galeria online</li>
 										<li>Możliwość dokupienia ujęć</li>
 									</ul>
@@ -137,14 +140,14 @@
 									<div class="featured-label">Najczęściej Wybierany</div>
 									<div class="pricing-header">
 										<h3>Pakiet Standard</h3>
-										<div class="pricing-price">700<span>PLN</span></div>
+										<div class="pricing-price">600<span>PLN</span></div>
 										<p class="pricing-desc">Najlepszy wybór na sesje kreatywne, portretowe i cosplay.</p>
 									</div>
 									
 									<ul class="pricing-features">
 										<li>Sesja do <strong>2h</strong></li>
-										<li><strong>15</strong> zdjęć z retuszem</li>
-										<li><strong>2-3</strong> stylizacje</li>
+										<li><strong>25-30</strong>&nbsp;zdjęć z retuszem</li>
+										<li><strong>2-3</strong>&nbsp;stylizacje</li>
 										<li>Pomoc w doborze lokacji</li>
 										<li>Galeria online</li>
 									</ul>
@@ -158,14 +161,14 @@
 								<div class="pricing-card">
 									<div class="pricing-header">
 										<h3>Pakiet Premium</h3>
-										<div class="pricing-price">1200<span>PLN</span></div>
-										<p class="pricing-desc">Pełne doświadczenie VIP, większa ilość zdjęć i swoboda twórcza.</p>
+										<div class="pricing-price">1000<span>PLN</span></div>
+										<p class="pricing-desc">Kompleksowa sesja bez pośpiechu. Maksimum czasu na realizację Twoich najbardziej kreatywnych pomysłów.</p>
 									</div>
 									
 									<ul class="pricing-features">
 										<li>Sesja do <strong>4h</strong></li>
-										<li><strong>30</strong> zdjęć z retuszem</li>
-										<li><strong>Nieograniczone</strong> stylizacje</li>
+										<li><strong>45-60</strong>&nbsp;zdjęć z retuszem</li>
+										<li><strong>Nieograniczone</strong>&nbsp;stylizacje</li>
 										<li>Filmik backstage (Reels)</li>
 										<li>Priorytetowa obróbka</li>
 									</ul>
@@ -178,51 +181,78 @@
 
 						<br><br><br>
 
-						<!-- DODATKI (Glassmorphism) -->
-						<div class="row">
-							<div class="col-8 col-12-medium">
-								<h3 class="major">Opcje Dodatkowe</h3>
-								<p>Chcesz rozszerzyć swój pakiet? Oto co możesz dobrać:</p>
-								
-								<div class="addons-card">
-									<table class="addons-table">
-										<tbody>
-											<tr>
-												<td>Dodatkowe ujęcie (z retuszem)</td>
-												<td>50 PLN / szt.</td>
-											</tr>
-											<tr>
-												<td>Ekspresowa obróbka (do 3 dni roboczych)</td>
-												<td>+30% ceny</td>
-											</tr>
-											<tr>
-												<td>Dojazd poza Poznań</td>
-												<td>2 PLN / km</td>
-											</tr>
-											<tr>
-												<td>Wydruki i albumy</td>
-												<td>Wycena</td>
-											</tr>
-											<tr>
-												<td>Sesja w studio (opłata za wynajem sali)</td>
-												<td>od 100 PLN / h</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							
-							<div class="col-4 col-12-medium">
-								<div class="box" style="background: rgba(30,33,48,0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
-									<h4><span class="icon solid fa-info-circle"></span> Ważne informacje</h4>
-									<ul class="alt" style="font-size: 0.9em; border:none;">
-										<li style="border-top-color: rgba(255,255,255,0.1);">Rezerwacja terminu następuje po wpłacie zadatku (100 PLN).</li>
-										<li style="border-top-color: rgba(255,255,255,0.1);">Czas oczekiwania na gotowe zdjęcia: do 14 dni roboczych.</li>
-										<li style="border-top-color: rgba(255,255,255,0.1);">Nie udostępniam surowych plików (RAW).</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+<!-- NOWY NAGŁÓWEK SEKCJI -->
+<div class="addons-header">
+    <span class="icon solid fa-sliders-h addons-header-icon"></span>
+    <h3>Personalizuj swoją sesję</h3>
+    <p>Każda sesja jest inna. Dobierz dodatki, które sprawią, że Twoje zdjęcia będą idealne.</p>
+</div>
+
+<div class="addons-wrapper"> <!-- Wspólny kontener -->
+    <div class="row">
+        
+        <!-- LEWO: Lista Usług -->
+        <div class="col-7 col-12-medium">
+            <div class="addon-list">
+                
+                <!-- Pozycja 1 -->
+                <div class="addon-item">
+                    <div class="addon-name">
+                        <i class="fas fa-image"></i> Dodatkowe ujęcie (z retuszem)
+                    </div>
+                    <div class="addon-price">20 PLN / szt.</div>
+                </div>
+
+                <!-- Pozycja 2 -->
+                <div class="addon-item">
+                    <div class="addon-name">
+                        <i class="fas fa-bolt"></i> Ekspresowa obróbka (3 dni)
+                    </div>
+                    <div class="addon-price">+30% ceny</div>
+                </div>
+
+                <!-- Pozycja 3 -->
+                <div class="addon-item">
+                    <div class="addon-name">
+                        <i class="fas fa-car"></i> Dojazd poza Poznań
+                    </div>
+                    <div class="addon-price">1 PLN / km</div>
+                </div>
+
+                <!-- Pozycja 4 -->
+                <div class="addon-item">
+                    <div class="addon-name">
+                        <i class="fas fa-book-open"></i> Wydruki i Fotoalbumy
+                    </div>
+                    <div class="addon-price">Wycena ind.</div>
+                </div>
+
+                <!-- Pozycja 5 -->
+                <div class="addon-item">
+                    <div class="addon-name">
+                        <i class="fas fa-building"></i> Wynajem studia
+                    </div>
+                    <div class="addon-price">od 100 PLN / h</div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- PRAWO: Info (Oddzielone linią) -->
+        <div class="col-5 col-12-medium">
+            <div class="info-box-pro">
+                <h4><i class="fas fa-info-circle" style="color:#4c5c96;"></i> Ważne informacje</h4>
+                <ul>
+                    <li><strong>Rezerwacja:</strong> Termin jest gwarantowany po wpłacie zadatku (100 PLN).</li>
+                    <li><strong>Czas:</strong> Na gotowe zdjęcia czekasz maksymalnie 14 dni roboczych.</li>
+                    <li><strong>Pliki:</strong> Otrzymujesz tylko gotowe zdjęcia JPG. Nie udostępniam surowych plików (RAW).</li>
+                    <li><strong>Płatność:</strong> Pozostałą kwotę rozliczamy w dniu sesji.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 					</div>
 				</div>
@@ -252,9 +282,9 @@
 									<div class="field" style="width: 100%; margin-bottom: 1.5em;">
 										<label for="package">Pakiet:</label>
 										<select name="package" id="package" style="background: rgba(255,255,255,0.05);">
-											<option value="Standard">Pakiet Standard (700 PLN)</option>
-											<option value="Mini">Pakiet Mini (400 PLN)</option>
-											<option value="Premium">Pakiet Premium (1200 PLN)</option>
+											<option value="Standard">Pakiet Standard (600 PLN)</option>
+											<option value="Mini">Pakiet Mini (300 PLN)</option>
+											<option value="Premium">Pakiet Premium (1000 PLN)</option>
 											<option value="Inne">Inne / Pytanie</option>
 										</select>
 									</div>
@@ -347,12 +377,12 @@
 		<script src="assets/js/util.js" defer></script>
 		<script src="assets/js/main.js" defer></script>
 		
-		<!-- Ciasteczka -->
-		<div id="cookie-card" style="display:none;">
+		<!-- 3. COOKIES -->
+		<div id="cookie-card">
 			<h4>🍪 Ciasteczka</h4>
-			<p>Strona używa plików cookies.</p>
+			<p>Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. Korzystając ze strony, zgadzasz się na ich użycie.</p>
 			<div class="cookie-actions">
-				<a href="polityka.html">Polityka</a>
+				<a href="polityka.html">Polityka Prywatności</a>
 				<button id="accept-cookies">Akceptuję</button>
 			</div>
 		</div>
@@ -362,7 +392,9 @@
 			}
 			document.getElementById('accept-cookies').addEventListener('click', function() {
 				localStorage.setItem('cookiesAccepted', 'true');
-				document.getElementById('cookie-card').style.display = 'none';
+				var card = document.getElementById('cookie-card');
+				card.style.opacity = '0'; card.style.transform = 'translateY(20px)'; card.style.transition = 'all 0.5s ease';
+				setTimeout(function() { card.style.display = 'none'; }, 500);
 			});
 		</script>
 		
@@ -382,5 +414,7 @@
 			});
 		</script>
 
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		
 	</body>
 </html>

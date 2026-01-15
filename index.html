@@ -80,15 +80,11 @@
 	<body class="is-preload">
 	
 	
-		<!-- ANIMOWANE TŁO -->
 		<div class="bg-slideshow">
 			<div class="bg-overlay"></div>
-			<!-- Zdjecie 1 (Startowe) -->
-			<span style="background-image: url('images/bg.webp')"></span>
-			<!-- Zdjecie 2 -->
-			<span style="background-image: url('images/bg2.webp')"></span>
-			<!-- Zdjecie 3 -->
-			<span style="background-image: url('images/bg3.webp')"></span>
+			<span></span>
+			<span></span>
+			<span></span>
 		</div>
 
 		<!-- Page Wrapper -->
@@ -126,6 +122,22 @@
 				
 			</div>
 		</header>
+		
+		<!-- Mobile Menu (Wysuwane) -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Start</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="cennik.html">Cennik</a></li>
+					<li><a href="index.html#five">Opinie</a></li>
+					<li><a href="index.html#faq">FAQ</a></li>
+					<li><a href="#footer">Kontakt</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
 
 
 			<!-- Banner -->
@@ -632,6 +644,43 @@
 				// Uruchom dla nagłówków i paragrafów
 				fixOrphans('p, h1, h2, h3, h4, h5, li, span.banner-text');
 			});
+		</script>
+		
+		<!-- DANE STRUKTURALNE: FAQ (Widoczne tylko dla Google) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "FAQPage",
+		  "mainEntity": [{
+			"@type": "Question",
+			"name": "Czy muszę umieć pozować?",
+			"acceptedAnswer": {
+			  "@type": "Answer",
+			  "text": "Absolutnie nie! To moje zadanie, żeby Cię poprowadzić. W trakcie sesji cały czas podpowiadam, co robić, gdzie spojrzeć i jak się ustawić. Działamy na luzie – najlepsze ujęcia wychodzą wtedy, gdy zapominasz o obiektywie."
+			}
+		  },{
+			"@type": "Question",
+			"name": "Mam szalony pomysł na zdjęcia...",
+			"acceptedAnswer": {
+			  "@type": "Answer",
+			  "text": "To świetnie trafiłaś/eś! Uwielbiam nietypowe projekty. Cosplay, urbex, neony, farby, stylizacje fantasy? Jestem otwarty na każdą kreatywną wizję. Napisz do mnie, a razem wymyślimy, jak to zrealizować w Poznaniu lub okolicach."
+			}
+		  },{
+			"@type": "Question",
+			"name": "Gdzie odbywają się sesje?",
+			"acceptedAnswer": {
+			  "@type": "Answer",
+			  "text": "Lokalizację wybieramy wspólnie podczas rozmowy, bazując na naszych ulubionych miejscówkach i dostępnym budżecie. Może to być miasto, las, opuszczony budynek, a nawet… stara wanna znaleziona na wysypisku! Wszystko zależy od naszej kreatywności."
+			}
+		  },{
+			"@type": "Question",
+			"name": "Ile czeka się na zdjęcia?",
+			"acceptedAnswer": {
+			  "@type": "Answer",
+			  "text": "Wiem, że nie możesz się doczekać efektów! Gotowe, poddane autorskiej obróbce zdjęcia otrzymasz w ciągu maksymalnie 14 dni roboczych od momentu wyboru ujęć. Często udaje się szybciej."
+			}
+		  }]
+		}
 		</script>
 
 	</body>

@@ -6,10 +6,10 @@
 -->
 <html lang="pl">
 	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
+		<title>Portfolio Fotograficzne - Cosplay, Portret, Urbex | FokusNaLuz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css?v=2" />
+		<link rel="stylesheet" href="assets/css/main.css?v=10" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 		<meta name="description" content="Odkryj galerię pełną emocji. Od mrocznych sesji urbex i cosplay, po delikatne portrety kobiece. Zobacz, jak tworzymy magię w Poznaniu. Kliknij i zainspiruj się!">
@@ -48,29 +48,17 @@
 		<meta name="geo.placename" content="Poznań" />
 		<meta name="geo.position" content="52.406374;16.925168" /> <!-- Współrzędne centrum Poznania -->
 		<meta name="ICBM" content="52.406374, 16.925168" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS778J4JG7"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-SS778J4JG7');
-		</script>
+		
 			
 	</head>
 	<body class="is-preload">
 	
-	<!-- ANIMOWANE TŁO -->
-		<div class="bg-slideshow">
-			<div class="bg-overlay"></div>
-			<!-- Zdjecie 1 (Startowe) -->
-			<span style="background-image: url('images/bg.webp')"></span>
-			<!-- Zdjecie 2 -->
-			<span style="background-image: url('images/bg2.webp')"></span>
-			<!-- Zdjecie 3 -->
-			<span style="background-image: url('images/bg3.webp')"></span>
-		</div>
+	<div class="bg-slideshow">
+		<div class="bg-overlay"></div>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 	
 
 		<!-- Page Wrapper -->
@@ -107,6 +95,22 @@
 								
 							</div>
 						</header>
+						
+						<!-- Mobile Menu (Wysuwane) -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Start</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="cennik.html">Cennik</a></li>
+					<li><a href="index.html#five">Opinie</a></li>
+					<li><a href="index.html#faq">FAQ</a></li>
+					<li><a href="#footer">Kontakt</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
 
 				
 
@@ -136,7 +140,7 @@
 
 							
 							
-							<div class="wrapper">
+							<div class="wrapper style4">
 								<div class="inner">
 									<h2 class="major">Moje Sesje</h2>
 
@@ -179,7 +183,7 @@
 									<div class="albums-grid">
 
 										<!-- === ALBUM 1: Krwawa Sesja === -->
-										<div class="album-card">
+										<div class="album-card" data-category="kreatywne" data-date="2025-12-01">
 											
 											<!-- 1. W "href" podajemy DUŻE zdjęcie (to, co się otworzy po kliknięciu) -->
 											<a href="images/krwawa/krwawa38.webp" data-lightbox="sesja-1" data-title="Krwawa Sesja" alt="Dwie dorosłe kobiety w czarnych strojach kąpielowych pozują w opuszczonym basenie. Jedna stoi, druga kuca na pierwszym planie. Na ciałach i posadzce widoczna stylizowana krew. W tle zniszczona hala basenowa z linami torów pływackich.">
@@ -424,15 +428,70 @@
 									</div>
 									
 									<br><br>
-									<ul class="actions">
-										<li><a href="index.html#footer" class="button">Umów się na sesję</a></li>
-									</ul>
+									<!-- PREMIUM PRZYCISK + FIX DZIURY (Paddingiem) -->
+									<div class="premium-btn-wrapper">
+										<a href="index.html#footer" class="button premium">Umów się na sesję</a>
+									</div>
 								</div>
 							</div>
 							
+				<!-- NOWA SEKCJA SEO (Czysty kod bez stylów inline) -->
+				<section class="wrapper style3 gap-fix">
+					<div class="inner">
+						<h3 class="major">Dlaczego warto wybrać FokusNaLuz?</h3>
+						<p>Fotografia to dla mnie coś więcej niż naciśnięcie spustu migawki. Stawiam na autentyczność, klimat i zero presji. Działam głównie w <strong>Poznaniu i Wielkopolsce</strong>.</p>
+						
+						<div class="features portfolio-features">
+							<!-- KAFELEK 1 -->
+							<article>
+								<span class="icon solid fa-camera-retro"></span>
+								<div class="content">
+									<h3>Portret i Wizerunek</h3>
+									<p>Boisz się sztucznych uśmiechów? Moje sesje to luźna rozmowa i spacer. Pomagam w doborze stylizacji i – co najważniejsze – <strong>pokazuję, jak pozować</strong>, żebyś wyglądał/a naturalnie.</p>
+								</div>
+							</article>
+							
+							<!-- KAFELEK 2 -->
+							<article>
+								<span class="icon solid fa-magic"></span>
+								<div class="content">
+									<h3>Cosplay i Fantasy</h3>
+									<p>Rozumiem, ile pracy wkładasz w strój. Zadbamy o epickie oświetlenie (mobilne lampy, dym) i klimat (Cytadela, lasy), aby oddać charakter Twojej postaci.</p>
+								</div>
+							</article>
+							
+							<!-- KAFELEK 3 -->
+							<article>
+								<span class="icon solid fa-building"></span>
+								<div class="content">
+									<h3>Urbex i Art</h3>
+									<p>Sesje w opuszczonych miejscach i mroczne projekty artystyczne. Tworzymy coś niepowtarzalnego, dbając o Twoje bezpieczeństwo i komfort.</p>
+								</div>
+							</article>
+
+							<!-- KAFELEK 4 -->
+							<article>
+								<span class="icon solid fa-heart"></span>
+								<div class="content">
+									<h3>Atmosfera</h3>
+									<p>Zero stresu. Muzyka, luźna gadka i profesjonalne efekty. Zobaczysz, że sesja zdjęciowa może być świetną zabawą, a nie obowiązkiem.</p>
+								</div>
+							</article>
+						</div>
+
+						<ul class="actions special">
+							<li><a href="cennik.html" class="button primary">Sprawdź Pakiety</a></li>
+							<li><a href="#footer" class="button">Napisz do mnie</a></li>
+						</ul>
+
+					</div>
+				</section>
+				
 				
 
 					</section>
+					
+					
 					
 			<section id="footer">
     <!-- KLUCZOWE: Style wpisane w linię, które naprawiają szerokość i centrowanie -->
@@ -559,7 +618,8 @@
 				lightbox.option({
 				  'resizeDuration': 200,
 				  'wrapAround': true,
-				  'albumLabel': "Zdjęcie %1 z %2"
+				  'albumLabel': "Zdjęcie %1 z %2",
+				  'disableScrolling': true,
 				})
 			</script>
 
@@ -664,18 +724,26 @@
 			});
 		</script>
 
-				<!-- FLOATING COOKIE CARD -->
-				<div id="cookie-card">
-					<h4>🍪 Ciasteczka</h4>
-					<p>
-						Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. 
-						Korzystając ze strony, zgadzasz się na ich użycie.
-					</p>
-					<div class="cookie-actions">
-						<a href="polityka.html">Polityka Prywatności</a>
-						<button id="accept-cookies">Akceptuję</button>
-					</div>
-				</div>
+				<!-- 3. COOKIES -->
+		<div id="cookie-card">
+			<h4>🍪 Ciasteczka</h4>
+			<p>Ta strona używa plików cookies, aby zapewnić Ci najlepsze doświadczenie. Korzystając ze strony, zgadzasz się na ich użycie.</p>
+			<div class="cookie-actions">
+				<a href="polityka.html">Polityka Prywatności</a>
+				<button id="accept-cookies">Akceptuję</button>
+			</div>
+		</div>
+		<script>
+			if (!localStorage.getItem('cookiesAccepted')) {
+				setTimeout(function() { document.getElementById('cookie-card').style.display = 'block'; }, 1000);
+			}
+			document.getElementById('accept-cookies').addEventListener('click', function() {
+				localStorage.setItem('cookiesAccepted', 'true');
+				var card = document.getElementById('cookie-card');
+				card.style.opacity = '0'; card.style.transform = 'translateY(20px)'; card.style.transition = 'all 0.5s ease';
+				setTimeout(function() { card.style.display = 'none'; }, 500);
+			});
+		</script>
 
 				<script>
 					// 1. Sprawdź, czy użytkownik już zaakceptował
@@ -717,6 +785,69 @@
 						}
 					});
 				</script>
+				
+				<script type="application/ld+json">
+				{
+				  "@context": "https://schema.org",
+				  "@type": "ImageGallery",
+				  "name": "Portfolio Fotograficzne FokusNaLuz",
+				  "description": "Galeria kreatywnej fotografii portretowej, cosplay i artystycznej w Poznaniu.",
+				  "author": {
+					"@type": "Person",
+					"name": "Mikołaj Zielonka"
+				  },
+				  "provider": {
+					"@type": "ProfessionalService",
+					"name": "FokusNaLuz",
+					"image": "https://www.fokusnaluz.com/images/favicon.png"
+				  }
+				}
+				</script>
+				
+				
+<script>
+(function() {
+    var startX, startY;
+
+    // 1. Rejestrujemy początek dotyku
+    document.addEventListener('touchstart', function(e) {
+        // Sprawdzamy czy Lightbox jest widoczny
+        var lb = document.getElementById('lightbox');
+        if (!lb || lb.style.display === 'none') return;
+
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, {passive: true});
+
+    // 2. Rejestrujemy koniec dotyku i obliczamy kierunek
+    document.addEventListener('touchend', function(e) {
+        if (!startX) return;
+
+        var lb = document.getElementById('lightbox');
+        if (!lb || lb.style.display === 'none') return;
+
+        var endX = e.changedTouches[0].clientX;
+        var endY = e.changedTouches[0].clientY;
+
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+
+        // Jeśli ruch był poziomy i wyraźny (więcej niż 50px)
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                // Swipe w lewo -> Następne zdjęcie
+                var nextBtn = document.querySelector('.lb-next');
+                if (nextBtn) nextBtn.click();
+            } else {
+                // Swipe w prawo -> Poprzednie zdjęcie
+                var prevBtn = document.querySelector('.lb-prev');
+                if (prevBtn) prevBtn.click();
+            }
+        }
+        startX = null; // Reset
+    }, {passive: true});
+})();
+</script>
 
 	</body>
 </html>
