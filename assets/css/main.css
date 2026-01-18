@@ -4968,8 +4968,8 @@ input, select, textarea {
     .bg-slideshow span:nth-of-type(3) {
         background-image: url('../../images/bg3.webp') !important;
 		background-position: 75% !important; 
+	}
 }
-
 /* ================================================= */
 /* PORTFOLIO: ZMIANA KOLORU TŁA (Deep Gallery)       */
 /* ================================================= */
@@ -5025,8 +5025,8 @@ input, select, textarea {
 
 #banner {
     /* Wymuszamy stałą wysokość zamiast paddingów */
-    height: 550px !important; 
-    min-height: 550px !important;
+    height: 1000px !important; 
+    min-height: 1000px !important;
     
     /* Centrujemy tekst idealnie w środku tych 550px */
     display: flex !important;
